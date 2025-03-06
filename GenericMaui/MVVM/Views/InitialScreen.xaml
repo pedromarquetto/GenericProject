@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GenericMaui.MVVM.Views.InitialScreen"
+             xmlns:custom="clr-namespace:GenericMaui.MVVM.Views.CustomComponents"
+             Title="InitialScreen">
+    <VerticalStackLayout>
+        <custom:PMSFrame>
+            <Image x:Name="imgInitial"></Image>
+        </custom:PMSFrame>
+        <custom:PMSFrame>
+            <custom:PMSLabel Text="Test" />
+        </custom:PMSFrame>
+    </VerticalStackLayout>
+</ContentPage>

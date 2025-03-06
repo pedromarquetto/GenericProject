@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<custom:PMSBasePage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GenericMaui.MVVM.Views.Login"
+             xmlns:custom="clr-namespace:GenericMaui.MVVM.Views.CustomComponents"
+             Title="Login">
+    <VerticalStackLayout>
+        <custom:PMSFrame>
+            <VerticalStackLayout>
+                <custom:PMSFrame>
+                    <custom:PMSEntry x:Name="txtUserName" Text="{Binding Name,Mode=TwoWay}"/>
+                </custom:PMSFrame>
+                <custom:PMSFrame>
+                    <custom:PMSEntry x:Name="txtPassword" Text="{Binding Users.Password,Mode=TwoWay}"/>
+                </custom:PMSFrame>
+                <custom:PMSFrame>
+                    <custom:PMSCheckBox x:Name="cbStaySigned" IsChecked="{Binding Users.StaySigned}" />
+                </custom:PMSFrame>
+                <custom:PMSFrame>
+                    <custom:PMSButton x:Name="btnLogin" Text="click" Command="{Binding SignInCommand,Mode=TwoWay}" />
+                </custom:PMSFrame>
+            </VerticalStackLayout>
+        </custom:PMSFrame>
+    </VerticalStackLayout>
+</custom:PMSBasePage>
