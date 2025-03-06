@@ -1,0 +1,231 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\plcm9\\source\\genericproject\\GenericProject\\GenericBlazor.Client\\GenericBlazor.Client.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\plcm9\\source\\genericproject\\GenericProject\\GenericBlazor.Client\\GenericBlazor.Client.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\plcm9\\source\\genericproject\\GenericProject\\GenericBlazor.Client\\GenericBlazor.Client.csproj",
+        "projectName": "GenericBlazor.Client",
+        "projectPath": "C:\\Users\\plcm9\\source\\genericproject\\GenericProject\\GenericBlazor.Client\\GenericBlazor.Client.csproj",
+        "packagesPath": "C:\\Users\\plcm9\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\plcm9\\source\\genericproject\\GenericProject\\GenericBlazor.Client\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\plcm9\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\plcm9\\source\\genericproject\\GenericProject\\GenericBlazor.Shared\\GenericBlazor.Shared.csproj": {
+                "projectPath": "C:\\Users\\plcm9\\source\\genericproject\\GenericProject\\GenericBlazor.Shared\\GenericBlazor.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.QuickGrid": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Microsoft.NET.ILLink.Tasks": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.13, )",
+              "autoReferenced": true
+            },
+            "Microsoft.NET.Sdk.WebAssembly.Pack": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.2, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "SixLabors.ImageSharp": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Syncfusion.Blazor": {
+              "target": "Package",
+              "version": "[24.2.8, )"
+            },
+            "Syncfusion.Blazor.Core": {
+              "target": "Package",
+              "version": "[24.2.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
+              "version": "[8.0.13, 8.0.13]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "browser-wasm": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\Users\\plcm9\\source\\genericproject\\GenericProject\\GenericBlazor.Shared\\GenericBlazor.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\plcm9\\source\\genericproject\\GenericProject\\GenericBlazor.Shared\\GenericBlazor.Shared.csproj",
+        "projectName": "GenericBlazor.Shared",
+        "projectPath": "C:\\Users\\plcm9\\source\\genericproject\\GenericProject\\GenericBlazor.Shared\\GenericBlazor.Shared.csproj",
+        "packagesPath": "C:\\Users\\plcm9\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\plcm9\\source\\genericproject\\GenericProject\\GenericBlazor.Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\plcm9\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Magick.NET-Q16-AnyCPU": {
+              "target": "Package",
+              "version": "[13.9.1, )"
+            },
+            "Microsoft.AspNetCore.Components.QuickGrid": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Microsoft.JSInterop": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "SixLabors.ImageSharp": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "SkiaSharp": {
+              "target": "Package",
+              "version": "[2.88.8, )"
+            },
+            "Syncfusion.Blazor": {
+              "target": "Package",
+              "version": "[24.2.8, )"
+            },
+            "Syncfusion.Blazor.Core": {
+              "target": "Package",
+              "version": "[24.2.8, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

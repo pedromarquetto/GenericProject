@@ -1,0 +1,142 @@
+﻿@page "/UserControlPage"
+
+@rendermode @(new InteractiveAutoRenderMode(false))
+@attribute [StreamRendering]
+
+@if (items?.Count() > 0 && fieldsList?.Count() > 0)
+{
+    <CustomDiv Class="divCard1 border"
+            Visible="@(_companyManager.CompanyConfig.IsShowScreenName)"
+            DivType="3">
+        <div class="divChildCard1">
+            <h3>@screen?.Name</h3>
+        </div>
+    </CustomDiv>
+
+	<div class="customContainer">
+
+        <CustomDiv Class="divCard1"
+                    Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "btnNew")?.IsVisible)">
+            <div class="divChildCard1">
+                <button class="btn btn-outline-info" @onclick="@(() => NavigateToDetail(0))">@fieldsList.FirstOrDefault(p => p.Xname == "btnNew")?.Name</button>
+            </div>
+        </CustomDiv>
+
+        <CustomDiv Class="divCard1"
+                   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtSearch")?.IsVisible)">
+            <div class="divChildCard1">
+                <label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtSearch")?.Name</label>
+            </div>
+            <div class="divChildCard1">
+                <input @bind="filter" @bind:event="oninput" @bind:after="FilterItems" />
+            </div>
+        </CustomDiv>
+
+        <QuickGrid Items="@filteredItems">
+            @foreach (var field in fieldsList)
+            {
+                @if (field.IsVisible)
+                {
+                    switch (field.Xname)
+                    {
+                        case "gridCol_UsersId":
+                            <PropertyColumn Sortable="true" Title="@field.Name" Property="@(p => p.UsersId)" />
+                            break;
+                        case "gridCol_Name":
+                            <PropertyColumn Sortable="true" Title="@field.Name" Property="@(p => p.Name)" />
+                            break;
+                        case "gridCol_Email":
+                            <PropertyColumn Sortable="true" Title="@field.Name" Property="@(p => p.Email)" />
+                            break;
+                        case "gridCol_PhoneNumber":
+                            <PropertyColumn Sortable="true" Title="@field.Name" Property="@(p => p.PhoneNumber)" />
+                            break;
+
+                        case "gridCol_UsersCompleteAddress":
+                            <TemplateColumn Sortable="true" Title="@field.Name">
+                                <div>
+                                    <label>@(string.Concat(context.AdressNumber, " - ", context.AdressStreet))</label>
+                                </div>
+                            </TemplateColumn>
+                            break;
+                        
+                        case "gridCol_AdressStreet":
+                            <PropertyColumn Sortable="true" Title="@field.Name" Property="@(p => p.AdressStreet)" />
+                            break;
+                        case "gridCol_AdressNumber":
+                            <PropertyColumn Sortable="true" Title="@field.Name" Property="@(p => p.AdressNumber)" />
+                            break;
+                        case "gridCol_UserTypeId":
+                            <PropertyColumn Sortable="true" Title="@field.Name" Property="@(p => p.UserTypeId)" />
+                            break;
+                        case "gridCol_NbHoodId":
+                            <PropertyColumn Sortable="true" Title="@field.Name" Property="@(p => p.NbHoodId)" />
+                            break;
+                        case "gridCol_Password":
+                            <PropertyColumn Sortable="true" Title="@field.Name" Property="@(p => p.Password)" />
+                            break;
+                        case "gridCol_CEP":
+                            <PropertyColumn Sortable="true" Title="@field.Name" Property="@(p => p.CEP)" />
+                            break;
+                        case "gridCol_StaySigned":
+                            <PropertyColumn Sortable="true" Title="@field.Name" Property="@(p => p.StaySigned)" />
+                            break;
+                        case "gridCol_Archive":
+                            <TemplateColumn Title="@field.Name">
+                                <div>
+                                    <img style="max-height:50px;" src="@($"data:image/jpeg;base64,{Convert.ToBase64String(context.Archive)}")" />
+                                </div>
+                            </TemplateColumn>
+                            break;
+                        case "gridCol_IsActive":
+                            <PropertyColumn Sortable="true" Title="@field.Name" Property="@(p => p.IsActive)" />
+                            break;
+                        case "gridCol_CreateDate":
+                            <PropertyColumn Sortable="true" Title="@field.Name" Property="@(p => p.CreateDate)" />
+                            break;
+                        case "gridCol_ButtonDetail":
+                            <TemplateColumn Title="@field.Name">
+                                <div>
+                                    <button class="btn btn-outline-info" @onclick="@(() => NavigateToDetail(context.UsersId))">@field.Name</button>
+                                </div>
+                            </TemplateColumn>
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
+        </QuickGrid>
+	</div>
+}
+else
+{
+	<label>Loading...</label>
+}
+
+@code {
+
+	public IQueryable<Users> items { get; set; }
+    public IQueryable<Users> filteredItems { get; set; }
+	public string filter { get; set; } = "";
+
+	private SystemScreen screen { get; set; }
+	private List<SystemScreenField> fieldsList { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        items = filteredItems = await GlobalHelper.GetTableData(_ws, items, "Users");//To change
+        (fieldsList, screen) = await GlobalHelper.GetScreenFields(_ws, "UserControlPage");//To change
+    }
+    private void FilterItems()
+    {
+        filteredItems = items;
+        filteredItems = string.IsNullOrEmpty(filter) == false ? filteredItems.Where(p => p.Name.ToLower().Contains(filter.ToLower())) : filteredItems;
+    }
+    private void NavigateToDetail(int id)
+    {
+        var navOption = id != 0 ? $"/CreateEditUserPage/{id}" : $"/CreateEditUserPage";//To change
+        _navig.NavigateTo(navOption);
+    }
+
+}

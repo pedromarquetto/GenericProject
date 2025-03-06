@@ -1,0 +1,89 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\plcm9\\source\\repos\\GenericBlazor\\GenericBlazor\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\GenericBlazor.bundle.scp.css",
+      "PackagePath": "staticwebassets\\GenericBlazor.ypi6y6j5dm.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\plcm9\\source\\repos\\GenericBlazor\\GenericBlazor\\wwwroot\\Images\\Back-100.png",
+      "PackagePath": "staticwebassets\\Images\\Back-100.png"
+    },
+    {
+      "Id": "C:\\Users\\plcm9\\source\\repos\\GenericBlazor\\GenericBlazor\\wwwroot\\Images\\Back-35.png",
+      "PackagePath": "staticwebassets\\Images\\Back-35.png"
+    },
+    {
+      "Id": "C:\\Users\\plcm9\\source\\repos\\GenericBlazor\\GenericBlazor\\wwwroot\\Images\\praia.jpeg",
+      "PackagePath": "staticwebassets\\Images\\praia.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\plcm9\\source\\repos\\GenericBlazor\\GenericBlazor\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\plcm9\\source\\repos\\GenericBlazor\\GenericBlazor\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\plcm9\\source\\repos\\GenericBlazor\\GenericBlazor\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\plcm9\\source\\repos\\GenericBlazor\\GenericBlazor\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\plcm9\\source\\repos\\GenericBlazor\\GenericBlazor\\wwwroot\\generic.css",
+      "PackagePath": "staticwebassets\\generic.css"
+    },
+    {
+      "Id": "C:\\Users\\plcm9\\source\\repos\\GenericBlazor\\GenericBlazor\\wwwroot\\jquery.js",
+      "PackagePath": "staticwebassets\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\plcm9\\source\\repos\\GenericBlazor\\GenericBlazor\\wwwroot\\jquery.min.js",
+      "PackagePath": "staticwebassets\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\plcm9\\source\\repos\\GenericBlazor\\GenericBlazor\\wwwroot\\jquery.min.map",
+      "PackagePath": "staticwebassets\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\plcm9\\source\\repos\\GenericBlazor\\GenericBlazor\\wwwroot\\jquery.slim.js",
+      "PackagePath": "staticwebassets\\jquery.slim.js"
+    },
+    {
+      "Id": "C:\\Users\\plcm9\\source\\repos\\GenericBlazor\\GenericBlazor\\wwwroot\\jquery.slim.min.js",
+      "PackagePath": "staticwebassets\\jquery.slim.min.js"
+    },
+    {
+      "Id": "C:\\Users\\plcm9\\source\\repos\\GenericBlazor\\GenericBlazor\\wwwroot\\jquery.slim.min.map",
+      "PackagePath": "staticwebassets\\jquery.slim.min.map"
+    },
+    {
+      "Id": "C:\\Users\\plcm9\\source\\repos\\GenericBlazor\\GenericBlazor\\wwwroot\\jsmanager.js",
+      "PackagePath": "staticwebassets\\jsmanager.js"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.GenericBlazor.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.GenericBlazor.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.GenericBlazor.props",
+      "PackagePath": "build\\GenericBlazor.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.GenericBlazor.props",
+      "PackagePath": "buildMultiTargeting\\GenericBlazor.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.GenericBlazor.props",
+      "PackagePath": "buildTransitive\\GenericBlazor.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

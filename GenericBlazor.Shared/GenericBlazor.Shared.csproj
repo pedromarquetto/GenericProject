@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Magick.NET-Q16-AnyCPU" Version="13.9.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.QuickGrid" Version="8.0.6" />
+    <PackageReference Include="Microsoft.JSInterop" Version="8.0.6" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="3.1.5" />
+    <PackageReference Include="SkiaSharp" Version="2.88.8" />
+    <PackageReference Include="Syncfusion.Blazor" Version="24.2.8" />
+    <PackageReference Include="Syncfusion.Blazor.Core" Version="24.2.8" />
+    <PackageReference Include="System.Drawing.Common" Version="8.0.6" />
+  </ItemGroup>
+
+</Project>

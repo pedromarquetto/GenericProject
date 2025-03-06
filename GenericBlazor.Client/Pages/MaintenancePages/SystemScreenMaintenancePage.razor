@@ -1,0 +1,256 @@
+﻿@page "/SystemScreenMaintenancePage/{id:int}"
+
+@rendermode @(new InteractiveAutoRenderMode(false))
+@attribute [StreamRendering]
+
+<CustomDiv Visible="@IsVisible" DivType="@DivType" Class="divCard" Id="lblErrorMessage">
+	<label>@Message</label>
+</CustomDiv>
+
+<EditForm class="customContainer" Model="screenItem" OnValidSubmit="Submit">
+	<CustomDiv Class="divCard2"
+				Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtSystemScreenId")?.IsVisible)" >
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtSystemScreenId")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput
+				Type="number" 
+				TextAlign="center"
+				Width="35"
+				Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtSystemScreenId")?.IsDisabled)"
+				@bind-ValueInt="screenItem.SystemScreenId" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "SystemScreenId")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtName")?.IsVisible)">
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtName")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="text"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtName")?.IsDisabled)"
+						 @bind-Value="screenItem.Name" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "Name")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCode")?.IsVisible)">
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtCode")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="text"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCode")?.IsDisabled)"
+						 @bind-Value="screenItem.Code" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "Code")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtMinUserLevel")?.IsVisible)">
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtMinUserLevel")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="number"
+						 TextAlign="center"
+						 Width="35"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtMinUserLevel")?.IsDisabled)"
+						 @bind-ValueInt="screenItem.MinUserLevel" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "MinUserLevel")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "cbxIsActive")?.IsVisible)">
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "cbxIsActive")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="checkbox"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "cbxIsActive")?.IsDisabled)"
+						 @bind-ValueBool="screenItem.IsActive" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "IsActive")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "cbxIsVisible")?.IsVisible)">
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "cbxIsVisible")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="checkbox"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "cbxIsVisible")?.IsDisabled)"
+						 @bind-ValueBool="screenItem.IsVisible" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "IsVisible")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "dtCreateDate")?.IsVisible)">
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "dtCreateDate")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<input type="date" @bind="screenItem.CreateDate" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "CreateDate")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtSSTableId")?.IsVisible)">
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtSSTableId")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="number"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtSSTableId")?.IsDisabled)"
+						 @bind-ValueInt="screenItem.SSTableId" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "SSTableId")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtPresentationSequence")?.IsVisible)">
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtPresentationSequence")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="number"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtPresentationSequence")?.IsDisabled)"
+						 @bind-ValueInt="screenItem.PresentationSequence" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "PresentationSequence")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "ckbIsControlScreen")?.IsVisible)">
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "ckbIsControlScreen")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="checkbox"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "ckbIsControlScreen")?.IsDisabled)"
+						 @bind-ValueBool="screenItem.IsControlScreen" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "IsControlScreen")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="true"
+			   Align="center">
+		<div class="divChildCard1">
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</div>
+	</CustomDiv>
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "btnFields")?.IsVisible)"
+			   Align="center">
+		<div class="divChildCard1">
+			<button class="btn btn-primary" @onclick="@(() =>
+                                            NavigateToDetail(screenItem.SystemScreenId,screenItem.Name))">
+				@fieldsList?.FirstOrDefault(p => p.Xname == "btnFields")?.Name
+			</button>
+		</div>
+	</CustomDiv>
+
+</EditForm>
+
+
+@code {
+	[Parameter] public int id { get; set; }
+
+	[SupplyParameterFromForm]
+	private SystemScreen screenItem { get; set; } = new SystemScreen();
+
+	private SystemScreen? screen { get; set; }
+	private List<SystemScreenField>? fieldsList { get; set; }
+	private List<ValidatorModel>? validator { get; set; }
+
+	private List<DropdownListItems>? dropDownItemCategory { get; set; }
+	private DropdownListItems? selectedItemCategory { get; set; }
+
+	private string? Message { get; set; } = "";
+	private bool IsVisible { get; set; } = false;
+	private int DivType { get; set; } = 0;
+
+	protected override async Task OnInitializedAsync()
+	{
+		var itemjson = await _ws.Get("GetTableById", $"SystemScreen/{id}");
+		screenItem = JsonConvert.DeserializeObject<SystemScreen>(itemjson);
+		
+		(fieldsList, screen) = await GlobalHelper.GetScreenFields(_ws, "SystemScreenMaintenancePage"); //ToChange
+	}
+
+	public async Task Submit()
+	{
+		validator = _vh.Validate(screenItem, fieldsList);
+		if (validator.Count() == 0)
+		{
+			try
+			{
+				if (screenItem != null)
+				{
+					if (id != 0)
+					{
+						await _ws.Put("PutObject", "SystemScreen", JsonConvert.SerializeObject(screenItem));
+					}
+					else
+					{
+						await _ws.Post("PostObject", "SystemScreen", JsonConvert.SerializeObject(screenItem));
+					}
+				}
+				await SetMessageProperties("Salvo", true, 2);
+			}
+			catch (Exception e)
+			{
+				await SetMessageProperties("Erro", true, 1);
+			}
+		}
+	}
+	private async Task SetMessageProperties(string msg, bool isVisible, int divType)
+	{
+		Message = msg;
+		IsVisible = isVisible;
+		DivType = divType;
+		StateHasChanged();
+
+		await _js.InvokeVoidAsync("scrollAndFocus", "lblErrorMessage", "up");
+		await Task.Delay(3000);
+
+		Message = string.Empty;
+		IsVisible = false;
+		DivType = 0;
+		StateHasChanged();
+	}
+	private void NavigateToDetail(int id, string name)
+	{
+		var navOption = id != 0 ? $"/SystemScreenFieldMaitenancePage/{id}/{name}" : $"/SystemScreenFieldMaitenancePage";//To change
+		_navig.NavigateTo(navOption);
+	}
+}

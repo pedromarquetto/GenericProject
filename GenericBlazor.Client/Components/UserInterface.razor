@@ -1,0 +1,61 @@
+﻿@rendermode InteractiveServer
+@attribute [StreamRendering]
+
+@if (_userManager.CurrentUser == null)
+{
+	<div style="padding:1%;">
+		<div style="border:1px solid; border-color:blue; text-align:center;">
+			<a href="CreateEditUserPage">Registrar</a>
+		</div>
+		<div style="border:1px solid; border-color:red; text-align:center; margin-top:5%;">
+			<a href="LoginPage">Login</a>
+		</div>
+	</div>
+}
+else
+{
+	<CustomDiv Visible="true"
+			   Class="divCard1">
+		@if (_userManager.CurrentUser?.Archive != null)
+		{
+			<img style="max-height:50px; border-radius:50px;" src="@($"data:image/jpeg;base64,{Convert.ToBase64String(_userManager.CurrentUser.Archive)}")" />
+		}
+		<a href="#" @onclick="Logoff">@_userManager.CurrentUser?.Name</a>
+	</CustomDiv>
+}
+
+
+@code {
+
+	protected override async Task OnAfterRenderAsync(bool firstrender)
+	{
+		if (firstrender)
+		{
+			if (_userManager.CurrentUser == null)
+			{
+				var a = _companyManager.CompanyConfig?.CompanyConfigurationId;
+				var userJson = await _userManager.GetCookie(_js, "User");
+				if (!string.IsNullOrEmpty(userJson))
+				{
+					var user = JsonConvert.DeserializeObject<Users>(userJson,new JsonSerializerSettings 
+						{ NullValueHandling = NullValueHandling.Include});
+					var completeUserJson = await _ws.Get("GetTableById",$"Users/{user.UsersId}");
+					var completeUser = JsonConvert.DeserializeObject<Users>(completeUserJson, new JsonSerializerSettings
+						{ NullValueHandling = NullValueHandling.Include });
+
+					//Complete user has the archive
+					await _userManager.SetCurrentUser(completeUser);
+					await _userManager.SetCookie(_js, userJson);
+					StateHasChanged();
+				}
+			}
+		}
+	}
+
+	public async Task Logoff()
+	{
+		await _userManager.SetCurrentUser(null);
+		await _userManager.DeleteCookie(_js, "User");
+		StateHasChanged();
+	}
+}

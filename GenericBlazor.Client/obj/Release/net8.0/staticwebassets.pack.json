@@ -1,0 +1,65 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\plcm9\\source\\repos\\GenericBlazor\\GenericBlazor.Client\\bin\\Release\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\Users\\plcm9\\source\\repos\\GenericBlazor\\GenericBlazor.Client\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\GenericBlazor.Client.bundle.scp.css",
+      "PackagePath": "staticwebassets\\GenericBlazor.Client.lklg6a77dj.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\plcm9\\source\\repos\\GenericBlazor\\GenericBlazor.Client\\wwwroot\\appsettings.Development.json",
+      "PackagePath": "staticwebassets\\appsettings.Development.json"
+    },
+    {
+      "Id": "C:\\Users\\plcm9\\source\\repos\\GenericBlazor\\GenericBlazor.Client\\wwwroot\\appsettings.json",
+      "PackagePath": "staticwebassets\\appsettings.json"
+    },
+    {
+      "Id": "C:\\Users\\plcm9\\source\\repos\\GenericBlazor\\GenericBlazor.Client\\wwwroot\\lib\\jquery\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\plcm9\\source\\repos\\GenericBlazor\\GenericBlazor.Client\\wwwroot\\lib\\jquery\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\plcm9\\source\\repos\\GenericBlazor\\GenericBlazor.Client\\wwwroot\\lib\\jquery\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\plcm9\\source\\repos\\GenericBlazor\\GenericBlazor.Client\\wwwroot\\lib\\jquery\\jquery.slim.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\jquery.slim.js"
+    },
+    {
+      "Id": "C:\\Users\\plcm9\\source\\repos\\GenericBlazor\\GenericBlazor.Client\\wwwroot\\lib\\jquery\\jquery.slim.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\jquery.slim.min.js"
+    },
+    {
+      "Id": "C:\\Users\\plcm9\\source\\repos\\GenericBlazor\\GenericBlazor.Client\\wwwroot\\lib\\jquery\\jquery.slim.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\jquery.slim.min.map"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.GenericBlazor.Client.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.GenericBlazor.Client.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.GenericBlazor.Client.props",
+      "PackagePath": "build\\GenericBlazor.Client.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.GenericBlazor.Client.props",
+      "PackagePath": "buildMultiTargeting\\GenericBlazor.Client.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.GenericBlazor.Client.props",
+      "PackagePath": "buildTransitive\\GenericBlazor.Client.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

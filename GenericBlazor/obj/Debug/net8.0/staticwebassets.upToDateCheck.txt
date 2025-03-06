@@ -1,0 +1,15 @@
+wwwroot\app.css
+wwwroot\bootstrap\bootstrap.min.css
+wwwroot\bootstrap\bootstrap.min.css.map
+wwwroot\favicon.png
+wwwroot\generic.css
+wwwroot\Images\Back-100.png
+wwwroot\Images\Back-35.png
+wwwroot\Images\praia.jpeg
+wwwroot\jquery.js
+wwwroot\jquery.min.js
+wwwroot\jquery.min.map
+wwwroot\jquery.slim.js
+wwwroot\jquery.slim.min.js
+wwwroot\jquery.slim.min.map
+wwwroot\jsmanager.js

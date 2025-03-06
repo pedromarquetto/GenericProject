@@ -1,0 +1,31 @@
+﻿@using System.Net.Http
+@using System.Net.Http.Json
+@using Microsoft.AspNetCore.Components.Forms
+@using static Microsoft.AspNetCore.Components.Web.RenderMode
+@using Microsoft.AspNetCore.Components.Web.Virtualization
+@using Microsoft.JSInterop
+@using GenericBlazor
+@using GenericBlazor.Client
+@using GenericBlazor.General
+@using GenericBlazor.Layout
+@using GenericBlazor.Client.Layout
+@using GenericBlazor.Client.Components
+@using GenericBlazor.Shared.Models
+@using GenericBlazor.Shared.Validator
+@using GenericBlazor.Shared.Models.ModelHelper
+@using GenericBlazor.Shared.WebServiceHelper
+@using Newtonsoft.Json
+@using Microsoft.AspNetCore.Components.Sections
+@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.AspNetCore.Components.Routing
+@using SixLabors.ImageSharp
+@using SixLabors.ImageSharp.Formats.Jpeg
+@using SixLabors.ImageSharp.Processing
+
+
+@inject WebServiceConnection _ws
+@inject NavigationManager _navig
+@inject ValidatorHelper _vh
+@inject IJSRuntime _js
+@inject IUserManager _userManager
+@inject ICompanyManager _companyManager

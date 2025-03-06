@@ -1,0 +1,297 @@
+﻿@page "/CompanyArchiveMaintenancePage/{Id:int}"
+
+@rendermode @(new InteractiveAutoRenderMode(false))
+@attribute [StreamRendering]
+
+
+<CustomDiv Visible="@IsVisible" DivType="@DivType" Class="divCard" Id="lblErrorMessage">
+    <label>@Message</label>
+</CustomDiv>
+
+<CustomDiv Class="divCard1 border"
+           Visible="@(_companyManager.CompanyConfig.IsShowScreenName)"
+           DivType="3">
+    <div class="divChildCard1">
+        <h3>@screen?.Name</h3>
+    </div>
+</CustomDiv>
+
+<div class="customContainer">
+
+    @if (fieldsList?.Count() > 0)
+    {
+		<CustomDiv Class="divCard1">
+            @* <CustomDiv Class="divCard2"
+                        Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtSearch")?.IsVisible)">
+                <div class="divChildCard1">
+                    <label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtSearch")?.Name</label>
+                </div>
+                <div class="divChildCard1">
+                    <input @bind="filter" @bind:event="oninput" @bind:after="FilterItems" />
+                </div>
+            </CustomDiv> *@
+            
+            <QuickGrid Items="@filteredItems">
+                @foreach (var field in fieldsList)
+                {
+                    @if (field.IsVisible)
+                    {
+                        switch (field.Xname)
+                        {
+                            case "gridCol_ButtonEdit":
+                                <TemplateColumn Title="@field.Name">
+                                    <div>
+                                        <button class="btn btn-outline-info" @onclick="@(() => 
+                                                EditItem(context.CompanyArchiveId))">
+                                            @field.Name
+                                        </button>
+                                    </div>
+                                </TemplateColumn>
+                                break;
+                            case "gridCol_CompanyArchiveId":
+                                <PropertyColumn Sortable="true" Title="@field.Name" Property="@(p => p.CompanyArchiveId)" />
+                                break;
+                            case "gridCol_CompanyId":
+                                <PropertyColumn Sortable="true" Title="@field.Name" Property="@(p => p.CompanyId)" />
+                                break;
+                            case "gridCol_Archive":
+                                <TemplateColumn Title="@field.Name">
+                                    <div>
+                                        <img style="max-height:50px;" src="@($"data:image/jpeg;base64,{Convert.ToBase64String(context.Archive)}")" />
+                                    </div>
+                                </TemplateColumn>
+                                break;
+                            case "gridCol_PresentationSequence":
+                                <PropertyColumn Sortable="true" Title="@field.Name" Property="@(p => p.PresentationSequence)" />
+                                break;
+                            case "gridCol_IsActive":
+                                <PropertyColumn Sortable="true" Title="@field.Name" Property="@(p => p.IsActive)" />
+                                break;
+                            case "gridCol_CreateDate":
+                                <PropertyColumn Sortable="true" Title="@field.Name" Property="@(p => p.CreateDate)" />
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                }
+            </QuickGrid>
+        </CustomDiv>
+    }
+    else
+    {
+        <label>Loading...</label>
+    }
+    <EditForm Class="customContainer" Model="item" OnValidSubmit="Submit">
+
+        <CustomDiv Class="divCard2"
+                   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyArchiveId")?.IsVisible)"
+                   Align="center"
+                   Id="txtCompanyArchiveId">
+            <div class="divChildCard1">
+                <label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyArchiveId")?.Name</label>
+            </div>
+            <div class="divChildCard1">
+                <CustomInput Type="number"
+                             TextAlign="center"
+                             Width="35"
+                             Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyArchiveId")?.IsDisabled)"
+                             @bind-ValueInt="item.CompanyArchiveId" />
+            </div>
+            <div class="divChildCard1">
+                <label>@validator?.FirstOrDefault(p => p.PropertyName == "CompanyArchiveId")?.ValidationMessage</label>
+            </div>
+        </CustomDiv>
+
+        <CustomDiv Class="divCard2"
+                   Align="center"
+                   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyId")?.IsVisible)">
+            <div class="divChildCard1">
+                <label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyId")?.Name</label>
+            </div>
+            <div class="divChildCard1">
+                <CustomInput Type="number"
+                             TextAlign="center"
+                             Width="35"
+                             Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyId")?.IsDisabled)"
+                             @bind-ValueInt="item.CompanyId" />
+            </div>
+            <div class="divChildCard1">
+                <label>@validator?.FirstOrDefault(p => p.PropertyName == "CompanyId")?.ValidationMessage</label>
+            </div>
+        </CustomDiv>
+
+        <CustomDiv Class="divCard2"
+                   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "fileArchive")?.IsVisible)"
+                   Align="center">
+
+            <div class="divChildCard1">
+                <label>@fieldsList?.FirstOrDefault(p => p.Xname == "fileArchive")?.Name</label>
+            </div>
+            <div class="divChildCard1">
+                <CustomInput Type="file"
+                             Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "fileArchive")?.IsDisabled)"
+                             @bind-ValueByte="item.Archive"
+                             ArchiveType="image" />
+            </div>
+            @* <div class="divChildCard1">
+            <label>@validator?.FirstOrDefault(p => p.PropertyName == "Archive")?.ValidationMessage</label>
+            </div> *@
+        </CustomDiv>
+
+        <CustomDiv Class="divCard2"
+                   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtPresentationSequence")?.IsVisible)"
+                   Align="center">
+
+            <div class="divChildCard1">
+                <label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtPresentationSequence")?.Name</label>
+            </div>
+            <div class="divChildCard1">
+                <CustomInput Type="number"
+                             TextAlign="center"
+                             Width="35"
+                             Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtPresentationSequence")?.IsDisabled)"
+                             @bind-ValueInt="item.PresentationSequence" />
+            </div>
+            <div class="divChildCard1">
+                <label>@validator?.FirstOrDefault(p => p.PropertyName == "PresentationSequence")?.ValidationMessage</label>
+            </div>
+        </CustomDiv>
+
+        <CustomDiv Class="divCard2"
+                   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "cbxIsActive")?.IsVisible)"
+                   Align="center">
+            <div class="divChildCard1">
+                <label>@fieldsList?.FirstOrDefault(p => p.Xname == "cbxIsActive")?.Name</label>
+            </div>
+            <div class="divChildCard1">
+                <CustomInput Type="checkbox"
+                             TextAlign="center"
+                             Width="100"
+                             Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "cbxIsActive")?.IsDisabled)"
+                             @bind-ValueBool="item.IsActive" />
+            </div>
+            <div class="divChildCard1">
+                <label>@validator?.FirstOrDefault(p => p.PropertyName == "IsActive")?.ValidationMessage</label>
+            </div>
+        </CustomDiv>
+
+        <CustomDiv Class="divCard2"
+                   Align="center"
+                   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "dtCreateDate")?.IsVisible)">
+
+            <div class="divChildCard1">
+                <label>@fieldsList?.FirstOrDefault(p => p.Xname == "dtCreateDate")?.Name</label>
+            </div>
+            <div class="divChildCard1">
+                <input type="date" @bind="@item.CreateDate" />
+            </div>
+            <div class="divChildCard1">
+                <label>@validator?.FirstOrDefault(p => p.PropertyName == "CreateDate")?.ValidationMessage</label>
+            </div>
+        </CustomDiv>
+
+        <CustomDiv Class="divCard1"
+                   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "btnSave")?.IsVisible)"
+                   Align="center">
+            <div class="divChildCard1">
+                <button type="submit" class="btn btn-primary">@fieldsList?.FirstOrDefault(p => p.Xname == "btnSave")?.Name</button>
+            </div>
+        </CustomDiv>
+    </EditForm>
+</div>
+
+@code {
+    [Parameter] public int Id { get; set; }
+
+    [SupplyParameterFromForm]
+    private CompanyArchive item { get; set; } = new CompanyArchive(); //ToChange
+    public IQueryable<CompanyArchive>? items { get; set; } //To change
+    public IQueryable<CompanyArchive>? filteredItems { get; set; } //To change
+
+    private SystemScreen? screen { get; set; }
+    private List<SystemScreenField>? fieldsList { get; set; }
+    private List<ValidatorModel>? validator { get; set; }
+
+    public string? filter { get; set; } = "";
+    private string? Message { get; set; } = "";
+    private bool IsVisible { get; set; } = false;
+    private int DivType { get; set; } = 0;
+
+    private void EditItem(int itemid)
+    {
+        item = items.FirstOrDefault(p => p.CompanyArchiveId == itemid);
+        _js.InvokeVoidAsync("scrollAndFocus", "txtCompanyArchiveId", "down");
+        StateHasChanged();
+    }
+    protected override async Task OnInitializedAsync()
+    {
+        items = filteredItems = await GlobalHelper.GetTableData(_ws, items, "CompanyArchive");//To change
+        (fieldsList, screen) = await GlobalHelper.GetScreenFields(_ws, "CompanyArchiveMaintenancePage"); //ToChange
+    }
+    private async Task Submit()
+    {
+        validator = _vh.Validate(item, fieldsList);
+        if (validator.Count() == 0)
+        {
+            try
+            {
+                var list = _companyManager.CompanyConfig?.CompanyArchives;
+                if (item.CompanyArchiveId == 0)
+                {
+                    list?.Add(item);
+                }
+                else
+                {
+                    var actualitem = list?.FirstOrDefault(p => p.CompanyArchiveId == item.CompanyArchiveId);
+                    list.Remove(actualitem);
+                    list.Add(item);
+                }
+                var config = _companyManager.CompanyConfig;
+                if (config != null)
+                {
+                    config.CompanyArchives = list;
+                }
+                
+                if (item != null)
+                {
+                    if (item.CompanyArchiveId != 0)
+                    {
+                        await _ws.Put("PutObject", "CompanyArchive", JsonConvert.SerializeObject(item)); //ToChange
+                        await _companyManager.SetCompanyConfiguration(config);
+                    }
+                    else
+                    {
+                        await _ws.Post("PostObject", "CompanyArchive", JsonConvert.SerializeObject(item)); //ToChange
+                        await _companyManager.SetCompanyConfiguration(config);
+					}
+				}
+				await SetMessageProperties("Salvo", true, 2);
+			}
+			catch (Exception e)
+			{
+				await SetMessageProperties("Erro", true, 1);
+			}
+		}
+	}
+    // private void FilterItems()
+    // {
+    //     filteredItems = items;
+    //     filteredItems = string.IsNullOrEmpty(filter) == false ? filteredItems.Where(p => p.Name.ToLower().Contains(filter.ToLower())) : filteredItems;
+    // }
+	private async Task SetMessageProperties(string msg, bool isVisible, int divType)
+	{
+		Message = msg;
+		IsVisible = isVisible;
+		DivType = divType;
+		StateHasChanged();
+
+		await _js.InvokeVoidAsync("scrollAndFocus", "lblErrorMessage","up");
+		await Task.Delay(3000);
+
+		Message = string.Empty;
+		IsVisible = false;
+		DivType = 0;
+		StateHasChanged();
+	}
+}

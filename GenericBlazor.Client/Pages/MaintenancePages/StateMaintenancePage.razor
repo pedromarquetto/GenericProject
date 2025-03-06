@@ -1,0 +1,202 @@
+﻿@page "/StateMaintenancePage"
+@page "/StateMaintenancePage/{Id:int}" 
+@* ToChange *@
+@rendermode @(new InteractiveAutoRenderMode(false))
+@attribute [StreamRendering]
+
+<CustomDiv Visible="@IsVisible" DivType="@DivType" Class="divCard" Id="lblErrorMessage">
+	<label>@Message</label>
+</CustomDiv>
+
+@if (fieldsList?.Count() > 0)
+{
+	<CustomDiv Class="divCard1 border"
+			   Visible="@(_companyManager.CompanyConfig.IsShowScreenName)"
+			   DivType="3">
+		<div class="divChildCard1">
+			<h3>@screen?.Name</h3>
+		</div>
+	</CustomDiv>
+
+	<EditForm class="customContainer" Model="item" OnValidSubmit="Submit">
+		@* ToChange *@
+		<CustomDiv Class="divCard2"
+				   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtStateId")?.IsVisible)"
+				   Align="center">
+
+			<div class="divChildCard1">
+				<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtStateId")?.Name</label>
+			</div>
+			<div class="divChildCard1">
+				<CustomInput Type="number"
+							 TextAlign="center"
+							 Width="35"
+							 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtStateId")?.IsDisabled)"
+							 @bind-ValueInt="item.StateId" />
+			</div>
+			<div class="divChildCard1">
+				<label>@validator?.FirstOrDefault(p => p.PropertyName == "StateId")?.ValidationMessage</label>
+			</div>
+		</CustomDiv>
+
+		<CustomDiv Class="divCard2"
+				   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCountryId")?.IsVisible)"
+				   Align="center">
+
+			<div class="divChildCard1">
+				<label>@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCountryId")?.Name)</label>
+			</div>
+			<div class="divChildCard1">
+				<CustomInput Type="dropdown"
+							 TextAlign="center"
+							 Width="35"
+							 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCountryId")?.IsDisabled)"
+							 Dropdownitems="dropDownCountry"
+							 SelectedDropdownItem="selectedCountry"
+							 @bind-ValueInt="item.CountryId" />
+			</div>
+			<div class="divChildCard1">
+				<label>@validator?.FirstOrDefault(p => p.PropertyName == "CountryId")?.ValidationMessage</label>
+			</div>
+		</CustomDiv>
+
+		<CustomDiv Class="divCard2"
+				   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtName")?.IsVisible)"
+				   Align="center">
+
+			<div class="divChildCard1">
+				<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtName")?.Name</label>
+			</div>
+			<div class="divChildCard1">
+				<CustomInput Type="text"
+							 TextAlign="left"
+							 Width="80"
+							 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtName")?.IsDisabled)"
+							 @bind-Value="item.Name" />
+			</div>
+			<div class="divChildCard1">
+				<label>@validator?.FirstOrDefault(p => p.PropertyName == "Name")?.ValidationMessage</label>
+			</div>
+		</CustomDiv>
+
+		<CustomDiv Class="divCard2"
+				   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "ckbIsActive")?.IsVisible)"
+				   Align="center">
+
+			<div class="divChildCard1">
+				<label>@fieldsList?.FirstOrDefault(p => p.Xname == "ckbIsActive")?.Name</label>
+			</div>
+			<div class="divChildCard1">
+				<CustomInput Type="checkbox"
+							 TextAlign="center"
+							 Width="35"
+							 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "ckbIsActive")?.IsDisabled)"
+							 @bind-ValueBool="item.IsActive" />
+			</div>
+			<div class="divChildCard1">
+				<label>@validator?.FirstOrDefault(p => p.PropertyName == "IsActive")?.ValidationMessage</label>
+			</div>
+		</CustomDiv>
+
+		<CustomDiv Class="divCard2"
+				   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "dtCreateDate")?.IsVisible)"
+				   Align="center">
+
+			<div class="divChildCard1">
+				<label>@fieldsList?.FirstOrDefault(p => p.Xname == "dtCreateDate")?.Name</label>
+			</div>
+			<div class="divChildCard1">
+				<input type="date" @bind="item.CreateDate" />
+			</div>
+			<div class="divChildCard1">
+				<label>@validator?.FirstOrDefault(p => p.PropertyName == "CreateDate")?.ValidationMessage</label>
+			</div>
+		</CustomDiv>
+
+		<CustomDiv Class="divCard1"
+				   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "btnSave")?.IsVisible)"
+				   Align="center">
+			<div class="divChildCard1">
+				<button type="submit" class="btn btn-primary">@(fieldsList?.FirstOrDefault(p => p.Xname == "btnSave")?.Name)</button>
+			</div>
+		</CustomDiv>
+
+	</EditForm>
+}
+else
+{
+	<CustomDiv DivType="4" Class="divCard1" />
+}
+
+@code {
+	[Parameter] public int Id { get; set; }
+
+	[SupplyParameterFromForm]
+	private State item { get; set; } = new State(); //ToChange
+
+	private SystemScreen? screen { get; set; }
+	private List<SystemScreenField>? fieldsList { get; set; }
+	private List<ValidatorModel>? validator { get; set; }
+
+	private List<DropdownListItems>? dropDownCountry { get; set; } //ToChange
+	private DropdownListItems? selectedCountry { get; set; } //ToChange
+
+	private string? Message { get; set; } = "";
+	private bool IsVisible { get; set; } = false;
+	private int DivType { get; set; } = 0;
+
+	protected override async Task OnInitializedAsync()
+	{
+		if (Id != 0)
+		{
+			var json = await _ws.Get("GetTableById", $"State/{Id}"); //ToChange
+			if (!string.IsNullOrEmpty(json))
+			{
+				item = JsonConvert.DeserializeObject<State>(json);//ToChange
+			}
+		}
+		(dropDownCountry, selectedCountry) = await GlobalHelper.DropDownList(_ws, "State", item.StateId); //ToChange
+		(fieldsList, screen) = await GlobalHelper.GetScreenFields(_ws, "StateMaintenancePage"); //ToChange
+	}
+	private async Task Submit()
+	{
+		validator = _vh.Validate(item, fieldsList);
+		if (validator.Count() == 0)
+		{
+			try
+			{
+				if (item != null)
+				{
+					if (Id != 0)
+					{
+						await _ws.Put("PutObject", "State", JsonConvert.SerializeObject(item)); //ToChange
+					}
+					else
+					{
+						await _ws.Post("PostObject", "State", JsonConvert.SerializeObject(item)); //ToChange
+					}
+				}
+				await SetMessageProperties("Salvo", true, 2);
+			}
+			catch (Exception e)
+			{
+				await SetMessageProperties("Erro", true, 1);
+			}
+		}
+	}
+	private async Task SetMessageProperties(string msg, bool isVisible, int divType)
+	{
+		Message = msg;
+		IsVisible = isVisible;
+		DivType = divType;
+		StateHasChanged();
+
+		await _js.InvokeVoidAsync("scrollAndFocus", "lblErrorMessage","up");
+		await Task.Delay(3000);
+
+		Message = string.Empty;
+		IsVisible = false;
+		DivType = 0;
+		StateHasChanged();
+	}
+}

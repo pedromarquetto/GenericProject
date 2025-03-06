@@ -1,0 +1,358 @@
+﻿@page "/CompanyConfigurationMaintenancePage/{Id:int}"
+
+
+@rendermode @(new InteractiveAutoRenderMode(false))
+@attribute [StreamRendering]
+
+
+<CustomDiv Visible="@IsVisible" DivType="@DivType" Class="divCard" Id="lblErrorMessage">
+	<label>@Message</label>
+</CustomDiv>
+
+
+<EditForm class="customContainer" Model="item" OnValidSubmit="Submit">
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyConfigurationId")?.IsVisible)"
+			   Align="center">
+
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyConfigurationId")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="number"
+						 TextAlign="center"
+						 Width="35"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyConfigurationId")?.IsDisabled)"
+						 @bind-ValueInt="item.CompanyConfigurationId" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "CompanyConfigurationId")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyId")?.IsVisible)"
+			   Align="center">
+
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyId")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="number"
+						 TextAlign="center"
+						 Width="35"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyId")?.IsDisabled)"
+						 @bind-ValueInt="item.CompanyId" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "CompanyId")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+	
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtLoadingMessage")?.IsVisible)"
+			   Align="center">
+
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtLoadingMessage")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="text"
+						 TextAlign="left"
+						 Width="80"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtLoadingMessage")?.IsDisabled)"
+						 @bind-Value="item.LoadingMessage" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "LoadingMessage")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtHeaderColor")?.IsVisible)"
+			   Align="center">
+
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtHeaderColor")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="color"
+						 TextAlign="left"
+						 Width="80"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtHeaderColor")?.IsDisabled)"
+						 @bind-Value="item.HeaderColor" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "HeaderColor")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtFooterColor")?.IsVisible)"
+			   Align="center">
+
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtFooterColor")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="color"
+						 TextAlign="left"
+						 Width="80"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtFooterColor")?.IsDisabled)"
+						 @bind-Value="item.FooterColor" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "FooterColor")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtFontColor")?.IsVisible)"
+			   Align="center">
+
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtFontColor")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="color"
+						 TextAlign="left"
+						 Width="80"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtFontColor")?.IsDisabled)"
+						 @bind-Value="item.FontColor" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "FontColor")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "cbxIsAppOffline")?.IsVisible)"
+			   Align="center">
+
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "cbxIsAppOffline")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="checkbox"
+						 TextAlign="center"
+						 Width="35"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "cbxIsAppOffline")?.IsDisabled)"
+						 @bind-ValueBool="item.IsAppOffline" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "IsAppOffline")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "cbxIsFreightPerNbHood")?.IsVisible)"
+			   Align="center">
+
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "cbxIsFreightPerNbHood")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="checkbox"
+						 TextAlign="center"
+						 Width="35"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "cbxIsFreightPerNbHood")?.IsDisabled)"
+						 @bind-ValueBool="item.IsFreightPerNbHood" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "IsFreightPerNbHood")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "cbxIsLoginWithPhone")?.IsVisible)"
+			   Align="center">
+
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "cbxIsLoginWithPhone")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="checkbox"
+						 TextAlign="center"
+						 Width="35"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "cbxIsLoginWithPhone")?.IsDisabled)"
+						 @bind-ValueBool="item.IsLoginWithPhone" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "IsLoginWithPhone")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "cbxIsLoginWithEmail")?.IsVisible)"
+			   Align="center">
+
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "cbxIsLoginWithEmail")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="checkbox"
+						 TextAlign="center"
+						 Width="35"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "cbxIsLoginWithEmail")?.IsDisabled)"
+						 @bind-ValueBool="item.IsLoginWithEmail" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "IsLoginWithEmail")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "cbxIsShowScreenName")?.IsVisible)"
+			   Align="center">
+
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "cbxIsShowScreenName")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="checkbox"
+						 TextAlign="center"
+						 Width="35"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "cbxIsShowScreenName")?.IsDisabled)"
+						 @bind-ValueBool="item.IsShowScreenName" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "IsShowScreenName")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "cbxIsDarkMode")?.IsVisible)"
+			   Align="center">
+
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "cbxIsDarkMode")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="checkbox"
+						 TextAlign="center"
+						 Width="35"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "cbxIsDarkMode")?.IsDisabled)"
+						 @bind-ValueBool="item.IsDarkMode" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "IsDarkMode")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "cbxIsActive")?.IsVisible)"
+			   Align="center">
+
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "cbxIsActive")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="checkbox"
+						 TextAlign="center"
+						 Width="35"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "cbxIsActive")?.IsDisabled)"
+						 @bind-ValueBool="item.IsActive" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "IsActive")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "dtCreateDate")?.IsVisible)"
+			   Align="center">
+
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "dtCreateDate")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<input type="datetime" @bind="item.CreateDate"/>
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "CreateDate")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard1"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "btnSave")?.IsVisible)"
+			   Align="center">
+		<div class="divChildCard1">
+			<button type="submit" class="btn btn-primary">@(fieldsList?.FirstOrDefault(p => p.Xname == "btnSave")?.Name)</button>
+		</div>
+	</CustomDiv>
+	
+</EditForm>
+
+
+@code {
+
+	[Parameter] public int Id { get; set; }
+
+	[SupplyParameterFromForm]
+	private CompanyConfiguration item { get; set; } = new CompanyConfiguration();
+
+	private SystemScreen? screen { get; set; }
+	private List<SystemScreenField>? fieldsList { get; set; }
+	private List<ValidatorModel>? validator { get; set; }
+
+	private string? Message { get; set; } = "";
+	private bool IsVisible { get; set; } = false;
+	private int DivType { get; set; } = 0;
+
+	protected override async Task OnInitializedAsync()
+	{
+		if (Id != 0)
+		{
+			var json = await _ws.Get("GetTableById", $"CompanyConfiguration/{Id}");
+			if (!string.IsNullOrEmpty(json))
+			{
+				item = JsonConvert.DeserializeObject<CompanyConfiguration>(json);
+			}
+		}
+		(fieldsList, screen) = await GlobalHelper.GetScreenFields(_ws, "CompanyConfigurationMaintenancePage"); //ToChange
+	}
+	public async Task Submit()
+	{
+		validator = _vh.Validate(item, fieldsList);
+		if (validator.Count() == 0)
+		{
+			try
+			{
+				if (item != null)
+				{
+					if (Id != 0)
+					{
+						await _ws.Put("PutObject", "CompanyConfiguration", JsonConvert.SerializeObject(item));
+						item.CompanyArchives = _companyManager.CompanyConfig?.CompanyArchives;
+						await _companyManager.SetCompanyConfiguration(item);
+					}
+					else
+					{
+						await _ws.Post("PostObject", "CompanyConfiguration", JsonConvert.SerializeObject(item));
+					}
+				}
+				await SetMessageProperties("Salvo", true, 2);
+			}
+			catch (Exception e)
+			{
+				await SetMessageProperties("Erro", true, 1);
+			}
+		}
+	}
+	private async Task SetMessageProperties(string msg, bool isVisible, int divType)
+	{
+		Message = msg;
+		IsVisible = isVisible;
+		DivType = divType;
+		StateHasChanged();
+
+		await _js.InvokeVoidAsync("scrollAndFocus", "lblErrorMessage", "up");
+		await Task.Delay(3000);
+
+		Message = string.Empty;
+		IsVisible = false;
+		DivType = 0;
+		StateHasChanged();
+	}
+}

@@ -1,0 +1,103 @@
+﻿@page "/NbHoodControlPage"
+@rendermode @(new InteractiveAutoRenderMode(false))
+@attribute [StreamRendering]
+
+@if (items?.Count() > 0 && fieldsList?.Count() > 0)
+{
+    <CustomDiv Class="divCard1 border"
+               Visible="@(_companyManager.CompanyConfig.IsShowScreenName)"
+               DivType="3">
+        <div class="divChildCard1">
+            <h3>@screen?.Name</h3>
+        </div>
+    </CustomDiv>
+
+	<div class="customContainer">
+        <CustomDiv Class="divCard1"
+                   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "btnNew")?.IsVisible)">
+            <div class="divChildCard1">
+                <button class="btn btn-outline-info" @onclick="@(() => NavigateToDetail(0))">@fieldsList.FirstOrDefault(p => p.Xname == "btnNew")?.Name</button>
+            </div>
+        </CustomDiv>
+        <CustomDiv Class="divCard1"
+                   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtSearch")?.IsVisible)">
+            <div class="divChildCard1">
+                <label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtSearch")?.Name</label>
+            </div>
+            <div class="divChildCard1">
+                <input @bind="filter" @bind:event="oninput" @bind:after="FilterItems" />
+            </div>
+        </CustomDiv>
+        <QuickGrid Items="@filteredItems">
+            @foreach (var field in fieldsList)
+            {
+                @if (field.IsVisible) 
+                {
+                    switch (field.Xname)
+                    {
+                        //To change
+                        case "gridCol_ButtonDetail":
+                            <TemplateColumn Title="@field.Name">
+                                <div>
+                                    <button class="btn btn-outline-info" @onclick="@(() => NavigateToDetail(context.NbHoodId))">
+                                        @fieldsList.FirstOrDefault(p => p.Xname == "gridCol_ButtonDetail")?.Name
+                                    </button>
+                                </div>
+                            </TemplateColumn>
+                            break;
+                        case "gridCol_NbHoodId":
+                            <PropertyColumn Sortable="true" Title="@field.Name" Property="@(p => p.NbHoodId)" />
+                            break;
+                        case "gridCol_CityId":
+                            <PropertyColumn Sortable="true" Title="@field.Name" Property="@(p => p.CityId)" />
+                            break;
+                        case "gridCol_Name":
+                            <PropertyColumn Sortable="true" Title="@field.Name" Property="@(p => p.Name)" />
+                            break;
+                        case "gridCol_NbHoodFreight":
+                            <PropertyColumn Sortable="true" Title="@field.Name" Property="@(p => p.NbHoodFreight)" />
+                            break;
+                        case "gridCol_IsActive":
+                            <PropertyColumn Sortable="true" Title="@field.Name" Property="@(p => p.IsActive)" />
+                            break;
+                        case "gridCol_CreateDate":
+                            <PropertyColumn Sortable="true" Title="@field.Name" Property="@(p => p.CreateDate)" />
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
+        </QuickGrid>
+	</div>
+}
+else
+{
+    <CustomDiv DivType="4" Class="divCard1" />
+}
+
+@code {
+    public IQueryable<NbHood>? items { get; set; } //To change 
+    public IQueryable<NbHood>? filteredItems { get; set; } //To change
+
+    public string filter { get; set; } = "";
+
+    private SystemScreen? screen { get; set; }
+    private List<SystemScreenField>? fieldsList { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        items = filteredItems = await GlobalHelper.GetTableData(_ws, items, "NbHood");//To change
+        (fieldsList,screen) = await GlobalHelper.GetScreenFields(_ws, "NbHoodControlPage");//To change
+    }
+    private void FilterItems()
+    {
+        filteredItems = items;
+        filteredItems = string.IsNullOrEmpty(filter) == false ? filteredItems.Where(p => p.Name.ToLower().Contains(filter.ToLower())) : filteredItems;
+    }
+    private void NavigateToDetail(int id)
+    {
+        var navOption = id != 0 ? $"/NbHoodMaintenancePage/{id}" : $"/NbHoodMaintenancePage";//To change
+        _navig.NavigateTo(navOption);
+    }
+}

@@ -1,0 +1,128 @@
+﻿@using Newtonsoft.Json
+@rendermode InteractiveServer
+@attribute [StreamRendering]
+
+@inject WebServiceConnection _ws;
+@inject NavigationManager _navig;
+
+@if (IsShowSidebar == 1)
+{
+    <div class="sidebar">
+        <div class="top-row ps-3 navbar navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="">GenericBlazor</a>
+            </div>
+        </div>
+        <input type="checkbox" title="Navigation menu" class="navbar-toggler" />
+
+        <button class="btn btn-primary" @onclick="Hide_Show_Sidebar">Abrir/Fechar - @error</button>
+
+        <div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
+            <nav class="flex-column">
+
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                        <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
+                    </NavLink>
+                </div>
+
+                @if (items?.Count() > 0)
+                {
+                    foreach (var screen in items)
+                    {
+                        <div class="nav-item px-3">
+                            @if (screen.Code != "GeneralControlPage")
+                            {
+                                <NavLink class="nav-link" href="@screen.Code">
+                                    <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> @screen.Name
+                                </NavLink>
+                            }
+                            else
+                            {
+                                <NavLink class="nav-link" @onclick="ShowSubMenu">
+                                    <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> @screen.Name
+                                </NavLink>
+                                @if (IsShowSubMenu)
+                                {
+                                    <div class="divChildCard1">
+                                        <input @bind="filter" @bind:event="oninput" @bind:after="FilterItems" />
+                                    </div>
+                                    foreach (var controlScreens in filteredSubItems)
+                                    {
+                                        <div style="padding:10%;">
+                                            <NavLink class="nav-link" href="@controlScreens.Code">
+                                                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> @controlScreens.Name
+                                            </NavLink>
+                                        </div>
+                                    }
+                                }
+
+                            }
+                        </div>
+                    }
+                }
+
+            </nav>
+        </div>
+    </div>
+}
+else
+{
+    <button class="btn btn-primary" @onclick="Hide_Show_Sidebar">Abrir/Fechar</button>
+}
+
+@code{
+
+    [Parameter] public bool IsFromMain { get; set; } = true;
+
+    public IQueryable<SystemScreen> items { get; set; }
+    public IQueryable<SystemScreen> itemsFull { get; set; }
+    public IQueryable<SystemScreen> filteredSubItems { get; set; }
+
+    public int IsShowSidebar { get; set; } = 1;
+    public bool IsShowSubMenu { get; set; } = false;
+    public string? filter { get; set; }
+
+    public string error { get; set; } = "";
+
+    public void Hide_Show_Sidebar(){
+        if (IsShowSidebar == 1)
+        {
+            IsShowSidebar = 0;
+        }
+        else
+        {
+            IsShowSidebar = 1;
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var itemlist = await _ws.Get("GetTable", $"SystemScreen");
+
+        if (!string.IsNullOrEmpty(itemlist))
+        {
+			try
+			{
+				itemsFull = JsonConvert.DeserializeObject<List<SystemScreen>>(itemlist).AsQueryable().Where(p => p.IsVisible).OrderBy(p => p.PresentationSequence);
+				filteredSubItems = itemsFull.Where(p => p.Code != "GeneralControlPage");
+				items = itemsFull.Where(p => p.IsVisible && !p.IsControlScreen);
+			}
+			catch (Exception ex)
+			{
+				error = ex.Message;
+			}
+        }
+    }
+
+    private void ShowSubMenu()
+    {
+        IsShowSubMenu = IsShowSubMenu == true ? false : true;
+    }
+
+    private void FilterItems()
+    {
+        filteredSubItems = string.IsNullOrEmpty(filter) == false ? itemsFull.Where(p => p.IsControlScreen && p.Name.ToLower().Contains(filter)) 
+        : itemsFull.Where(p => p.Code != "GeneralControlPage");
+    }
+}

@@ -1,0 +1,73 @@
+/*Standard layout*/
+.customContainer {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+    .customContainer .divCard1 {
+        width: 98%;
+        margin: 1%;
+    }
+    .customContainer .divCard2 {
+        width: 48%;
+        margin: 1%;
+    }
+    .customContainer .divCard3 {
+        width: 31%;
+        margin: 1%;
+    }
+    .customContainer .divCard4 {
+        width: 23%;
+        margin: 1%;
+    }
+        .customContainer .divCard1 .divChildCard1,
+        .customContainer .divCard2 .divChildCard1,
+        .customContainer .divCard3 .divChildCard1,
+        .customContainer .divCard4 .divChildCard1 {
+            width: 98%;
+            height: auto;
+            /*background-color: green;*/
+            margin: 1%;
+        }
+        .customContainer .divCard1 .divChildCard2,
+        .customContainer .divCard2 .divChildCard2,
+        .customContainer .divCard3 .divChildCard2,
+        .customContainer .divCard4 .divChildCard2 {
+            width: 48%;
+            height: auto;
+            /*background-color: green;*/
+            margin: 1%;
+        }
+        .customContainer .divCard1 .divChildCard3,
+        .customContainer .divCard2 .divChildCard3,
+        .customContainer .divCard3 .divChildCard3,
+        .customContainer .divCard4 .divChildCard3 {
+            width: 31%;
+            height: auto;
+            /*background-color: green;*/
+            margin: 1%;
+        }
+        .customContainer .divCard1 .divChildCard4,
+        .customContainer .divCard2 .divChildCard4,
+        .customContainer .divCard3 .divChildCard4,
+        .customContainer .divCard4 .divChildCard4 {
+            width: 23%;
+            height: auto;
+            /*background-color: green;*/
+            margin: 1%;
+        }
+
+.border{
+    border:1px solid;
+    border-radius:30px;
+    border-color:aqua;
+}
+.noMarginAndPadding{
+    margin:0px;
+    padding:0px;
+}
+.heightAuto{
+    height:auto;
+}

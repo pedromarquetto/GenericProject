@@ -1,0 +1,68 @@
+﻿
+@if (Visible == true)
+{
+	@if (DivType == 0)//Normal
+	{
+		<div id="@Id" class="@Class" style="text-align:@Align">
+			@ChildContent
+		</div>
+	}
+	else if (DivType == 1)//Failed
+	{
+		<div id="@Id" style="background-color:red; color: white; text-align:center; font-variant-caps:all-petite-caps;
+				font-weight:bold;" class="@Class">
+			@ChildContent
+		</div>
+	}
+	else if (DivType == 2)//Saved
+	{
+		<div id="@Id" style="background-color:green; color: white; text-align:center; font-variant-caps:all-petite-caps;
+				font-weight:bold;" class="@Class">
+			@ChildContent
+		</div>
+	}
+	else if (DivType == 3)//Title
+	{
+		<div id="@Id" style="color: black; text-align:center; font-variant-caps:all-petite-caps;
+				font-weight:bold;" class="@Class">
+			@ChildContent
+		</div>
+	}
+	else if (DivType == 4)//Loading
+	{
+		<div id="@Id" style="color: black; text-align:center; font-variant-caps:all-petite-caps;
+				font-weight:bold;" class="@Class">
+			<label>@_companyManager.CompanyConfig?.LoadingMessage</label>
+		</div>
+	}
+	else if (DivType == 5)//Stylable div
+	{
+		<div id="@Id" class="@Class" style="@Style">
+			@ChildContent
+		</div>
+	}
+}
+
+@code {
+	[Parameter]
+	public bool? Visible { get; set; } = true;
+
+	[Parameter]
+	public string Class { get; set; } = "";
+	[Parameter]
+	public string Style { get; set; } = "";
+
+	[Parameter]
+	public RenderFragment ChildContent { get; set; }
+
+	[Parameter]
+	public int DivType { get; set; } = 0; // 1-ErrorMessage// 2-Success // 3-Title// 4-Loading //5-Stylable div
+
+	[Parameter]
+	public string Align { get; set; } = "left";
+
+	[Parameter]
+	public string? Id { get; set; }
+
+
+}

@@ -1,0 +1,478 @@
+﻿@page "/CompanyMaintenancePage/{Id:int}"
+
+
+@rendermode @(new InteractiveAutoRenderMode(false))
+@attribute [StreamRendering]
+
+
+<CustomDiv Visible="@IsVisible" DivType="@DivType" Class="divCard">
+	<label>@Message</label>
+</CustomDiv>
+
+
+<EditForm class="customContainer" Model="company" OnValidSubmit="Submit">
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyId")?.IsVisible)"
+			   Align="center">
+
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyId")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="number"
+						 TextAlign="center"
+						 Width="35"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyId")?.IsDisabled)"
+						 @bind-ValueInt="company.CompanyId" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "UsersId")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyName")?.IsVisible)"
+			   Align="center">
+
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyName")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="text"
+						 TextAlign="left"
+						 Width="80"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyName")?.IsDisabled)"
+						 @bind-Value="company.CompanyName" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "CompanyName")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyName2")?.IsVisible)"
+			   Align="center">
+
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyName2")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="text"
+						 TextAlign="left"
+						 Width="80"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyName2")?.IsDisabled)"
+						 @bind-Value="company.CompanyName2" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "CompanyName2")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyAdressStreet")?.IsVisible)"
+			   Align="center">
+
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyAdressStreet")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="text"
+						 TextAlign="left"
+						 Width="80"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyAdressStreet")?.IsDisabled)"
+						 @bind-Value="company.CompanyAdressStreet" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "CompanyAdressStreet")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyAdressStreet")?.IsVisible)"
+			   Align="center">
+
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyAdressNumber")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="text"
+						 TextAlign="left"
+						 Width="80"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyAdressNumber")?.IsDisabled)"
+						 @bind-ValueInt="company.CompanyAdressNumber" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "CompanyAdressNumber")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtNbHoodId")?.IsVisible)"
+			   Align="center">
+
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtNbHoodId")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="dropdown"
+						 TextAlign="center"
+						 Width="35"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtNbHoodId")?.IsDisabled)"
+						 Dropdownitems="dropDownNbHood"
+						 SelectedDropdownItem="selectedNbHood"
+						 @bind-ValueInt="company.NbHoodId"/>
+						 
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "NbHoodId")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyPhone")?.IsVisible)"
+			   Align="center">
+
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyPhone")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="text"
+						 TextAlign="left"
+						 Width="80"
+						 Id="phone"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyPhone")?.IsDisabled)"
+						 @bind-Value="company.CompanyPhone" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "CompanyPhone")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyEmail")?.IsVisible)"
+			   Align="center">
+
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyEmail")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="text"
+						 TextAlign="left"
+						 Width="80"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyEmail")?.IsDisabled)"
+						 @bind-Value="company.CompanyEmail" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "CompanyEmail")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyTypesId")?.IsVisible)"
+			   Align="center">
+
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyTypesId")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="dropdown"
+						 TextAlign="center"
+						 Width="35"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyTypesId")?.IsDisabled)"
+						 Dropdownitems="dropDownCompanyType"
+						 SelectedDropdownItem="selectedCompanyType"
+						 @bind-ValueInt="company.CompanyTypesId" />
+
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "CompanyTypesId")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCEP")?.IsVisible)"
+			   Align="center">
+
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtCEP")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="text"
+						 TextAlign="left"
+						 Width="80"
+						 Id="cep"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCEP")?.IsDisabled)"
+						 @bind-Value="company.CEP" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "CEP")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyFacebookURL")?.IsVisible)"
+			   Align="center">
+
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyFacebookURL")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="text"
+						 TextAlign="left"
+						 Width="80"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyFacebookURL")?.IsDisabled)"
+						 @bind-Value="company.CompanyFacebookURL" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "CompanyFacebookURL")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyInstagramURL")?.IsVisible)"
+			   Align="center">
+
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyInstagramURL")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="text"
+						 TextAlign="left"
+						 Width="80"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyInstagramURL")?.IsDisabled)"
+						 @bind-Value="company.CompanyInstagramURL" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "CompanyInstagramURL")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyLinkedintURL")?.IsVisible)"
+			   Align="center">
+
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyLinkedintURL")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="text"
+						 TextAlign="left"
+						 Width="80"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyLinkedintURL")?.IsDisabled)"
+						 @bind-Value="company.CompanyLinkedinURL" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "CompanyLinkedinURL")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanySiteURL")?.IsVisible)"
+			   Align="center">
+
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanySiteURL")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="text"
+						 TextAlign="left"
+						 Width="80"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanySiteURL")?.IsDisabled)"
+						 @bind-Value="company.CompanySiteURL" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "CompanySiteURL")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyApiURL")?.IsVisible)"
+			   Align="center">
+
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyApiURL")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="text"
+						 TextAlign="left"
+						 Width="80"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtCompanyApiURL")?.IsDisabled)"
+						 @bind-Value="company.CompanyApiURL" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "CompanyApiURL")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "fileCompanyLogo")?.IsVisible)"
+			   Align="center">
+
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "fileCompanyLogo")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="text"
+						 TextAlign="left"
+						 Width="80"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "fileCompanyLogo")?.IsDisabled)"
+						 />
+						 @* @bind-Value="company.CompanyLogo"  *@
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "CompanyLogo")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "cbxIsActive")?.IsVisible)"
+			   Align="center">
+
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "cbxIsActive")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="checkbox"
+						 TextAlign="center"
+						 Width="35"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "cbxIsActive")?.IsDisabled)"
+						 @bind-ValueBool="company.IsActive" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "IsActive")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "dtCreateDate")?.IsVisible)"
+			   Align="center">
+
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "dtCreateDate")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<input type="datetime" @bind="company.CreateDate"/>
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "CreateDate")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard1"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "btnSave")?.IsVisible)"
+			   Align="center">
+		<div class="divChildCard1">
+			<button type="submit" class="btn btn-primary">@(fieldsList?.FirstOrDefault(p => p.Xname == "btnSave")?.Name)</button>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard1"
+			   Visible="true"
+			   Align="center">
+		<div class="divChildCard1">
+			<button class="btn btn-outline-info" @onclick="@(() =>
+                                                NavigateToDetail(1,1))">
+				Archives
+			</button>
+		</div>
+	</CustomDiv>
+	
+	<CustomDiv Class="divCard1"
+			   Visible="true"
+			   Align="center">
+		<div class="divChildCard1">
+			<button class="btn btn-outline-info" @onclick="@(() =>
+                                                NavigateToDetail(1,2))">
+				Config
+			</button>
+		</div>
+	</CustomDiv>
+
+
+</EditForm>
+
+
+@code {
+
+	[Parameter] public int Id { get; set; }
+
+	[SupplyParameterFromForm]
+	private Company company { get; set; } = new Company();
+
+	private SystemScreen? screen { get; set; }
+	private List<SystemScreenField>? fieldsList { get; set; }
+	private List<ValidatorModel>? validator { get; set; }
+
+	private List<DropdownListItems>? dropDownCompanyType { get; set; }
+	private DropdownListItems? selectedCompanyType { get; set; }
+
+	private List<DropdownListItems>? dropDownNbHood { get; set; }
+	private DropdownListItems? selectedNbHood { get; set; }
+
+	private string? Message { get; set; } = "";
+	private bool IsVisible { get; set; } = false;
+	private int DivType { get; set; } = 0;
+
+	protected override async Task OnInitializedAsync()
+	{
+		if (Id != 0)
+		{
+			var nb = await _ws.Get("GetTableById", $"Company/{Id}");
+			if (nb != null && nb != "")
+			{
+				company = JsonConvert.DeserializeObject<Company>(nb);
+			}
+		}
+		(dropDownNbHood, selectedNbHood) = await GlobalHelper.DropDownList(_ws, "NbHood", company?.NbHoodId);
+		(dropDownCompanyType,selectedCompanyType) = await GlobalHelper.DropDownList(_ws, "CompanyTypes", company?.NbHoodId);
+		(fieldsList, screen) = await GlobalHelper.GetScreenFields(_ws, "CompanyMaintenancePage"); //ToChange
+	}
+	public async Task Submit()
+	{
+		validator = _vh.Validate(company, fieldsList);
+		if (validator.Count() == 0)
+		{
+			try
+			{
+				if (company != null)
+				{
+					if (Id != 0)
+					{
+						await _ws.Put("PutObject", "Company", JsonConvert.SerializeObject(company));
+					}
+					else
+					{
+						await _ws.Post("PostObject", "Company", JsonConvert.SerializeObject(company));
+					}
+				}
+				await SetMessageProperties("Salvo", true, 2);
+			}
+			catch (Exception e)
+			{
+				await SetMessageProperties("Erro", true, 1);
+			}
+		}
+	}
+	private async Task SetMessageProperties(string msg, bool isVisible, int divType)
+	{
+		Message = msg;
+		IsVisible = isVisible;
+		DivType = divType;
+		StateHasChanged();
+
+		await _js.InvokeVoidAsync("scrollAndFocus", "lblErrorMessage", "up");
+		await Task.Delay(3000);
+
+		Message = string.Empty;
+		IsVisible = false;
+		DivType = 0;
+		StateHasChanged();
+	}
+	private void NavigateToDetail(int id,int screen)//1 archive // 2 config
+	{
+		var page = screen == 1 ? "CompanyArchiveMaintenancePage" : "CompanyConfigurationMaintenancePage";
+		var navOption = id != 0 ? $"/{page}/{id}" : $"/{page}";//To change
+		_navig.NavigateTo(navOption);
+	}
+}

@@ -1,0 +1,69 @@
+﻿@rendermode InteractiveServer
+
+
+<div class="Nav" style="background-color: @(_companyManager.CompanyConfig?.HeaderColor ?? ""); ">
+	<div class="NavDiv">
+		<div class="NavDiv-Item">
+			<NavLink href="counter">
+				Home
+			</NavLink>
+		</div>
+		<div class="NavDiv-Item">
+			<NavLink href="counter">
+				Produtos
+			</NavLink>
+		</div>
+		<div class="NavDiv-Item">
+			<NavLink href="counter">
+				Produtos
+			</NavLink>
+		</div>
+		<div class="NavDiv-Item">
+			<NavLink href="counter">
+				Produtos
+			</NavLink>
+		</div>
+		<div class="NavDiv-Item" style="justify-content:right;">
+			<UserInterface></UserInterface>
+		</div>
+	</div>
+</div>
+
+@code{
+	protected async override Task OnInitializedAsync()
+	{
+		if (_companyManager.Company == null || _companyManager.CompanyConfig == null)
+		{
+			var company = await _ws.Get("GetTableById", $"Company/{1}");
+			var companyConfig = await _ws.Get("GetTableById", $"CompanyConfiguration/{1}");
+
+			if (!string.IsNullOrEmpty(company) && !string.IsNullOrEmpty(companyConfig))
+			{
+				var comp = JsonConvert.DeserializeObject<Company>(company, new JsonSerializerSettings
+					{ NullValueHandling = NullValueHandling.Include });
+
+				var compConfig = JsonConvert.DeserializeObject<CompanyConfiguration>(companyConfig, new JsonSerializerSettings
+					{ NullValueHandling = NullValueHandling.Include });
+
+				var companyArchives = await _ws.Get("GetTableByParentId", $"Company/CompanyArchive/{compConfig?.CompanyId ?? 0}");
+				if (!string.IsNullOrEmpty(companyArchives))
+				{
+					try
+					{
+						List<CompanyArchive> archives = JsonConvert.DeserializeObject<List<CompanyArchive>>(companyArchives);
+						compConfig.CompanyArchives = archives;
+					}
+					catch (Exception e)
+					{
+						throw;
+					}
+				}
+
+				await _companyManager.SetCompany(comp);
+				await _companyManager.SetCompanyConfiguration(compConfig);
+
+				StateHasChanged();
+			}
+		}
+	}
+}

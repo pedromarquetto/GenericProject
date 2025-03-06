@@ -1,0 +1,32 @@
+﻿
+
+
+@switch (ButtonType)
+{
+	case ButtonEnum.Normal:
+		<button @onclick="OnClickCallback">
+			@ChildContent
+		</button>
+		break;
+
+	case ButtonEnum.Blue:
+		<button class="btn btn-primary" @onclick="OnClickCallback">
+			@ChildContent
+		</button>
+		break;
+
+
+	default:
+		break;
+}
+
+@code {
+	[Parameter]
+	public EventCallback OnClickCallback { get; set; }
+
+	[Parameter]
+	public RenderFragment ChildContent { get; set; }
+
+	[Parameter]
+	public ButtonEnum ButtonType { get; set; } = ButtonEnum.Normal;
+}

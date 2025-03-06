@@ -1,0 +1,32 @@
+﻿@* @using Microsoft.AspNetCore.SignalR.Client *@
+@rendermode InteractiveServer
+@inject NavigationManager Navigation
+
+@attribute [StreamRendering]
+
+<footer style="width:100%; background-color:@(_companyManager.CompanyConfig?.FooterColor ?? "");">
+	<div>
+        Footer area - contador: @counter
+	</div>
+</footer>
+
+
+@code {
+    private int counter;
+    //private HubConnection? hubConnection;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // hubConnection = new HubConnectionBuilder()
+        //    .WithUrl(Navigation.ToAbsoluteUri("/counterHub"))
+        //    .Build();
+
+        // hubConnection.On<int>("ReceiveCounter", async (value) =>
+        // {
+        //     counter = value;
+        //     await InvokeAsync(StateHasChanged);
+        // });
+
+        // await hubConnection.StartAsync();
+    }
+}

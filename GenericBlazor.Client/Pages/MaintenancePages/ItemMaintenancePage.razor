@@ -1,0 +1,311 @@
+﻿@page "/ItemMaintenance"
+@page "/ItemMaintenance/{id:int}"
+
+@rendermode InteractiveAuto
+@attribute [StreamRendering]
+
+<CustomDiv Visible="@IsVisible" DivType="@DivType" Class="divCard" Id="lblErrorMessage">
+	<label>@Message</label>
+</CustomDiv>
+
+<EditForm class="customContainer" Model="item" OnValidSubmit="Submit">
+	<CustomDiv Class="divCard2"
+				Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtItemId")?.IsVisible)" >
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtItemId")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput
+				Type="number" 
+				TextAlign="center"
+				Width="35"
+				Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtItemId")?.IsDisabled)" 
+				@bind-ValueInt="item.ItemId" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "ItemId")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+				Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtName")?.IsVisible)">
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtName")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput 
+				Type="text"
+				Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtName")?.IsDisabled)"
+				@bind-Value="item.Name" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "Name")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+				Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtDescription")?.IsVisible)">
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtDescription")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="text"
+							Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtDescription")?.IsDisabled)"
+							@bind-Value="item.Description" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "Description")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+		
+	<CustomDiv Class="divCard2"
+				Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtPrice")?.IsVisible)">
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtPrice")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="decimal"
+							Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtPrice")?.IsDisabled)"
+							@bind-ValueDecimal="item.Price" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "Price")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+				Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtSpecialPrice")?.IsVisible)">
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtSpecialPrice")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="decimal"
+							Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtSpecialPrice")?.IsDisabled)"
+							@bind-ValueDecimal="item.SpecialPrice" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "SpecialPrice")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+		
+	<CustomDiv Class="divCard2"
+				Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "cbItemTypeId")?.IsVisible)">
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "cbItemTypeId")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="number"
+							Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "cbItemTypeId")?.IsDisabled)"
+							@bind-ValueInt="item.ItemTypeId" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "ItemTypeId")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+				Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "cbItemCategoryId")?.IsVisible)">
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "cbItemCategoryId")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="dropdown"
+							Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "cbItemCategoryId")?.IsDisabled)"
+							Dropdownitems="dropDownItemCategory"
+							SelectedDropdownItem="selectedItemCategory"
+							@bind-ValueInt="item.ItemCategoryId" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "ItemCategoryId")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+				Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "cbxIsActive")?.IsVisible)">
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "cbxIsActive")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="checkbox"
+							Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "cbxIsActive")?.IsDisabled)"
+							@bind-ValueBool="item.IsActive" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "IsActive")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+				Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "dtCreateDate")?.IsVisible)">
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "dtCreateDate")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<input type="date" @bind="item.CreateDate"/>
+		</div>
+		@* <CustomInput Type="date"
+						Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "dtCreateDate")?.IsDisabled)"
+						@bind-ValueDateTime="item.CreateDate" /> *@
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "CreateDate")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+				Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtGeneric1")?.IsVisible)">
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtGeneric1")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="text"
+							Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtGeneric1")?.IsDisabled)"
+							@bind-Value="item.Generic1" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "Generic1")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+		
+	<CustomDiv Class="divCard2"
+				Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtGeneric2")?.IsVisible)">
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtGeneric2")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="text"
+							Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtGeneric2")?.IsDisabled)"
+							@bind-Value="item.Generic2" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "Generic2")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+				Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtGeneric3")?.IsVisible)">
+
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtGeneric3")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="text"
+							Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtGeneric3")?.IsDisabled)"
+							@bind-Value="item.Generic3" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "Generic4")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+				Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtGeneric4")?.IsVisible)">
+		
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtGeneric4")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="text"
+							Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtGeneric3")?.IsDisabled)"
+							@bind-Value="item.Generic4" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "Generic4")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
+				Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtGeneric5")?.IsVisible)">
+
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "txtGeneric5")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="text"
+							Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "txtGeneric5")?.IsDisabled)"
+							@bind-Value="item.Generic5" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "Generic5")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+	<CustomDiv Class="divCard1"
+				Visible="true"
+				Align="center">
+		<div class="divChildCard1">
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</div>
+	</CustomDiv>
+</EditForm>
+
+
+@code {
+
+	[Parameter] public int id { get; set; }
+
+	[SupplyParameterFromForm] 
+	private Item item { get; set; } = new Item();
+
+	private SystemScreen? screen { get; set; }
+	private List<SystemScreenField>? fieldsList { get; set; }
+	private List<ValidatorModel>? validator { get; set; }
+
+	private List<DropdownListItems>? dropDownItemCategory { get; set; }
+	private DropdownListItems? selectedItemCategory { get; set; }
+
+	private string? Message { get; set; } = "";
+	private bool IsVisible { get; set; } = false;
+	private int DivType { get; set; } = 0;
+
+	protected override async Task OnInitializedAsync()
+	{
+		if (id != 0)
+		{
+			var itemjson = await _ws.Get("GetTableById", $"Item/{id}");
+			item = JsonConvert.DeserializeObject<Item>(itemjson);
+		}
+		(dropDownItemCategory, selectedItemCategory) = await GlobalHelper.DropDownList(_ws, "State", item.ItemCategoryId); //ToChange
+		(fieldsList, screen) = await GlobalHelper.GetScreenFields(_ws, "ItemMaintenancePage"); //ToChange
+	}
+	public async Task Submit()
+	{
+		validator = _vh.Validate(item, fieldsList);
+		if (validator.Count() == 0)
+		{
+			try
+			{
+				if (item != null)
+				{
+					if (id != 0)
+					{
+						await _ws.Put("PutObject", "Item", JsonConvert.SerializeObject(item));
+					}
+					else
+					{
+						await _ws.Post("PostObject", "Item", JsonConvert.SerializeObject(item));
+					}
+				}
+				SetMessageProperties("Salvo",true,2);
+			}
+			catch (Exception e)
+			{
+				SetMessageProperties("Erro", true, 1);
+			}
+		}
+	}
+	private async Task SetMessageProperties(string msg, bool isVisible, int divType)
+	{
+		Message = msg;
+		IsVisible = isVisible;
+		DivType = divType;
+		StateHasChanged();
+
+		await _js.InvokeVoidAsync("scrollAndFocus", "lblErrorMessage", "up");
+		await Task.Delay(3000);
+
+		Message = string.Empty;
+		IsVisible = false;
+		DivType = 0;
+		StateHasChanged();
+	}
+}
+

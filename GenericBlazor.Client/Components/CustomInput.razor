@@ -1,0 +1,348 @@
+﻿
+
+
+@if (Disabled == false)
+{
+	if (Type == "text")
+	{
+		<input id="@Id" style="width:@Width%;text-align:@TextAlign" placeholder="@Placeholder" type="text" @oninput="OnInput" value="@Value" />
+	}
+	else if(Type == "number")
+	{
+		<input id="@Id" style="width:@Width%;text-align:@TextAlign" type="number" @oninput="OnInputInt" value="@ValueInt" />
+	}
+	else if (Type == "date")
+	{
+		<input id="@Id" style="width:@Width%;text-align:@TextAlign" type="date" @oninput="OnInputDateTime" value="@ValueDateTime.Date" />
+	}
+	if (Type == "decimal")
+	{
+		<input id="@Id" style="width:@Width%;text-align:@TextAlign" type="text" @oninput="OnInputDecimal" value="@ValueDecimal" />
+	}
+	if (Type == "color")
+	{
+		<input id="@Id" style="width:@Width%;text-align:@TextAlign" type="color" @oninput="OnInput" value="@Value" />
+	}
+	else if (Type == "checkbox")
+	{
+		if (ValueBool)
+		{
+			<input id="@Id" style="width:@Width%;text-align:@TextAlign" type="checkbox" @onchange="OnInputBool" value="@ValueBool" checked />
+		}
+		else
+		{
+			<input id="@Id" style="width:@Width%;text-align:@TextAlign" type="checkbox" @onchange="OnInputBool" value="@ValueBool" />
+		}
+	}
+	else if (Type == "dropdown")
+	{
+		@if (Dropdownitems?.Count() > 0)
+		{
+			<select id="@Id" @onchange="OnInputInt" style="width:@Width%;text-align:@TextAlign">
+				@if (SelectedDropdownItem != null)
+				{
+					<option selected style="text-align:@TextAlign" value="SelectedDropdownItem.Value">@SelectedDropdownItem.Description</option>
+				}
+				@foreach (var item in Dropdownitems.Where(p => p.Value != SelectedDropdownItem?.Value))
+				{
+					<option style="text-align:@TextAlign"value="@item.Value">@item.Description</option>
+				}
+			</select>
+		}
+	}
+	else if (Type == "file")
+	{
+		if (!string.IsNullOrEmpty(ArchiveType))
+		{
+			<InputFile  @onload="ConvertToBase64" OnChange="OnInputByte" />
+			@if (!string.IsNullOrEmpty(imageData))
+			{
+				<img style="max-height:100px;" src="@imageData" />
+			}
+		}
+	}
+}
+else
+{
+	if (Type == "text")
+	{
+		<input id="@Id" disabled style="width:@Width%;text-align:@TextAlign" placeholder="@Placeholder" type="text" @oninput="OnInput" value="@Value" />
+	}
+	else if (Type == "number")
+	{
+		<input id="@Id" disabled style="width:@Width%;text-align:@TextAlign" type="number" @oninput="OnInputInt" value="@ValueInt" />
+	}
+	else if (Type == "date")
+	{
+		<input id="@Id" disabled style="width:@Width%;text-align:@TextAlign" type="date" @oninput="OnInputDateTime" value="@ValueDateTime" />
+	}
+	else if (Type == "decimal")
+	{
+		<input id="@Id" disabled style="width:@Width%;text-align:@TextAlign" type="text" @oninput="OnInputDecimal" value="@ValueDecimal" />
+	}
+	if (Type == "color")
+	{
+		<input id="@Id" disabled style="width:@Width%;text-align:@TextAlign" type="color" @oninput="OnInput" value="@Value" />
+	}
+	else if (Type == "checkbox")
+	{
+		if (ValueBool)
+		{
+			<input id="@Id" disabled style="width:@Width%;text-align:@TextAlign" type="checkbox" @onchange="OnInputBool" value="@ValueBool" checked />
+		}
+		else
+		{
+			<input id="@Id" disabled style="width:@Width%;text-align:@TextAlign" type="checkbox" @onchange="OnInputBool" value="@ValueBool" />
+		}
+	}
+	else if(Type == "dropdown")
+	{
+		@if (Dropdownitems?.Count() > 0)
+		{
+			<select id="@Id" @onchange="OnInputInt" disabled style="width:@Width%;">
+				@if (SelectedDropdownItem != null)
+				{
+					<option style="text-align:@TextAlign" selected value="SelectedDropdownItem.Value">@SelectedDropdownItem.Description</option>
+				}
+				@foreach (var item in Dropdownitems.Where(p => p.Value != SelectedDropdownItem?.Value))
+				{
+					<opton style="text-align:@TextAlign" value="@item.Value">@item.Description</opton>
+				}
+			</select>
+		}
+	}
+	else if(Type == "file")
+	{
+		if (!string.IsNullOrEmpty(ArchiveType))
+		{
+			<InputFile OnChange="OnInputByte" />
+			@if (!string.IsNullOrEmpty(imageData))
+			{
+				<img src="@imageData" />
+			}
+			
+		}
+	}
+
+}
+
+@code {
+
+	//It is required to create an EventCallBack for each Type of value
+	[Parameter]
+	public EventCallback<string> ValueChanged { get; set; }
+
+	[Parameter]
+	public EventCallback<int> ValueIntChanged { get; set; }
+
+	[Parameter]
+	public EventCallback<decimal> ValueDecimalChanged { get; set; }
+
+	[Parameter]
+	public EventCallback<DateTime> ValueDateTimeChanged { get; set; }
+
+	[Parameter]
+	public EventCallback<bool> ValueBoolChanged { get; set; }
+
+	[Parameter]
+	public EventCallback<byte[]> ValueByteChanged { get; set; }
+
+	[Parameter]
+	public string? Placeholder { get; set; } = "";
+
+	[Parameter]
+	public bool? Disabled { get; set; } = false;
+
+	[Parameter]
+	public string Value { get; set; } = "";
+
+	[Parameter]
+	public int ValueInt { get; set; } = 0;
+
+	[Parameter]
+	public bool ValueBool { get; set; } = false;
+
+	[Parameter]
+	public byte[]? ValueByte { get; set; }
+
+	[Parameter]
+	public DateTime ValueDateTime { get; set; } = DateTime.MinValue;
+
+	[Parameter]
+	public decimal ValueDecimal { get; set; } = 0;
+
+	[Parameter]
+	public string? Type { get; set; }
+
+	[Parameter]
+	public string? ArchiveType { get; set; }
+
+	[Parameter]
+	public int Width { get; set; } = 90;
+
+	[Parameter]
+	public string TextAlign { get; set; } = "left";
+
+	[Parameter]
+	public string Id { get; set; } = "";
+
+	[Parameter]
+	public List<DropdownListItems>? Dropdownitems { get; set; }
+
+	[Parameter]
+	public DropdownListItems? SelectedDropdownItem { get; set; }
+
+	[Parameter]
+	public string Mask { get; set; } = "";//CEP //Phone //CPF
+
+	private string? imageData { get; set; }
+
+	protected override async Task OnParametersSetAsync()
+	{
+		ConvertToBase64();
+		await base.OnParametersSetAsync();
+	}
+
+	private async Task OnInput(ChangeEventArgs e)
+	{
+		if (!string.IsNullOrEmpty(e.Value.ToString()))
+		{
+			Value = e.Value.ToString();
+			await ValueChanged.InvokeAsync(Value);
+		}
+		else
+		{
+			await ValueChanged.InvokeAsync("");
+		}
+	}
+	private async Task OnInputInt(ChangeEventArgs e)
+	{
+		bool IsInt = true;
+
+		if (!string.IsNullOrEmpty(e.Value.ToString()))
+		{
+			foreach (char c in e.Value.ToString())
+			{
+				if ((c.ToString() == "," || c.ToString() == ".") && !char.IsDigit(c))
+				{
+					IsInt = false;
+					break;
+				}
+			}
+			if (IsInt)
+			{
+				ValueInt = Convert.ToInt32(e.Value);
+				await ValueIntChanged.InvokeAsync(ValueInt);
+			}
+
+		}
+		else
+		{
+			await ValueIntChanged.InvokeAsync(0);
+		}	
+	}
+	private async Task OnInputBool(ChangeEventArgs e)
+	{
+		if (e.Value is bool)
+		{
+			ValueBool = (bool)e.Value;
+			await ValueBoolChanged.InvokeAsync(ValueBool);
+		}
+	}
+
+	private async Task OnInputByte(InputFileChangeEventArgs e)
+	{
+		// byte[] archiveBytes;
+
+		if (e.File != null)
+		{
+			var maxFileSize = 6 * 1024 * 1024;
+			var buffer = new byte[maxFileSize];
+
+			using (var stream = e.File.OpenReadStream(maxFileSize))
+
+			using (var ms = new MemoryStream())
+			{
+				int bytesRead;
+				while ((bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length)) > 0)
+				{
+					await ms.WriteAsync(buffer, 0, bytesRead);
+				}
+
+				ValueByte = ms.ToArray();
+
+				// await e.File.OpenReadStream().CopyToAsync(ms);
+				// archiveBytes = ms.ToArray();
+				// if (archiveBytes.Length >= 4096)
+				// {
+				// 	var maxHeight = 100;
+				// 	var maxWidth = 100;
+
+				// 	archiveBytes = ConverterManager.ResizeImage(archiveBytes, maxHeight, maxWidth);
+				// }
+			}
+			// ValueByte = archiveBytes;
+			imageData = $"data:image/jpeg;base64,{Convert.ToBase64String(ValueByte)}";
+			await ValueByteChanged.InvokeAsync(ValueByte);
+		}
+	}
+	private void ConvertToBase64()
+	{
+		if (ValueByte != null)
+		{
+			imageData = $"data:image/jpeg;base64,{Convert.ToBase64String(ValueByte)}";
+		}
+	}
+
+	private async Task OnInputDecimal(ChangeEventArgs e)
+	{
+		bool IsDecimal = true;
+
+		if (!string.IsNullOrEmpty(e.Value.ToString()))
+		{
+			foreach (char c in e.Value.ToString())
+			{
+				if (!char.IsDigit(c))
+				{
+					if (c.ToString() == "," || c.ToString() == ".")
+					{
+						e.Value.ToString().Replace(",", ".");
+					}
+					else
+					{
+						IsDecimal = false;
+						break;
+					}
+				}
+			}
+			if (IsDecimal)
+			{
+				ValueDecimal = Convert.ToDecimal(e.Value);
+				await ValueDecimalChanged.InvokeAsync(ValueDecimal);
+			}
+		}
+		else
+		{
+			await ValueDecimalChanged.InvokeAsync(0);
+		}
+	}
+	private async Task OnInputDateTime(ChangeEventArgs e)
+	{
+		if (!string.IsNullOrEmpty(e.Value.ToString()))
+		{
+			ValueDateTime = Convert.ToDateTime(e.Value);
+			await ValueDateTimeChanged.InvokeAsync(ValueDateTime.Date);
+		}
+		else
+		{
+			await ValueDateTimeChanged.InvokeAsync(DateTime.Today.Date);
+		}
+	}
+
+}
+
+<script>
+	$('#doc').mask('000.000.000-00');
+	$('#cep').mask('000000-00');
+	$('#phone').mask('(00)00000-0000');
+</script>

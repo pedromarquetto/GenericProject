@@ -1,0 +1,20 @@
+﻿@page "/HomeAdmin"
+
+
+@rendermode @(new InteractiveAutoRenderMode(false))
+@attribute [StreamRendering]
+
+<PageTitle>Home</PageTitle>
+
+<h1>PMS</h1>
+
+<CustomButton OnClickCallback="NavigateToHome">
+	Company
+</CustomButton>
+
+@code{
+	public void NavigateToHome()
+	{
+		_navig.NavigateTo($"/CompanyMaintenancePage/1");
+	}
+}
