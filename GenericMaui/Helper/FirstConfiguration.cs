@@ -1,44 +1,39 @@
-﻿using GenericMaui.Services;
+﻿using GenericMaui.Helper.Enums;
+using GenericMaui.Helper.Logger;
+using GenericMaui.MVVM.Models;
+using GenericMaui.Services;
 using GenericMaui.Sql;
 using Newtonsoft.Json;
 using SQLite;
 using System.Reflection;
+using static Microsoft.VisualStudio.Services.Graph.Constants;
 
 namespace GenericMaui.Helper
 {
-    public class FirstConfiguration(int config)
+    public static class FirstConfiguration
     {
-        readonly SqlContext _db = new SqlContext();
-        readonly WebServiceConnection _ws = new WebServiceConnection();
-        public List<Type> GetModels()
+        private static readonly SqlContext _db = new SqlContext();
+        public static Tuple<LoginStateEnum,Users> CheckFirstConfig(bool isForceReconfiguration = false)
         {
-            List<Type> models = new List<Type>();
+            var user = new Users();
+            LoginStateEnum state = isForceReconfiguration ? LoginStateEnum.NotConfigured : GetInitializationState();
 
-            Assembly assembly = Assembly.GetExecutingAssembly();
-
-            foreach (Type type in assembly.GetTypes())
-            {
-                if (type.GetProperties().Any(prop => prop.GetCustomAttribute<PrimaryKeyAttribute>() != null))
-                {
-                    models.Add(type);
-                }
-            }
-            return models;
-        }
-        public int CheckFirstConfig()
-        {
-            if (config == 0)
+            if (state == LoginStateEnum.NotConfigured)
             {
                 try
                 {
                     var i = GlobalHelper.GetModels();
                     foreach (var item in i)
                     {
-                        var items = _ws.Get($"GetTable/{item.Name}");
+                        // Get all the elements from the table in the server
+                        var items = WebServiceConnection.Get($"GetTable/{item.Name}");
 
                         var objectType = Type.GetType(item.FullName ?? "");
 
-                        if (items?.Count > 0)
+                        if (objectType == null) continue;
+
+                        // Loop all the found items and insert/update them into SQLLite
+                        if (items.Any())
                         {
                             foreach (var itm in items)
                             {
@@ -48,7 +43,10 @@ namespace GenericMaui.Helper
                                 if (idValue != null)
                                 {
                                     var newInstance = Activator.CreateInstance(objectType);
-                                    var existingItem = _db.Get(newInstance).FirstOrDefault(x => x.GetType().GetProperty(objectType.Name.ToString() + "Id")?.GetValue(x).Equals(idValue) ?? false);
+
+                                    // Check if the item already exists in the database with the same "Model Name + ID"
+                                    var existingItem = _db.Get(newInstance)?.FirstOrDefault(x => x?.GetType().GetProperty(objectType.Name.ToString() + "Id")?
+                                        .GetValue(x).Equals(idValue) ?? false);
 
                                     if (existingItem != null)
                                     {
@@ -62,17 +60,30 @@ namespace GenericMaui.Helper
                             }
                         }
                     }
-                    return 1;
+                    return Tuple.Create(LoginStateEnum.UserNotLogged, user);
                 }
-                catch (Exception e)
+                catch (Exception ex)
                 {
-                    return 0;
+                    return Tuple.Create(LoginStateEnum.NotConfigured, user);
                 }
             }
             else
             {
-                return 2;
+                var loggedUser = _db.Get(new Users()).FirstOrDefault(p => p.IsLoggedUser && user.StaySigned);
+                return Tuple.Create(loggedUser != null ? LoginStateEnum.UserLogged : LoginStateEnum.UserNotLogged, loggedUser != null ? loggedUser : user);
             }
         }
+        public static LoginStateEnum GetInitializationState()
+        {
+            LoginStateEnum state = LoginStateEnum.NotConfigured;
+
+            if (_db.Get(new CompanyConfiguration()).Any())
+            {
+                state = LoginStateEnum.Configured;
+            }
+
+            return state;
+        }
+
     }
 }

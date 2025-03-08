@@ -2265,11 +2265,6 @@ C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor.Client\obj\Deb
 C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor.Client\obj\Debug\net8.0\compressed\suguco6ur8-tptq2av103.gz
 C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor.Client\obj\Debug\net8.0\compressed\7klsr7x3e7-lfu7j35m59.gz
 C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor.Client\obj\Debug\net8.0\compressed\wp9nyztfxp-oyz0vx2fzb.gz
-C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor.Client\obj\Debug\net8.0\compressed\h5wjgmkx8b-xili75pkx2.gz
-C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor.Client\obj\Debug\net8.0\compressed\s246ddcfua-su7v0ba6s6.gz
-C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor.Client\obj\Debug\net8.0\compressed\ruuereingg-h3ij9o4a3d.gz
-C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor.Client\obj\Debug\net8.0\compressed\vnufh7xd0d-q55nc6umjv.gz
-C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor.Client\obj\Debug\net8.0\compressed\t5yhgdg3uw-rso7csngvu.gz
 C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor.Client\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor.Client\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor.Client\obj\Debug\net8.0\staticwebassets.build.endpoints.json
@@ -2285,3 +2280,9 @@ C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor.Client\obj\Deb
 C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor.Client\obj\Debug\net8.0\refint\GenericBlazor.Client.dll
 C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor.Client\obj\Debug\net8.0\GenericBlazor.Client.pdb
 C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor.Client\obj\Debug\net8.0\ref\GenericBlazor.Client.dll
+C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor.Client\obj\Debug\net8.0\GenericBlazor.Client.sourcelink.json
+C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor.Client\obj\Debug\net8.0\compressed\h5wjgmkx8b-hrhfxf318t.gz
+C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor.Client\obj\Debug\net8.0\compressed\s246ddcfua-f0dvmaxrrf.gz
+C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor.Client\obj\Debug\net8.0\compressed\ruuereingg-h5n5ds0h4o.gz
+C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor.Client\obj\Debug\net8.0\compressed\vnufh7xd0d-vo1tfrwiop.gz
+C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor.Client\obj\Debug\net8.0\compressed\t5yhgdg3uw-qwfb0rre9g.gz

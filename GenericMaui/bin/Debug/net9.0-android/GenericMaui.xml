@@ -32,6 +32,9 @@
         <member name="P:GenericMaui.MVVM.ViewModels.DbManagemantViewModel.ModelNamesList">
             <inheritdoc cref="F:GenericMaui.MVVM.ViewModels.DbManagemantViewModel.modelNamesList"/>
         </member>
+        <member name="P:GenericMaui.MVVM.ViewModels.DbManagemantViewModel.Test">
+            <inheritdoc cref="F:GenericMaui.MVVM.ViewModels.DbManagemantViewModel.test"/>
+        </member>
         <member name="P:GenericMaui.MVVM.ViewModels.DbManagemantViewModel.LineRecordsList">
             <inheritdoc cref="F:GenericMaui.MVVM.ViewModels.DbManagemantViewModel.lineRecordsList"/>
         </member>
@@ -58,13 +61,6 @@
         </member>
         <member name="T:GenericMaui.MVVM.ViewModels.InitialScreenViewModel">
             <inheritdoc/>
-            <inheritdoc/>
-        </member>
-        <member name="P:GenericMaui.MVVM.ViewModels.InitialScreenViewModel.List">
-            <inheritdoc cref="F:GenericMaui.MVVM.ViewModels.InitialScreenViewModel.list"/>
-        </member>
-        <member name="P:GenericMaui.MVVM.ViewModels.InitialScreenViewModel.Model">
-            <inheritdoc cref="F:GenericMaui.MVVM.ViewModels.InitialScreenViewModel.model"/>
         </member>
         <member name="F:GenericMaui.MVVM.ViewModels.InitialScreenViewModel.insertCommand">
             <summary>The backing field for <see cref="P:GenericMaui.MVVM.ViewModels.InitialScreenViewModel.InsertCommand"/>.</summary>
@@ -72,12 +68,25 @@
         <member name="P:GenericMaui.MVVM.ViewModels.InitialScreenViewModel.InsertCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:GenericMaui.MVVM.ViewModels.InitialScreenViewModel.Insert"/>.</summary>
         </member>
+        <member name="T:GenericMaui.MVVM.ViewModels.LoginViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:GenericMaui.MVVM.ViewModels.LoginViewModel.Users">
+            <inheritdoc cref="F:GenericMaui.MVVM.ViewModels.LoginViewModel.users"/>
+        </member>
+        <member name="F:GenericMaui.MVVM.ViewModels.LoginViewModel.signInCommand">
+            <summary>The backing field for <see cref="P:GenericMaui.MVVM.ViewModels.LoginViewModel.SignInCommand"/>.</summary>
+        </member>
+        <member name="P:GenericMaui.MVVM.ViewModels.LoginViewModel.SignInCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:GenericMaui.MVVM.ViewModels.LoginViewModel.SignIn"/>.</summary>
+        </member>
         <member name="T:GenericMaui.MVVM.ViewModels.MainPageViewModel">
             <inheritdoc/>
             <inheritdoc/>
         </member>
-        <member name="P:GenericMaui.MVVM.ViewModels.MainPageViewModel.List">
-            <inheritdoc cref="F:GenericMaui.MVVM.ViewModels.MainPageViewModel.list"/>
+        <member name="P:GenericMaui.MVVM.ViewModels.MainPageViewModel.CompanyArchiveList">
+            <inheritdoc cref="F:GenericMaui.MVVM.ViewModels.MainPageViewModel.companyArchiveList"/>
         </member>
         <member name="P:GenericMaui.MVVM.ViewModels.MainPageViewModel.Model">
             <inheritdoc cref="F:GenericMaui.MVVM.ViewModels.MainPageViewModel.model"/>
@@ -115,6 +124,9 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ModelNamesList">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ModelNamesList" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Test">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Test" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.LineRecordsList">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "LineRecordsList" generated properties.</summary>
         </member>
@@ -123,6 +135,12 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedModelName">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedModelName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Users">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Users" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CompanyArchiveList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CompanyArchiveList" generated properties.</summary>
         </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
@@ -145,6 +163,9 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ModelNamesList">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ModelNamesList" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Test">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Test" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.LineRecordsList">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "LineRecordsList" generated properties.</summary>
         </member>
@@ -153,6 +174,12 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedModelName">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedModelName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Users">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Users" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CompanyArchiveList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CompanyArchiveList" generated properties.</summary>
         </member>
     </members>
 </doc>

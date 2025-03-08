@@ -1,5 +1,6 @@
 ﻿
 using CommunityToolkit.Mvvm.Input;
+using GenericMaui.Helper.Logger;
 using GenericMaui.MVVM.Models;
 using Microsoft.Data.Sqlite;
 using Microsoft.TeamFoundation.SourceControl.WebApi;
@@ -41,6 +42,7 @@ namespace GenericMaui.Sql
             _database.CreateTable<Users>();
             _database.CreateTable<UserType>();
             _database.CreateTable<Validation>();
+            _database.CreateTable<LogClass>();
         }
 
         public int Insert<T>(T item)
@@ -91,6 +93,8 @@ namespace GenericMaui.Sql
                     return new ObservableCollection<T>((IEnumerable<T>)_database.Query<UserType>(query));
                 case Validation:
                     return new ObservableCollection<T>((IEnumerable<T>)_database.Query<Validation>(query));
+                case LogClass:
+                    return new ObservableCollection<T>((IEnumerable<T>)_database.Query<LogClass>(query));
 
                 default:
                     throw new NotImplementedException();

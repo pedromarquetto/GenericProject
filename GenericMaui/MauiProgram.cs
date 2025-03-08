@@ -4,8 +4,10 @@ using GenericMaui.Interfaces;
 using GenericMaui.MVVM.Models;
 using GenericMaui.MVVM.ViewModels;
 using GenericMaui.MVVM.Views;
+using GenericMaui.MVVM.Views.ApplicationManagemant;
 using GenericMaui.Sql;
 using Microsoft.Extensions.Logging;
+using Org.BouncyCastle.Tls;
 using System.Threading.Tasks;
 
 namespace GenericMaui
@@ -28,10 +30,12 @@ namespace GenericMaui
             //ViewModelDeclaration
             builder.Services.AddSingleton<MainPageViewModel>();
             builder.Services.AddSingleton<DbManagemantViewModel>();
+            builder.Services.AddSingleton<LoginViewModel>();
 
             //Link View Model to view
             builder.Services.LinkViewWithViewModel<MainPage, MainPageViewModel>();
             builder.Services.LinkViewWithViewModel<DbManagementPage, DbManagemantViewModel>();
+            builder.Services.LinkViewWithViewModel<LoginPage, LoginViewModel>();
 
 
 #if DEBUG

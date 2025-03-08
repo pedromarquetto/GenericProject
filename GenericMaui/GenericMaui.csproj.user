@@ -27,16 +27,16 @@
     <MauiXaml Update="MVVM\Views\CustomComponents\PMSEntry.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="MVVM\Views\CreateScreen.xaml">
+    <MauiXaml Update="MVVM\Views\ApplicationManagemant\CreateScreen.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="MVVM\Views\InitialScreen.xaml">
+    <MauiXaml Update="MVVM\Views\ApplicationManagemant\InitialScreen.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="MVVM\Views\Login.xaml">
+    <MauiXaml Update="MVVM\Views\ApplicationManagemant\LoginPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="MVVM\Views\DbManagementPage.xaml">
+    <MauiXaml Update="MVVM\Views\ApplicationManagemant\DbManagementPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="MVVM\Views\CustomComponents\PMSFrame.xaml">

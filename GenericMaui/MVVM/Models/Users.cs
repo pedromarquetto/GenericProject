@@ -26,7 +26,7 @@ namespace GenericMaui.MVVM.Models
         public bool StaySigned { get; set; }
         public bool IsActive { get; set; }
         public DateTime CreateDate { get; set; }
-
+        public bool IsLoggedUser { get; set; }// used for identify the user from the current machine
 
         readonly SqlContext _db = new SqlContext();
         public int ValidateConfiguration()

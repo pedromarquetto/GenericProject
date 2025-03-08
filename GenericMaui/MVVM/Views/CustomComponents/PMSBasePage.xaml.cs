@@ -4,15 +4,15 @@ using System.Collections.ObjectModel;
 
 namespace GenericMaui.MVVM.Views.CustomComponents
 {
-	public partial class PMSBasePage : ContentPage
-	{
-		public PMSBasePage()
-		{
-			
-		}
-		public void LoadScreenFields()
-		{
-			ObservableCollection<SystemScreenField> list = FieldValidatior.GetFields("1");
+    public partial class PMSBasePage : ContentPage
+    {
+        public PMSBasePage()
+        {
+
+        }
+        public void LoadScreenFields()
+        {
+            ObservableCollection<SystemScreenField> list = FieldValidatior.GetFields("1");
 
             foreach (var item in list)
             {
@@ -28,5 +28,5 @@ namespace GenericMaui.MVVM.Views.CustomComponents
                 text?.SetValue(field, placeholder != null ? "" : item.Name);
             }
         }
-	}
+    }
 }

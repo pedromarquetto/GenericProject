@@ -193,3 +193,4 @@ C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor\obj\Debug\net8
 C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor\obj\Debug\net8.0\GenericBlazor.pdb
 C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor\obj\Debug\net8.0\GenericBlazor.genruntimeconfig.cache
 C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor\obj\Debug\net8.0\ref\GenericBlazor.dll
+C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor\obj\Debug\net8.0\GenericBlazor.sourcelink.json

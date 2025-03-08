@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<custom:PMSBasePage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GenericMaui.MVVM.Views.DbManagementPage"
+             Title="DbManagementPage"
+             xmlns:custom="clr-namespace:GenericMaui.MVVM.Views.CustomComponents"
+             >
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label Text="Teste"></Label>
+            <Picker x:Name="pkOperation" Title="Operação" ItemsSource="{Binding OperationList}" SelectedItem="{Binding SelectedOperation,Mode=TwoWay}" />
+
+            <!--<Picker x:Name="pkTable" ItemsSource="{Binding ModelNamesList,Mode=TwoWay}" SelectedItem="{Binding SelectedModelName,Mode=TwoWay}" 
+                     Title="Tabela" />-->
+
+            <custom:PMSAutoSuggestBox  Items="{Binding LineRecordsList,Mode=TwoWay}" DisplayColumn="Model"
+                                      SelectedItem="{Binding SelectedLineRecord,Mode=TwoWay}" />
+
+            <CollectionView x:Name="lrecords" SelectedItem="{Binding SelectedLineRecord,Mode=TwoWay}" 
+                            ItemsSource="{Binding LineRecordsList,Mode=TwoWay}" SelectionMode="Single" >
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="10">
+                            <Label Text="{Binding Id}"></Label>
+                            <Label Text="{Binding CompleteRecord}"></Label>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+    
+</custom:PMSBasePage>

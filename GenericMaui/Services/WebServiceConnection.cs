@@ -13,14 +13,10 @@ namespace GenericMaui.Services
 {
     public class WebServiceConnection
     {
-        readonly HttpClient _http = new HttpClient();
-        internal HttpResponseMessage _response = new HttpResponseMessage();
-        internal string _url = "http://192.168.2.113:8085/api/Main/";
-        public WebServiceConnection()
-        {
-            
-        }
-        public List<object> Get(string? route = "",string? parameters = "")
+        private static readonly HttpClient _http = new HttpClient();
+        private static HttpResponseMessage _response = new HttpResponseMessage();
+        private static readonly string _url = "http://192.168.2.113:8085/api/Main/";
+        public static List<object> Get(string? route = "",string? parameters = "")
         {
             List<object> list = new List<object>();
             var url = $"{_url}{route}/{parameters}";

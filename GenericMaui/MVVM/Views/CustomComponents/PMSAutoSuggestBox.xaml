@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="GenericMaui.MVVM.Views.CustomComponents.PMSAutoSuggestBox"
+            xmlns:local="clr-namespace:GenericMaui.Helper.Converters"
+            x:Name="Root">
+
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <local:DisplayColumnConverter x:Key="DisplayColumnConverter" />
+        </ResourceDictionary>
+    </ContentView.Resources>
+    
+    <VerticalStackLayout Padding="10">
+        <SearchBar Placeholder="Digite aqui..."
+                   Text="{Binding SearchText,Source={x:Reference Root},Mode=TwoWay}" />
+
+        <ListView ItemsSource="{Binding FilteredItems,Source={x:Reference Root}, Mode=TwoWay}" 
+                  SelectionMode="Single"
+                  SelectedItem="{Binding SelectedItem,Source={x:Reference Root},Mode=TwoWay}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Label>
+                            <Label.Text>
+                                <MultiBinding Converter="{StaticResource DisplayColumnConverter}">
+                                    <!-- Primeiro valor: o item atual -->
+                                    <Binding Path="." />
+                                    <!-- Segundo valor: o nome da propriedade, que pode vir de outra propriedade do ViewModel ou de um controle -->
+                                    <Binding Source="{x:Reference Root}" Path="DisplayColumn" />
+                                </MultiBinding>
+                            </Label.Text>
+                        </Label>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            
+        </ListView>
+    </VerticalStackLayout>
+
+</ContentView>

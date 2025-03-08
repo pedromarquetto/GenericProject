@@ -1,7 +1,10 @@
 ﻿
 using GenericMaui.Helper;
+using GenericMaui.Helper.Enums;
+using GenericMaui.Helper.Logger;
 using GenericMaui.MVVM.Models;
 using GenericMaui.MVVM.Views;
+using GenericMaui.MVVM.Views.ApplicationManagemant;
 using GenericMaui.Services;
 using GenericMaui.Sql;
 using Newtonsoft.Json;
@@ -13,34 +16,31 @@ namespace GenericMaui
 {
     public partial class App : Application
     {
-        private int config = 0;
         public App()
         {
             InitializeComponent();
         }
-        //public void InitializeApp()
-        //{
-        //    if (config == 0 || config == 2) //0 first time //2 not signed
-        //    {
-        //        Application.Current.Windows[0].Page = new Login();
-        //    }
-        //    else
-        //    {
-        //        Application.Current.Windows[0].Page = new AppShell();
-        //    }
-        //}
+
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            var fconfig = new FirstConfiguration(config).CheckFirstConfig();
+            LoginStateEnum fconfig = LoginStateEnum.NotConfigured;
+            Users user = new Users();
+
+            (fconfig, user) = FirstConfiguration.CheckFirstConfig();
+
             Page mainPage;
 
-            if (fconfig == 1 || fconfig == 2) // 1 first time // 2 not singed
+            if (fconfig == LoginStateEnum.UserLogged) // 1 first time // 2 not singed
             {
                 mainPage = new AppShell();
             }
-            else // 0 não concluído
+            else if (fconfig == LoginStateEnum.UserNotLogged)
             {
-                mainPage = new Login();
+                mainPage = new LoginPage();
+            }
+            else
+            {
+                mainPage = new LoginPage(); // To add error page
             }
 
             return new Window(mainPage);

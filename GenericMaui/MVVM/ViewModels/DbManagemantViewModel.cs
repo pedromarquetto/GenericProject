@@ -4,6 +4,7 @@ using GenericMaui.Helper;
 using GenericMaui.MVVM.Models;
 using GenericMaui.MVVM.Models.GenericModels;
 using GenericMaui.MVVM.Views;
+using GenericMaui.MVVM.Views.ApplicationManagemant;
 using GenericMaui.Sql;
 using Newtonsoft.Json;
 using System.Collections.ObjectModel;
@@ -18,6 +19,10 @@ namespace GenericMaui.MVVM.ViewModels
         {
             _db = sqlContext;
             ModelNamesList = new ObservableCollection<string>(GlobalHelper.GetModels()?.Select(p => p.Name) ?? new ObservableCollection<string>());
+
+            LineRecordsList = new ObservableCollection<LineRecord> { new LineRecord { Id=1,CompleteRecord="",Model="ABC" }
+                , new LineRecord { Id = 2, CompleteRecord = "", Model = "DDD" } };
+
             OperationList = new ObservableCollection<string> { "Delete", "Refresh" };
         }
 
@@ -43,7 +48,7 @@ namespace GenericMaui.MVVM.ViewModels
         {
             if (value != null)
             {
-                Del();
+                //Del();
             }
         }
         partial void OnSelectedModelNameChanged(string value)
@@ -63,8 +68,15 @@ namespace GenericMaui.MVVM.ViewModels
                 var op = value;
                 if (op == "Refresh")
                 {
-                    var refresh = new FirstConfiguration(0).CheckFirstConfig();
-                    LoadItems();
+                    var isContinue = Shell.Current.CurrentPage.DisplayAlert("Warning", "This operation will restore all the data and may take some time, do you want to continue?"
+                        , "Yes","No").Result;
+
+                    if (isContinue)
+                    {
+                        FirstConfiguration.CheckFirstConfig(true);
+
+                        LoadItems();
+                    }
                 }
             }
         }
@@ -103,7 +115,7 @@ namespace GenericMaui.MVVM.ViewModels
                 {
                     if (Application.Current?.Windows?.Count > 0)
                     {
-                        Application.Current.Windows[0].Page = new Login();
+                        Application.Current.Windows[0].Page = new LoginPage();
                     }
                 }
             }

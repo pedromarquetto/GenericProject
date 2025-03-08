@@ -29,25 +29,25 @@
     <AppXManifest Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-03-06T00:21:56.615</Modified>
+      <Modified>2025-03-08T20:36:59.486</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-03-05T23:10:08.811</Modified>
+      <Modified>2025-03-08T19:32:10.535</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\GenericMaui.runtimeconfig.json">
       <PackagePath>GenericMaui.runtimeconfig.json</PackagePath>
-      <Modified>2025-03-06T00:21:55.772</Modified>
+      <Modified>2025-03-08T19:32:09.959</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\GenericMaui.dll">
       <PackagePath>GenericMaui.dll</PackagePath>
-      <Modified>2025-03-06T00:21:53.491</Modified>
+      <Modified>2025-03-08T20:36:56.345</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>GenericMaui.exe</PackagePath>
-      <Modified>2025-03-06T00:21:53.581</Modified>
+      <Modified>2025-03-08T20:36:56.486</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -55,23 +55,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2025-03-04T14:11:52.425</Modified>
+      <Modified>2025-03-08T19:31:58.045</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2025-03-04T14:11:52.441</Modified>
+      <Modified>2025-03-08T19:31:58.108</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2025-03-04T14:11:52.519</Modified>
+      <Modified>2025-03-08T19:31:58.202</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2025-03-04T14:11:52.566</Modified>
+      <Modified>2025-03-08T19:31:58.327</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2025-03-04T14:11:52.737</Modified>
+      <Modified>2025-03-08T19:31:58.920</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
@@ -83,191 +83,191 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2025-03-04T14:11:53.956</Modified>
+      <Modified>2025-03-08T19:32:03.990</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.941</Modified>
+      <Modified>2025-03-08T19:32:03.537</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.941</Modified>
+      <Modified>2025-03-08T19:32:03.537</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.941</Modified>
+      <Modified>2025-03-08T19:32:03.537</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.941</Modified>
+      <Modified>2025-03-08T19:32:03.537</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.941</Modified>
+      <Modified>2025-03-08T19:32:03.521</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.956</Modified>
+      <Modified>2025-03-08T19:32:03.724</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.956</Modified>
+      <Modified>2025-03-08T19:32:03.724</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.956</Modified>
+      <Modified>2025-03-08T19:32:03.724</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.956</Modified>
+      <Modified>2025-03-08T19:32:03.724</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.956</Modified>
+      <Modified>2025-03-08T19:32:03.724</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.956</Modified>
+      <Modified>2025-03-08T19:32:03.724</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.956</Modified>
+      <Modified>2025-03-08T19:32:03.724</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.956</Modified>
+      <Modified>2025-03-08T19:32:03.724</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.956</Modified>
+      <Modified>2025-03-08T19:32:03.724</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.956</Modified>
+      <Modified>2025-03-08T19:32:03.724</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.956</Modified>
+      <Modified>2025-03-08T19:32:03.927</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.956</Modified>
+      <Modified>2025-03-08T19:32:03.912</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.956</Modified>
+      <Modified>2025-03-08T19:32:03.849</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.956</Modified>
+      <Modified>2025-03-08T19:32:03.849</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.956</Modified>
+      <Modified>2025-03-08T19:32:03.849</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.956</Modified>
+      <Modified>2025-03-08T19:32:03.818</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.956</Modified>
+      <Modified>2025-03-08T19:32:03.802</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.956</Modified>
+      <Modified>2025-03-08T19:32:03.740</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.956</Modified>
+      <Modified>2025-03-08T19:32:03.787</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.956</Modified>
+      <Modified>2025-03-08T19:32:03.755</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.956</Modified>
+      <Modified>2025-03-08T19:32:03.552</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.956</Modified>
+      <Modified>2025-03-08T19:32:03.552</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.956</Modified>
+      <Modified>2025-03-08T19:32:03.552</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.941</Modified>
+      <Modified>2025-03-08T19:32:03.537</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.941</Modified>
+      <Modified>2025-03-08T19:32:03.537</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.956</Modified>
+      <Modified>2025-03-08T19:32:03.615</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.956</Modified>
+      <Modified>2025-03-08T19:32:03.615</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.956</Modified>
+      <Modified>2025-03-08T19:32:03.599</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.956</Modified>
+      <Modified>2025-03-08T19:32:03.552</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.956</Modified>
+      <Modified>2025-03-08T19:32:03.552</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.956</Modified>
+      <Modified>2025-03-08T19:32:03.724</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.956</Modified>
+      <Modified>2025-03-08T19:32:03.724</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.956</Modified>
+      <Modified>2025-03-08T19:32:03.708</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.956</Modified>
+      <Modified>2025-03-08T19:32:03.646</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.956</Modified>
+      <Modified>2025-03-08T19:32:03.630</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.941</Modified>
+      <Modified>2025-03-08T19:32:03.537</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.941</Modified>
+      <Modified>2025-03-08T19:32:03.537</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.941</Modified>
+      <Modified>2025-03-08T19:32:03.537</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.941</Modified>
+      <Modified>2025-03-08T19:32:03.537</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2025-03-04T14:11:53.941</Modified>
+      <Modified>2025-03-08T19:32:03.537</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\companylogo.scale-100.jpg">
       <PackagePath>companylogo.scale-100.jpg</PackagePath>
-      <Modified>2025-03-04T14:11:53.941</Modified>
+      <Modified>2025-03-08T19:32:03.505</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\.nuget\packages\microsoft.web.webview2\1.0.2792.45\runtimes\win-x64\native\WebView2Loader.dll">
       <PackagePath>runtimes\win-x64\native\WebView2Loader.dll</PackagePath>
@@ -791,7 +791,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\GenericMaui.deps.json">
       <PackagePath>GenericMaui.deps.json</PackagePath>
-      <Modified>2025-03-06T00:21:55.533</Modified>
+      <Modified>2025-03-08T19:32:09.662</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\.nuget\packages\microsoft.maui.controls.compatibility\9.0.40\lib\net9.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>

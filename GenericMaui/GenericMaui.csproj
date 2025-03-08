@@ -96,22 +96,25 @@
 	  <MauiXaml Update="MVVM\Views\CustomComponents\PMSButton.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="MVVM\Views\CustomComponents\PMSAutoSuggestBox.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="MVVM\Views\CustomComponents\PMSCheckBox.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="MVVM\Views\CustomComponents\PMSEntry.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="MVVM\Views\CreateScreen.xaml">
+	  <MauiXaml Update="MVVM\Views\ApplicationManagemant\CreateScreen.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="MVVM\Views\InitialScreen.xaml">
+	  <MauiXaml Update="MVVM\Views\ApplicationManagemant\InitialScreen.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="MVVM\Views\Login.xaml">
+	  <MauiXaml Update="MVVM\Views\ApplicationManagemant\LoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="MVVM\Views\DbManagementPage.xaml">
+	  <MauiXaml Update="MVVM\Views\ApplicationManagemant\DbManagementPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="MVVM\Views\CustomComponents\PMSFrame.xaml">
@@ -126,14 +129,17 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="MVVM\Views\CreateScreen.xaml.cs">
+	  <Compile Update="MVVM\Views\ApplicationManagemant\CreateScreen.xaml.cs">
 	    <DependentUpon>CreateScreen.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="MVVM\Views\Login.xaml.cs">
-	    <DependentUpon>Login.xaml</DependentUpon>
+	  <Compile Update="MVVM\Views\ApplicationManagemant\LoginPage.xaml.cs">
+	    <DependentUpon>LoginPage.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="MVVM\Views\DbManagementPage.xaml.cs">
+	  <Compile Update="MVVM\Views\ApplicationManagemant\DbManagementPage.xaml.cs">
 	    <DependentUpon>DbManagementPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="MVVM\Views\CustomComponents\PMSAutoSuggestBox.xaml.cs">
+	    <DependentUpon>PMSAutoSuggestBox.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
