@@ -6,8 +6,8 @@
     xmlns:local="clr-namespace:GenericMaui.MVVM.Views"
     xmlns:custom="clr-namespace:GenericMaui.MVVM.Views.CustomComponents"
     Title="GenericMaui"
-    FlyoutBackgroundColor="{StaticResource TerciaryColorPMS}"
-    BackgroundColor="{StaticResource PrimaryColorPMS}"
+    FlyoutBackgroundColor="{DynamicResource TerciaryColorPMS}"
+    BackgroundColor="{DynamicResource PrimaryColorPMS}"
     >
     <Shell.FlyoutHeader>
         <custom:PMSFrame>
@@ -39,7 +39,7 @@
 
     <Shell.FlyoutFooter>
         <custom:PMSFrame>
-            <custom:PMSLabel BackgroundColor="{Binding FooterColor}" Text="Footer"></custom:PMSLabel>
+            <custom:PMSLabel Text="Footer"></custom:PMSLabel>
         </custom:PMSFrame>
     </Shell.FlyoutFooter>
 </Shell>

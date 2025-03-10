@@ -3,39 +3,55 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             x:Class="GenericMaui.MVVM.Views.CustomComponents.PMSAutoSuggestBox"
             xmlns:local="clr-namespace:GenericMaui.Helper.Converters"
-            x:Name="Root">
+            x:Name="Root"
+            HeightRequest="40"
+            ZIndex="999"
+            BackgroundColor="{DynamicResource PrimaryColorPMS}"
+            Margin="5"> <!--To allow selection-->
 
     <ContentView.Resources>
         <ResourceDictionary>
             <local:DisplayColumnConverter x:Key="DisplayColumnConverter" />
         </ResourceDictionary>
     </ContentView.Resources>
-    
-    <VerticalStackLayout Padding="10">
-        <SearchBar Placeholder="Digite aqui..."
-                   Text="{Binding SearchText,Source={x:Reference Root},Mode=TwoWay}" />
 
-        <ListView ItemsSource="{Binding FilteredItems,Source={x:Reference Root}, Mode=TwoWay}" 
-                  SelectionMode="Single"
-                  SelectedItem="{Binding SelectedItem,Source={x:Reference Root},Mode=TwoWay}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <Label>
-                            <Label.Text>
-                                <MultiBinding Converter="{StaticResource DisplayColumnConverter}">
-                                    <!-- Primeiro valor: o item atual -->
-                                    <Binding Path="." />
-                                    <!-- Segundo valor: o nome da propriedade, que pode vir de outra propriedade do ViewModel ou de um controle -->
-                                    <Binding Source="{x:Reference Root}" Path="DisplayColumn" />
-                                </MultiBinding>
-                            </Label.Text>
-                        </Label>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
+    <Grid> 
+        <AbsoluteLayout>
+            <SearchBar Placeholder="--Select--"
+                       AbsoluteLayout.LayoutFlags="WidthProportional"
+                       AbsoluteLayout.LayoutBounds="0,0,1,AutoSize"
+                       Text="{Binding SearchText,Source={x:Reference Root},Mode=TwoWay}" />
+
+            <ListView ItemsSource="{Binding FilteredItems,Source={x:Reference Root}, Mode=TwoWay}" 
+                      SelectionMode="Single"
+                      AbsoluteLayout.LayoutFlags="WidthProportional"
+                      AbsoluteLayout.LayoutBounds="0,43,1,AutoSize"
+                      SelectedItem="{Binding SelectedItem,Source={x:Reference Root},Mode=TwoWay}"
+                      IsVisible="{Binding IsDropDownOpen, Source={x:Reference Root},Mode=TwoWay}"
+                      SeparatorColor="{DynamicResource White}"
+                      BackgroundColor="{DynamicResource TerciaryColorPMS}"
+                      >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Label TextColor="{DynamicResource TextColorPMS}">
+                                    <Label.Text>
+                                        <MultiBinding Converter="{StaticResource DisplayColumnConverter}">
+                                            <!-- Primeiro valor: o item atual -->
+                                            <Binding Path="." />
+                                            <!-- Segundo valor: o nome da propriedade, que pode vir de outra propriedade do ViewModel ou de um controle -->
+                                            <Binding Source="{x:Reference Root}" Path="DisplayColumn" />
+                                        </MultiBinding>
+                                    </Label.Text>
+                                </Label>
+                            </Grid>
+                        </ViewCell>
+                        
+                    </DataTemplate>
+                </ListView.ItemTemplate>
             
-        </ListView>
-    </VerticalStackLayout>
-
+            </ListView>
+        </AbsoluteLayout>
+    </Grid>
 </ContentView>

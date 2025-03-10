@@ -3,6 +3,7 @@ using GenericMaui.Helper;
 using GenericMaui.Helper.Enums;
 using GenericMaui.Helper.Logger;
 using GenericMaui.MVVM.Models;
+using GenericMaui.MVVM.ViewModels;
 using GenericMaui.MVVM.Views;
 using GenericMaui.MVVM.Views.ApplicationManagemant;
 using GenericMaui.Services;
@@ -23,27 +24,7 @@ namespace GenericMaui
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            LoginStateEnum fconfig = LoginStateEnum.NotConfigured;
-            Users user = new Users();
-
-            (fconfig, user) = FirstConfiguration.CheckFirstConfig();
-
-            Page mainPage;
-
-            if (fconfig == LoginStateEnum.UserLogged) // 1 first time // 2 not singed
-            {
-                mainPage = new AppShell();
-            }
-            else if (fconfig == LoginStateEnum.UserNotLogged)
-            {
-                mainPage = new LoginPage();
-            }
-            else
-            {
-                mainPage = new LoginPage(); // To add error page
-            }
-
-            return new Window(mainPage);
+            return new Window(new InitialPage { BindingContext = new InitialViewModel(new SqlContext()) });
         }
     }
 

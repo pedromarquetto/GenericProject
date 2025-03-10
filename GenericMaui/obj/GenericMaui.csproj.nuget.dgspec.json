@@ -105,6 +105,10 @@
               "target": "Package",
               "version": "[13.0.3, )"
             },
+            "Plugin.LocalNotification": {
+              "target": "Package",
+              "version": "[11.1.4, )"
+            },
             "SQLitePCLRaw.bundle_green": {
               "target": "Package",
               "version": "[2.1.10, )"
@@ -187,6 +191,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "Plugin.LocalNotification": {
+              "target": "Package",
+              "version": "[11.1.4, )"
             },
             "SQLitePCLRaw.bundle_green": {
               "target": "Package",
@@ -271,6 +279,10 @@
               "target": "Package",
               "version": "[13.0.3, )"
             },
+            "Plugin.LocalNotification": {
+              "target": "Package",
+              "version": "[11.1.4, )"
+            },
             "SQLitePCLRaw.bundle_green": {
               "target": "Package",
               "version": "[2.1.10, )"
@@ -348,6 +360,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "Plugin.LocalNotification": {
+              "target": "Package",
+              "version": "[11.1.4, )"
             },
             "SQLitePCLRaw.bundle_green": {
               "target": "Package",

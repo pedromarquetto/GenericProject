@@ -6,6 +6,7 @@ using GenericMaui.MVVM.Models.GenericModels;
 using GenericMaui.MVVM.Views;
 using GenericMaui.MVVM.Views.ApplicationManagemant;
 using GenericMaui.Sql;
+using Microsoft.TeamFoundation.Common;
 using Newtonsoft.Json;
 using System.Collections.ObjectModel;
 
@@ -18,10 +19,7 @@ namespace GenericMaui.MVVM.ViewModels
         public DbManagemantViewModel(SqlContext sqlContext)
         {
             _db = sqlContext;
-            ModelNamesList = new ObservableCollection<string>(GlobalHelper.GetModels()?.Select(p => p.Name) ?? new ObservableCollection<string>());
-
-            LineRecordsList = new ObservableCollection<LineRecord> { new LineRecord { Id=1,CompleteRecord="",Model="ABC" }
-                , new LineRecord { Id = 2, CompleteRecord = "", Model = "DDD" } };
+            ModelNamesList = GlobalHelper.GetModels();
 
             OperationList = new ObservableCollection<string> { "Delete", "Refresh" };
         }
@@ -33,7 +31,7 @@ namespace GenericMaui.MVVM.ViewModels
         private string selectedOperation = "";
 
         [ObservableProperty]
-        private ObservableCollection<string> modelNamesList = new();
+        private ObservableCollection<ModelClass> modelNamesList = new();
 
         [ObservableProperty]
         private ObservableCollection<LineRecord> lineRecordsList = new();
@@ -42,34 +40,34 @@ namespace GenericMaui.MVVM.ViewModels
         private LineRecord selectedLineRecord = new();
 
         [ObservableProperty]
-        private string selectedModelName = "";
+        private ModelClass selectedModelName;
 
         partial void OnSelectedLineRecordChanged(LineRecord value)
         {
             if (value != null)
             {
-                //Del();
+                Del();
             }
         }
-        partial void OnSelectedModelNameChanged(string value)
+        partial void OnSelectedModelNameChanged(ModelClass value)
         {
-            if (!string.IsNullOrEmpty(value))
+            if (!string.IsNullOrEmpty(value?.Name))
             {
                 LoadItems();
 
                 //Application.Current.OpenWindow(new Window (new MainPage { BindingContext = new MainPageViewModel(_db)}));
             }
         }
-
-        partial void OnSelectedOperationChanged(string value)
+        async partial void OnSelectedOperationChanged(string value)
         {
             if (!string.IsNullOrEmpty(value))
             {
                 var op = value;
                 if (op == "Refresh")
                 {
-                    var isContinue = Shell.Current.CurrentPage.DisplayAlert("Warning", "This operation will restore all the data and may take some time, do you want to continue?"
-                        , "Yes","No").Result;
+
+                    var isContinue = await Shell.Current.CurrentPage.DisplayAlert("Warning", "This operation will restore all the data and may take some time, do you want to continue?"
+                        , "Yes", "No");
 
                     if (isContinue)
                     {
@@ -82,12 +80,11 @@ namespace GenericMaui.MVVM.ViewModels
         }
         public void LoadItems()
         {
-            var selected = selectedModelName;
-            if (string.IsNullOrEmpty(selected))
+            if (string.IsNullOrEmpty(SelectedModelName.Name))
             {
                 return;
             }
-            var obj = "GenericMaui.MVVM.Models." + selected;
+            var obj = "GenericMaui.MVVM.Models." + SelectedModelName.Name;
             var objectType = Type.GetType(obj);
             var newInstance = Activator.CreateInstance(objectType);
             var i = _db.Get(newInstance);
@@ -111,7 +108,7 @@ namespace GenericMaui.MVVM.ViewModels
             else
             {
                 LineRecordsList?.Clear();
-                if (selected == "CompanyConfiguration" && i.Count <= 0)
+                if (SelectedModelName.Name == "CompanyConfiguration" && i.Count <= 0)
                 {
                     if (Application.Current?.Windows?.Count > 0)
                     {

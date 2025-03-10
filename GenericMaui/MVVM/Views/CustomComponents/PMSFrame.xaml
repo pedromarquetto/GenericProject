@@ -2,7 +2,7 @@
 <Frame xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GenericMaui.MVVM.Views.CustomComponents.PMSFrame"
-             BackgroundColor="{StaticResource TerciaryColorPMS}"
+             BackgroundColor="{DynamicResource TerciaryColorPMS}"
              x:Name="frm"
             >
 </Frame>

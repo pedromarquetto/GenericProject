@@ -8,6 +8,7 @@ using GenericMaui.MVVM.Views.ApplicationManagemant;
 using GenericMaui.Sql;
 using Microsoft.Extensions.Logging;
 using Org.BouncyCastle.Tls;
+using Plugin.LocalNotification;
 using System.Threading.Tasks;
 
 namespace GenericMaui
@@ -19,6 +20,7 @@ namespace GenericMaui
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseLocalNotification()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -31,11 +33,13 @@ namespace GenericMaui
             builder.Services.AddSingleton<MainPageViewModel>();
             builder.Services.AddSingleton<DbManagemantViewModel>();
             builder.Services.AddSingleton<LoginViewModel>();
+            builder.Services.AddSingleton<InitialViewModel>();
 
             //Link View Model to view
             builder.Services.LinkViewWithViewModel<MainPage, MainPageViewModel>();
             builder.Services.LinkViewWithViewModel<DbManagementPage, DbManagemantViewModel>();
             builder.Services.LinkViewWithViewModel<LoginPage, LoginViewModel>();
+            builder.Services.LinkViewWithViewModel<InitialPage, InitialViewModel>();
 
 
 #if DEBUG

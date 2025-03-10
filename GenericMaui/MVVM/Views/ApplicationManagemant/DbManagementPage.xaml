@@ -6,17 +6,21 @@
              xmlns:custom="clr-namespace:GenericMaui.MVVM.Views.CustomComponents"
              >
     <ScrollView>
-        <VerticalStackLayout>
-            <Label Text="Teste"></Label>
-            <Picker x:Name="pkOperation" Title="Operação" ItemsSource="{Binding OperationList}" SelectedItem="{Binding SelectedOperation,Mode=TwoWay}" />
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto">
+            <Label Grid.Row="0" Text="Teste"></Label>
+            <Picker Grid.Row="1" x:Name="pkOperation" Title="Operação" ItemsSource="{Binding OperationList}" SelectedItem="{Binding SelectedOperation,Mode=TwoWay}" />
 
             <!--<Picker x:Name="pkTable" ItemsSource="{Binding ModelNamesList,Mode=TwoWay}" SelectedItem="{Binding SelectedModelName,Mode=TwoWay}" 
                      Title="Tabela" />-->
 
-            <custom:PMSAutoSuggestBox  Items="{Binding LineRecordsList,Mode=TwoWay}" DisplayColumn="Model"
-                                      SelectedItem="{Binding SelectedLineRecord,Mode=TwoWay}" />
+            <custom:PMSAutoSuggestBox Grid.Row="2" Items="{Binding ModelNamesList,Mode=TwoWay}" 
+                                      DisplayColumn="Name"
+                                      VerticalOptions="Start"
+                                      HorizontalOptions="Start"
+                                      SelectedItem="{Binding SelectedModelName,Mode=TwoWay}" 
+                                      WidthRequest="200"/>
 
-            <CollectionView x:Name="lrecords" SelectedItem="{Binding SelectedLineRecord,Mode=TwoWay}" 
+            <CollectionView Grid.Row="3" x:Name="lrecords" SelectedItem="{Binding SelectedLineRecord,Mode=TwoWay}" 
                             ItemsSource="{Binding LineRecordsList,Mode=TwoWay}" SelectionMode="Single" >
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
@@ -27,7 +31,7 @@
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-        </VerticalStackLayout>
+        </Grid>
     </ScrollView>
     
 </custom:PMSBasePage>

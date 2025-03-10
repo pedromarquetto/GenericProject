@@ -2,10 +2,10 @@
 <Entry xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GenericMaui.MVVM.Views.CustomComponents.PMSEntry"
-            PlaceholderColor="{StaticResource TextColorPMS}"
-            TextColor="{StaticResource TextColorPMS}"
-            HorizontalTextAlignment="Start"
-            
+             PlaceholderColor="{DynamicResource TextColorPMS}"
+             TextColor="{DynamicResource TextColorPMS}"
+             HorizontalTextAlignment="Start"
+             BackgroundColor="{DynamicResource TerciaryColorPMS}"
              >
     <!-- Keyboard Types
         Chat – usado para mensagens de texto e lugares em que os emojis são úteis.

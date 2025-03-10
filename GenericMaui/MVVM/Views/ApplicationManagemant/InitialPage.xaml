@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<custom:PMSBasePage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GenericMaui.MVVM.Views.InitialPage"
+             xmlns:custom="clr-namespace:GenericMaui.MVVM.Views.CustomComponents"
+             Title="InitialScreen">
+    <Grid RowDefinitions="*,*">
+
+        <Image Source="companylogo.jpg" Aspect="Fill" Grid.RowSpan="99"/>
+
+        <ProgressBar Grid.Row="1" VerticalOptions="End" Margin="50" WidthRequest="200" IsVisible="True" 
+                     Progress="{Binding ProgressCounter,Mode=TwoWay}" 
+                     ProgressColor="Green"></ProgressBar>
+        
+    </Grid>
+</custom:PMSBasePage>

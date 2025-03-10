@@ -882,6 +882,22 @@
           }
         }
       },
+      "Plugin.LocalNotification/11.1.4": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.GooglePlayServices.Location": "121.2.0"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Plugin.LocalNotification.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Plugin.LocalNotification.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SharpZipLib/1.4.2": {
         "type": "package",
         "compile": {
@@ -3454,6 +3470,13 @@
           "buildTransitive/net8.0-android34.0/Xamarin.AndroidX.Window.Extensions.Core.Core.targets": {}
         }
       },
+      "Xamarin.Build.Download/0.11.4": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Xamarin.Build.Download.props": {},
+          "buildTransitive/Xamarin.Build.Download.targets": {}
+        }
+      },
       "Xamarin.Google.Android.Material/1.12.0.2": {
         "type": "package",
         "dependencies": {
@@ -3546,6 +3569,97 @@
           "lib/net8.0-android34.0/Xamarin.Google.Guava.ListenableFuture.dll": {
             "related": ".aar;.pdb;.xml"
           }
+        }
+      },
+      "Xamarin.GooglePlayServices.Base/118.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.4.0.5",
+          "Xamarin.AndroidX.Core": "1.13.1.2",
+          "Xamarin.AndroidX.Fragment": "1.7.0.2",
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Basement": "118.3.0.2",
+          "Xamarin.GooglePlayServices.Tasks": "118.1.0.2"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Base.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Base.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0-android34.0/Xamarin.GooglePlayServices.Base.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Basement/118.3.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.4.0.5",
+          "Xamarin.AndroidX.Core": "1.13.1.2",
+          "Xamarin.AndroidX.Fragment": "1.7.0.2",
+          "Xamarin.Build.Download": "0.11.4"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Basement.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Basement.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0-android34.0/Xamarin.GooglePlayServices.Basement.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Location/121.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Base": "118.4.0",
+          "Xamarin.GooglePlayServices.Basement": "118.3.0.2",
+          "Xamarin.GooglePlayServices.Tasks": "118.1.0.2",
+          "Xamarin.Kotlin.StdLib": "1.9.23.3",
+          "Xamarin.KotlinX.Coroutines.Android": "1.8.0.4",
+          "Xamarin.KotlinX.Coroutines.Core": "1.8.0.4"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Location.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Location.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0-android34.0/Xamarin.GooglePlayServices.Location.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Tasks/118.1.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Basement": "118.3.0.2"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Tasks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Tasks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0-android34.0/Xamarin.GooglePlayServices.Tasks.targets": {}
         }
       },
       "Xamarin.Jetbrains.Annotations/26.0.1.2": {
@@ -4567,6 +4681,22 @@
           }
         }
       },
+      "Plugin.LocalNotification/11.1.4": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.GooglePlayServices.Location": "121.2.0"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Plugin.LocalNotification.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Plugin.LocalNotification.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SharpZipLib/1.4.2": {
         "type": "package",
         "compile": {
@@ -7005,6 +7135,13 @@
           "buildTransitive/net8.0-android34.0/Xamarin.AndroidX.Window.Extensions.Core.Core.targets": {}
         }
       },
+      "Xamarin.Build.Download/0.11.4": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Xamarin.Build.Download.props": {},
+          "buildTransitive/Xamarin.Build.Download.targets": {}
+        }
+      },
       "Xamarin.Google.Android.Material/1.12.0.2": {
         "type": "package",
         "dependencies": {
@@ -7097,6 +7234,97 @@
           "lib/net8.0-android34.0/Xamarin.Google.Guava.ListenableFuture.dll": {
             "related": ".aar;.pdb;.xml"
           }
+        }
+      },
+      "Xamarin.GooglePlayServices.Base/118.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.4.0.5",
+          "Xamarin.AndroidX.Core": "1.13.1.2",
+          "Xamarin.AndroidX.Fragment": "1.7.0.2",
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Basement": "118.3.0.2",
+          "Xamarin.GooglePlayServices.Tasks": "118.1.0.2"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Base.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Base.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0-android34.0/Xamarin.GooglePlayServices.Base.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Basement/118.3.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.4.0.5",
+          "Xamarin.AndroidX.Core": "1.13.1.2",
+          "Xamarin.AndroidX.Fragment": "1.7.0.2",
+          "Xamarin.Build.Download": "0.11.4"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Basement.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Basement.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0-android34.0/Xamarin.GooglePlayServices.Basement.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Location/121.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Base": "118.4.0",
+          "Xamarin.GooglePlayServices.Basement": "118.3.0.2",
+          "Xamarin.GooglePlayServices.Tasks": "118.1.0.2",
+          "Xamarin.Kotlin.StdLib": "1.9.23.3",
+          "Xamarin.KotlinX.Coroutines.Android": "1.8.0.4",
+          "Xamarin.KotlinX.Coroutines.Core": "1.8.0.4"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Location.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Location.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0-android34.0/Xamarin.GooglePlayServices.Location.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Tasks/118.1.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Basement": "118.3.0.2"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Tasks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Tasks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0-android34.0/Xamarin.GooglePlayServices.Tasks.targets": {}
         }
       },
       "Xamarin.Jetbrains.Annotations/26.0.1.2": {
@@ -8118,6 +8346,22 @@
           }
         }
       },
+      "Plugin.LocalNotification/11.1.4": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.GooglePlayServices.Location": "121.2.0"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Plugin.LocalNotification.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Plugin.LocalNotification.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SharpZipLib/1.4.2": {
         "type": "package",
         "compile": {
@@ -10556,6 +10800,13 @@
           "buildTransitive/net8.0-android34.0/Xamarin.AndroidX.Window.Extensions.Core.Core.targets": {}
         }
       },
+      "Xamarin.Build.Download/0.11.4": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Xamarin.Build.Download.props": {},
+          "buildTransitive/Xamarin.Build.Download.targets": {}
+        }
+      },
       "Xamarin.Google.Android.Material/1.12.0.2": {
         "type": "package",
         "dependencies": {
@@ -10648,6 +10899,97 @@
           "lib/net8.0-android34.0/Xamarin.Google.Guava.ListenableFuture.dll": {
             "related": ".aar;.pdb;.xml"
           }
+        }
+      },
+      "Xamarin.GooglePlayServices.Base/118.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.4.0.5",
+          "Xamarin.AndroidX.Core": "1.13.1.2",
+          "Xamarin.AndroidX.Fragment": "1.7.0.2",
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Basement": "118.3.0.2",
+          "Xamarin.GooglePlayServices.Tasks": "118.1.0.2"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Base.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Base.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0-android34.0/Xamarin.GooglePlayServices.Base.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Basement/118.3.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.4.0.5",
+          "Xamarin.AndroidX.Core": "1.13.1.2",
+          "Xamarin.AndroidX.Fragment": "1.7.0.2",
+          "Xamarin.Build.Download": "0.11.4"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Basement.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Basement.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0-android34.0/Xamarin.GooglePlayServices.Basement.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Location/121.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Base": "118.4.0",
+          "Xamarin.GooglePlayServices.Basement": "118.3.0.2",
+          "Xamarin.GooglePlayServices.Tasks": "118.1.0.2",
+          "Xamarin.Kotlin.StdLib": "1.9.23.3",
+          "Xamarin.KotlinX.Coroutines.Android": "1.8.0.4",
+          "Xamarin.KotlinX.Coroutines.Core": "1.8.0.4"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Location.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Location.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0-android34.0/Xamarin.GooglePlayServices.Location.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Tasks/118.1.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Basement": "118.3.0.2"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Tasks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Tasks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0-android34.0/Xamarin.GooglePlayServices.Tasks.targets": {}
         }
       },
       "Xamarin.Jetbrains.Annotations/26.0.1.2": {
@@ -11669,6 +12011,22 @@
           }
         }
       },
+      "Plugin.LocalNotification/11.1.4": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.GooglePlayServices.Location": "121.2.0"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Plugin.LocalNotification.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Plugin.LocalNotification.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SharpZipLib/1.4.2": {
         "type": "package",
         "compile": {
@@ -14107,6 +14465,13 @@
           "buildTransitive/net8.0-android34.0/Xamarin.AndroidX.Window.Extensions.Core.Core.targets": {}
         }
       },
+      "Xamarin.Build.Download/0.11.4": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Xamarin.Build.Download.props": {},
+          "buildTransitive/Xamarin.Build.Download.targets": {}
+        }
+      },
       "Xamarin.Google.Android.Material/1.12.0.2": {
         "type": "package",
         "dependencies": {
@@ -14199,6 +14564,97 @@
           "lib/net8.0-android34.0/Xamarin.Google.Guava.ListenableFuture.dll": {
             "related": ".aar;.pdb;.xml"
           }
+        }
+      },
+      "Xamarin.GooglePlayServices.Base/118.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.4.0.5",
+          "Xamarin.AndroidX.Core": "1.13.1.2",
+          "Xamarin.AndroidX.Fragment": "1.7.0.2",
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Basement": "118.3.0.2",
+          "Xamarin.GooglePlayServices.Tasks": "118.1.0.2"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Base.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Base.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0-android34.0/Xamarin.GooglePlayServices.Base.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Basement/118.3.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.4.0.5",
+          "Xamarin.AndroidX.Core": "1.13.1.2",
+          "Xamarin.AndroidX.Fragment": "1.7.0.2",
+          "Xamarin.Build.Download": "0.11.4"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Basement.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Basement.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0-android34.0/Xamarin.GooglePlayServices.Basement.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Location/121.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Base": "118.4.0",
+          "Xamarin.GooglePlayServices.Basement": "118.3.0.2",
+          "Xamarin.GooglePlayServices.Tasks": "118.1.0.2",
+          "Xamarin.Kotlin.StdLib": "1.9.23.3",
+          "Xamarin.KotlinX.Coroutines.Android": "1.8.0.4",
+          "Xamarin.KotlinX.Coroutines.Core": "1.8.0.4"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Location.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Location.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0-android34.0/Xamarin.GooglePlayServices.Location.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Tasks/118.1.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Basement": "118.3.0.2"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Tasks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Tasks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0-android34.0/Xamarin.GooglePlayServices.Tasks.targets": {}
         }
       },
       "Xamarin.Jetbrains.Annotations/26.0.1.2": {
@@ -15220,6 +15676,22 @@
           }
         }
       },
+      "Plugin.LocalNotification/11.1.4": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.GooglePlayServices.Location": "121.2.0"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Plugin.LocalNotification.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Plugin.LocalNotification.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SharpZipLib/1.4.2": {
         "type": "package",
         "compile": {
@@ -17658,6 +18130,13 @@
           "buildTransitive/net8.0-android34.0/Xamarin.AndroidX.Window.Extensions.Core.Core.targets": {}
         }
       },
+      "Xamarin.Build.Download/0.11.4": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Xamarin.Build.Download.props": {},
+          "buildTransitive/Xamarin.Build.Download.targets": {}
+        }
+      },
       "Xamarin.Google.Android.Material/1.12.0.2": {
         "type": "package",
         "dependencies": {
@@ -17750,6 +18229,97 @@
           "lib/net8.0-android34.0/Xamarin.Google.Guava.ListenableFuture.dll": {
             "related": ".aar;.pdb;.xml"
           }
+        }
+      },
+      "Xamarin.GooglePlayServices.Base/118.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.4.0.5",
+          "Xamarin.AndroidX.Core": "1.13.1.2",
+          "Xamarin.AndroidX.Fragment": "1.7.0.2",
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Basement": "118.3.0.2",
+          "Xamarin.GooglePlayServices.Tasks": "118.1.0.2"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Base.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Base.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0-android34.0/Xamarin.GooglePlayServices.Base.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Basement/118.3.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.4.0.5",
+          "Xamarin.AndroidX.Core": "1.13.1.2",
+          "Xamarin.AndroidX.Fragment": "1.7.0.2",
+          "Xamarin.Build.Download": "0.11.4"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Basement.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Basement.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0-android34.0/Xamarin.GooglePlayServices.Basement.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Location/121.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Base": "118.4.0",
+          "Xamarin.GooglePlayServices.Basement": "118.3.0.2",
+          "Xamarin.GooglePlayServices.Tasks": "118.1.0.2",
+          "Xamarin.Kotlin.StdLib": "1.9.23.3",
+          "Xamarin.KotlinX.Coroutines.Android": "1.8.0.4",
+          "Xamarin.KotlinX.Coroutines.Core": "1.8.0.4"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Location.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Location.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0-android34.0/Xamarin.GooglePlayServices.Location.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Tasks/118.1.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Basement": "118.3.0.2"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Tasks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Tasks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0-android34.0/Xamarin.GooglePlayServices.Tasks.targets": {}
         }
       },
       "Xamarin.Jetbrains.Annotations/26.0.1.2": {
@@ -18768,6 +19338,22 @@
           },
           "lib/net6.0/NPOI.OpenXmlFormats.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Plugin.LocalNotification/11.1.4": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.GooglePlayServices.Location": "121.2.0"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Plugin.LocalNotification.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Plugin.LocalNotification.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -21213,6 +21799,13 @@
           "buildTransitive/net8.0-android34.0/Xamarin.AndroidX.Window.Extensions.Core.Core.targets": {}
         }
       },
+      "Xamarin.Build.Download/0.11.4": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Xamarin.Build.Download.props": {},
+          "buildTransitive/Xamarin.Build.Download.targets": {}
+        }
+      },
       "Xamarin.Google.Android.Material/1.12.0.2": {
         "type": "package",
         "dependencies": {
@@ -21305,6 +21898,97 @@
           "lib/net8.0-android34.0/Xamarin.Google.Guava.ListenableFuture.dll": {
             "related": ".aar;.pdb;.xml"
           }
+        }
+      },
+      "Xamarin.GooglePlayServices.Base/118.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.4.0.5",
+          "Xamarin.AndroidX.Core": "1.13.1.2",
+          "Xamarin.AndroidX.Fragment": "1.7.0.2",
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Basement": "118.3.0.2",
+          "Xamarin.GooglePlayServices.Tasks": "118.1.0.2"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Base.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Base.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0-android34.0/Xamarin.GooglePlayServices.Base.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Basement/118.3.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.4.0.5",
+          "Xamarin.AndroidX.Core": "1.13.1.2",
+          "Xamarin.AndroidX.Fragment": "1.7.0.2",
+          "Xamarin.Build.Download": "0.11.4"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Basement.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Basement.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0-android34.0/Xamarin.GooglePlayServices.Basement.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Location/121.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Base": "118.4.0",
+          "Xamarin.GooglePlayServices.Basement": "118.3.0.2",
+          "Xamarin.GooglePlayServices.Tasks": "118.1.0.2",
+          "Xamarin.Kotlin.StdLib": "1.9.23.3",
+          "Xamarin.KotlinX.Coroutines.Android": "1.8.0.4",
+          "Xamarin.KotlinX.Coroutines.Core": "1.8.0.4"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Location.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Location.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0-android34.0/Xamarin.GooglePlayServices.Location.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Tasks/118.1.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.11.4",
+          "Xamarin.GooglePlayServices.Basement": "118.3.0.2"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Tasks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Tasks.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0-android34.0/Xamarin.GooglePlayServices.Tasks.targets": {}
         }
       },
       "Xamarin.Jetbrains.Annotations/26.0.1.2": {
@@ -22342,6 +23026,19 @@
           },
           "lib/net6.0/NPOI.OpenXmlFormats.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Plugin.LocalNotification/11.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-ios17.2/Plugin.LocalNotification.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.2/Plugin.LocalNotification.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -24925,6 +25622,19 @@
           },
           "lib/net6.0/NPOI.OpenXmlFormats.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Plugin.LocalNotification/11.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-ios17.2/Plugin.LocalNotification.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.2/Plugin.LocalNotification.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -27679,6 +28389,19 @@
           }
         }
       },
+      "Plugin.LocalNotification/11.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-ios17.2/Plugin.LocalNotification.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.2/Plugin.LocalNotification.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "runtime.any.System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -30427,6 +31150,19 @@
           },
           "lib/net6.0/NPOI.OpenXmlFormats.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Plugin.LocalNotification/11.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-ios17.2/Plugin.LocalNotification.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.2/Plugin.LocalNotification.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -33181,6 +33917,19 @@
           }
         }
       },
+      "Plugin.LocalNotification/11.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-ios17.2/Plugin.LocalNotification.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.2/Plugin.LocalNotification.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "runtime.any.System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -35929,6 +36678,19 @@
           },
           "lib/net6.0/NPOI.OpenXmlFormats.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Plugin.LocalNotification/11.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-ios17.2/Plugin.LocalNotification.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios17.2/Plugin.LocalNotification.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -38697,6 +39459,19 @@
           }
         }
       },
+      "Plugin.LocalNotification/11.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Plugin.LocalNotification.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Plugin.LocalNotification.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
@@ -41379,6 +42154,19 @@
           },
           "lib/net6.0/NPOI.OpenXmlFormats.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Plugin.LocalNotification/11.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Plugin.LocalNotification.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Plugin.LocalNotification.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -44152,6 +44940,19 @@
           }
         }
       },
+      "Plugin.LocalNotification/11.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Plugin.LocalNotification.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Plugin.LocalNotification.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "runtime.any.System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -46922,6 +47723,19 @@
           }
         }
       },
+      "Plugin.LocalNotification/11.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Plugin.LocalNotification.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Plugin.LocalNotification.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "runtime.any.System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -49686,6 +50500,19 @@
           },
           "lib/net6.0/NPOI.OpenXmlFormats.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Plugin.LocalNotification/11.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Plugin.LocalNotification.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Plugin.LocalNotification.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -52459,6 +53286,19 @@
           }
         }
       },
+      "Plugin.LocalNotification/11.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Plugin.LocalNotification.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Plugin.LocalNotification.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "runtime.any.System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -55072,6 +55912,25 @@
           }
         }
       },
+      "Microsoft.Toolkit.Uwp.Notifications/7.1.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.Registry": "4.7.0",
+          "System.Drawing.Common": "4.7.0",
+          "System.Reflection.Emit": "4.7.0",
+          "System.ValueTuple": "4.5.0"
+        },
+        "compile": {
+          "lib/net5.0-windows10.0.17763/Microsoft.Toolkit.Uwp.Notifications.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0-windows10.0.17763/Microsoft.Toolkit.Uwp.Notifications.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.VisualStudio.Services.Client/19.225.1": {
         "type": "package",
         "dependencies": {
@@ -55148,7 +56007,7 @@
           "System.Security.Principal.Windows": "4.7.0"
         },
         "compile": {
-          "ref/netstandard2.0/_._": {
+          "ref/netstandard2.0/Microsoft.Win32.Registry.dll": {
             "related": ".xml"
           }
         },
@@ -55437,6 +56296,22 @@
           },
           "lib/net6.0/NPOI.OpenXmlFormats.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Plugin.LocalNotification/11.1.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Toolkit.Uwp.Notifications": "7.1.3"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/Plugin.LocalNotification.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/Plugin.LocalNotification.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -56430,22 +57305,13 @@
           }
         }
       },
-      "System.Reflection.Emit/4.3.0": {
+      "System.Reflection.Emit/4.7.0": {
         "type": "package",
-        "dependencies": {
-          "System.IO": "4.3.0",
-          "System.Reflection": "4.3.0",
-          "System.Reflection.Emit.ILGeneration": "4.3.0",
-          "System.Reflection.Primitives": "4.3.0",
-          "System.Runtime": "4.3.0"
-        },
         "compile": {
-          "ref/netstandard1.1/_._": {
-            "related": ".xml"
-          }
+          "ref/netcoreapp2.0/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.3/System.Reflection.Emit.dll": {}
+          "lib/netcoreapp2.0/_._": {}
         }
       },
       "System.Reflection.Emit.ILGeneration/4.3.0": {
@@ -57100,6 +57966,15 @@
           "ref/netstandard1.2/System.Threading.Timer.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.ValueTuple/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
         }
       },
       "System.Windows.Extensions/6.0.0": {
@@ -57955,6 +58830,25 @@
           }
         }
       },
+      "Microsoft.Toolkit.Uwp.Notifications/7.1.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.Registry": "4.7.0",
+          "System.Drawing.Common": "4.7.0",
+          "System.Reflection.Emit": "4.7.0",
+          "System.ValueTuple": "4.5.0"
+        },
+        "compile": {
+          "lib/net5.0-windows10.0.17763/Microsoft.Toolkit.Uwp.Notifications.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0-windows10.0.17763/Microsoft.Toolkit.Uwp.Notifications.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.VisualStudio.Services.Client/19.225.1": {
         "type": "package",
         "dependencies": {
@@ -58018,7 +58912,7 @@
           "System.Security.Principal.Windows": "4.7.0"
         },
         "compile": {
-          "ref/netstandard2.0/_._": {
+          "ref/netstandard2.0/Microsoft.Win32.Registry.dll": {
             "related": ".xml"
           }
         },
@@ -58277,6 +59171,22 @@
           },
           "lib/net6.0/NPOI.OpenXmlFormats.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Plugin.LocalNotification/11.1.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Toolkit.Uwp.Notifications": "7.1.3"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/Plugin.LocalNotification.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/Plugin.LocalNotification.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -59423,22 +60333,13 @@
           }
         }
       },
-      "System.Reflection.Emit/4.3.0": {
+      "System.Reflection.Emit/4.7.0": {
         "type": "package",
-        "dependencies": {
-          "System.IO": "4.3.0",
-          "System.Reflection": "4.3.0",
-          "System.Reflection.Emit.ILGeneration": "4.3.0",
-          "System.Reflection.Primitives": "4.3.0",
-          "System.Runtime": "4.3.0"
-        },
         "compile": {
-          "ref/netstandard1.1/_._": {
-            "related": ".xml"
-          }
+          "ref/netcoreapp2.0/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.3/System.Reflection.Emit.dll": {}
+          "lib/netcoreapp2.0/_._": {}
         }
       },
       "System.Reflection.Emit.ILGeneration/4.3.0": {
@@ -60031,6 +60932,15 @@
           "ref/netstandard1.2/System.Threading.Timer.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.ValueTuple/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
         }
       },
       "System.Windows.Extensions/6.0.0": {
@@ -60880,6 +61790,25 @@
           }
         }
       },
+      "Microsoft.Toolkit.Uwp.Notifications/7.1.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.Registry": "4.7.0",
+          "System.Drawing.Common": "4.7.0",
+          "System.Reflection.Emit": "4.7.0",
+          "System.ValueTuple": "4.5.0"
+        },
+        "compile": {
+          "lib/net5.0-windows10.0.17763/Microsoft.Toolkit.Uwp.Notifications.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0-windows10.0.17763/Microsoft.Toolkit.Uwp.Notifications.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.VisualStudio.Services.Client/19.225.1": {
         "type": "package",
         "dependencies": {
@@ -60943,7 +61872,7 @@
           "System.Security.Principal.Windows": "4.7.0"
         },
         "compile": {
-          "ref/netstandard2.0/_._": {
+          "ref/netstandard2.0/Microsoft.Win32.Registry.dll": {
             "related": ".xml"
           }
         },
@@ -61202,6 +62131,22 @@
           },
           "lib/net6.0/NPOI.OpenXmlFormats.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Plugin.LocalNotification/11.1.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Toolkit.Uwp.Notifications": "7.1.3"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/Plugin.LocalNotification.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/Plugin.LocalNotification.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -62348,22 +63293,13 @@
           }
         }
       },
-      "System.Reflection.Emit/4.3.0": {
+      "System.Reflection.Emit/4.7.0": {
         "type": "package",
-        "dependencies": {
-          "System.IO": "4.3.0",
-          "System.Reflection": "4.3.0",
-          "System.Reflection.Emit.ILGeneration": "4.3.0",
-          "System.Reflection.Primitives": "4.3.0",
-          "System.Runtime": "4.3.0"
-        },
         "compile": {
-          "ref/netstandard1.1/_._": {
-            "related": ".xml"
-          }
+          "ref/netcoreapp2.0/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.3/System.Reflection.Emit.dll": {}
+          "lib/netcoreapp2.0/_._": {}
         }
       },
       "System.Reflection.Emit.ILGeneration/4.3.0": {
@@ -62956,6 +63892,15 @@
           "ref/netstandard1.2/System.Threading.Timer.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.ValueTuple/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
         }
       },
       "System.Windows.Extensions/6.0.0": {
@@ -63805,6 +64750,25 @@
           }
         }
       },
+      "Microsoft.Toolkit.Uwp.Notifications/7.1.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.Registry": "4.7.0",
+          "System.Drawing.Common": "4.7.0",
+          "System.Reflection.Emit": "4.7.0",
+          "System.ValueTuple": "4.5.0"
+        },
+        "compile": {
+          "lib/net5.0-windows10.0.17763/Microsoft.Toolkit.Uwp.Notifications.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0-windows10.0.17763/Microsoft.Toolkit.Uwp.Notifications.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.VisualStudio.Services.Client/19.225.1": {
         "type": "package",
         "dependencies": {
@@ -63868,7 +64832,7 @@
           "System.Security.Principal.Windows": "4.7.0"
         },
         "compile": {
-          "ref/netstandard2.0/_._": {
+          "ref/netstandard2.0/Microsoft.Win32.Registry.dll": {
             "related": ".xml"
           }
         },
@@ -64127,6 +65091,22 @@
           },
           "lib/net6.0/NPOI.OpenXmlFormats.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Plugin.LocalNotification/11.1.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Toolkit.Uwp.Notifications": "7.1.3"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/Plugin.LocalNotification.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/Plugin.LocalNotification.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -65270,22 +66250,13 @@
           }
         }
       },
-      "System.Reflection.Emit/4.3.0": {
+      "System.Reflection.Emit/4.7.0": {
         "type": "package",
-        "dependencies": {
-          "System.IO": "4.3.0",
-          "System.Reflection": "4.3.0",
-          "System.Reflection.Emit.ILGeneration": "4.3.0",
-          "System.Reflection.Primitives": "4.3.0",
-          "System.Runtime": "4.3.0"
-        },
         "compile": {
-          "ref/netstandard1.1/_._": {
-            "related": ".xml"
-          }
+          "ref/netcoreapp2.0/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.3/System.Reflection.Emit.dll": {}
+          "lib/netcoreapp2.0/_._": {}
         }
       },
       "System.Reflection.Emit.ILGeneration/4.3.0": {
@@ -65878,6 +66849,15 @@
           "ref/netstandard1.2/System.Threading.Timer.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.ValueTuple/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
         }
       },
       "System.Windows.Extensions/6.0.0": {
@@ -66727,6 +67707,25 @@
           }
         }
       },
+      "Microsoft.Toolkit.Uwp.Notifications/7.1.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.Registry": "4.7.0",
+          "System.Drawing.Common": "4.7.0",
+          "System.Reflection.Emit": "4.7.0",
+          "System.ValueTuple": "4.5.0"
+        },
+        "compile": {
+          "lib/net5.0-windows10.0.17763/Microsoft.Toolkit.Uwp.Notifications.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0-windows10.0.17763/Microsoft.Toolkit.Uwp.Notifications.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.VisualStudio.Services.Client/19.225.1": {
         "type": "package",
         "dependencies": {
@@ -66790,7 +67789,7 @@
           "System.Security.Principal.Windows": "4.7.0"
         },
         "compile": {
-          "ref/netstandard2.0/_._": {
+          "ref/netstandard2.0/Microsoft.Win32.Registry.dll": {
             "related": ".xml"
           }
         },
@@ -67049,6 +68048,22 @@
           },
           "lib/net6.0/NPOI.OpenXmlFormats.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Plugin.LocalNotification/11.1.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Toolkit.Uwp.Notifications": "7.1.3"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/Plugin.LocalNotification.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/Plugin.LocalNotification.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -68195,22 +69210,13 @@
           }
         }
       },
-      "System.Reflection.Emit/4.3.0": {
+      "System.Reflection.Emit/4.7.0": {
         "type": "package",
-        "dependencies": {
-          "System.IO": "4.3.0",
-          "System.Reflection": "4.3.0",
-          "System.Reflection.Emit.ILGeneration": "4.3.0",
-          "System.Reflection.Primitives": "4.3.0",
-          "System.Runtime": "4.3.0"
-        },
         "compile": {
-          "ref/netstandard1.1/_._": {
-            "related": ".xml"
-          }
+          "ref/netcoreapp2.0/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.3/System.Reflection.Emit.dll": {}
+          "lib/netcoreapp2.0/_._": {}
         }
       },
       "System.Reflection.Emit.ILGeneration/4.3.0": {
@@ -68803,6 +69809,15 @@
           "ref/netstandard1.2/System.Threading.Timer.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.ValueTuple/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
         }
       },
       "System.Windows.Extensions/6.0.0": {
@@ -69655,6 +70670,25 @@
           }
         }
       },
+      "Microsoft.Toolkit.Uwp.Notifications/7.1.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.Registry": "4.7.0",
+          "System.Drawing.Common": "4.7.0",
+          "System.Reflection.Emit": "4.7.0",
+          "System.ValueTuple": "4.5.0"
+        },
+        "compile": {
+          "lib/net5.0-windows10.0.17763/Microsoft.Toolkit.Uwp.Notifications.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0-windows10.0.17763/Microsoft.Toolkit.Uwp.Notifications.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.VisualStudio.Services.Client/19.225.1": {
         "type": "package",
         "dependencies": {
@@ -69721,7 +70755,7 @@
           "System.Security.Principal.Windows": "4.7.0"
         },
         "compile": {
-          "ref/netstandard2.0/_._": {
+          "ref/netstandard2.0/Microsoft.Win32.Registry.dll": {
             "related": ".xml"
           }
         },
@@ -69983,6 +71017,22 @@
           },
           "lib/net6.0/NPOI.OpenXmlFormats.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Plugin.LocalNotification/11.1.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Toolkit.Uwp.Notifications": "7.1.3"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/Plugin.LocalNotification.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/Plugin.LocalNotification.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -71126,22 +72176,13 @@
           }
         }
       },
-      "System.Reflection.Emit/4.3.0": {
+      "System.Reflection.Emit/4.7.0": {
         "type": "package",
-        "dependencies": {
-          "System.IO": "4.3.0",
-          "System.Reflection": "4.3.0",
-          "System.Reflection.Emit.ILGeneration": "4.3.0",
-          "System.Reflection.Primitives": "4.3.0",
-          "System.Runtime": "4.3.0"
-        },
         "compile": {
-          "ref/netstandard1.1/_._": {
-            "related": ".xml"
-          }
+          "ref/netcoreapp2.0/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.3/System.Reflection.Emit.dll": {}
+          "lib/netcoreapp2.0/_._": {}
         }
       },
       "System.Reflection.Emit.ILGeneration/4.3.0": {
@@ -71736,6 +72777,15 @@
           "ref/netstandard1.2/System.Threading.Timer.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.ValueTuple/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
         }
       },
       "System.Windows.Extensions/6.0.0": {
@@ -73477,6 +74527,47 @@
         "microsoft.teamfoundationserver.client.nuspec"
       ]
     },
+    "Microsoft.Toolkit.Uwp.Notifications/7.1.3": {
+      "sha512": "A1dglAzb24gjehmb7DwGd07mfyZ1gacAK7ObE0KwDlRc3mayH2QW7cSOy3TkkyELjLg19OQBuhPOj4SpXET9lg==",
+      "type": "package",
+      "path": "microsoft.toolkit.uwp.notifications/7.1.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "License.md",
+        "build/native/Microsoft.Toolkit.Uwp.Notifications.targets",
+        "lib/native/Microsoft.Toolkit.Uwp.Notifications.pdb",
+        "lib/native/Microsoft.Toolkit.Uwp.Notifications.pri",
+        "lib/native/Microsoft.Toolkit.Uwp.Notifications.winmd",
+        "lib/native/Microsoft.Toolkit.Uwp.Notifications.xml",
+        "lib/net461/Microsoft.Toolkit.Uwp.Notifications.dll",
+        "lib/net461/Microsoft.Toolkit.Uwp.Notifications.pdb",
+        "lib/net461/Microsoft.Toolkit.Uwp.Notifications.xml",
+        "lib/net5.0-windows10.0.17763/Microsoft.Toolkit.Uwp.Notifications.dll",
+        "lib/net5.0-windows10.0.17763/Microsoft.Toolkit.Uwp.Notifications.pdb",
+        "lib/net5.0-windows10.0.17763/Microsoft.Toolkit.Uwp.Notifications.xml",
+        "lib/net5.0/Microsoft.Toolkit.Uwp.Notifications.dll",
+        "lib/net5.0/Microsoft.Toolkit.Uwp.Notifications.pdb",
+        "lib/net5.0/Microsoft.Toolkit.Uwp.Notifications.xml",
+        "lib/netcoreapp3.1/Microsoft.Toolkit.Uwp.Notifications.dll",
+        "lib/netcoreapp3.1/Microsoft.Toolkit.Uwp.Notifications.pdb",
+        "lib/netcoreapp3.1/Microsoft.Toolkit.Uwp.Notifications.xml",
+        "lib/netstandard1.4/Microsoft.Toolkit.Uwp.Notifications.dll",
+        "lib/netstandard1.4/Microsoft.Toolkit.Uwp.Notifications.pdb",
+        "lib/netstandard1.4/Microsoft.Toolkit.Uwp.Notifications.xml",
+        "lib/uap10.0.10240/Microsoft.Toolkit.Uwp.Notifications.pdb",
+        "lib/uap10.0.10240/Microsoft.Toolkit.Uwp.Notifications.pri",
+        "lib/uap10.0.10240/Microsoft.Toolkit.Uwp.Notifications.winmd",
+        "lib/uap10.0.10240/Microsoft.Toolkit.Uwp.Notifications.xml",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.Notifications.dll",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.Notifications.pdb",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.Notifications.pri",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.Notifications.xml",
+        "microsoft.toolkit.uwp.notifications.7.1.3.nupkg.sha512",
+        "microsoft.toolkit.uwp.notifications.nuspec"
+      ]
+    },
     "Microsoft.VisualStudio.Services.Client/19.225.1": {
       "sha512": "hfUkXEnTLS35rBwPuiEduLYpItWL+b7H8jb2VauXYZ5G35tiRvAvWGzb5fcoi6CxIk3u5FMXQTqxpi8fVgG9Zg==",
       "type": "package",
@@ -74516,6 +75607,27 @@
         "logo/60_60.jpg",
         "npoi.2.7.2.nupkg.sha512",
         "npoi.nuspec"
+      ]
+    },
+    "Plugin.LocalNotification/11.1.4": {
+      "sha512": "X/Z808LXBq+sRpw3F3gwuCaJ7wIp8pf3K/v5rP2cO4Wu5Zun5BFv2j/UE6qjsElUbgdHecRcxzN/z7rc457+0w==",
+      "type": "package",
+      "path": "plugin.localnotification/11.1.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net8.0-android34.0/Plugin.LocalNotification.dll",
+        "lib/net8.0-android34.0/Plugin.LocalNotification.xml",
+        "lib/net8.0-ios17.2/Plugin.LocalNotification.dll",
+        "lib/net8.0-ios17.2/Plugin.LocalNotification.xml",
+        "lib/net8.0-windows10.0.19041/Plugin.LocalNotification.dll",
+        "lib/net8.0-windows10.0.19041/Plugin.LocalNotification.xml",
+        "lib/net8.0/Plugin.LocalNotification.dll",
+        "lib/net8.0/Plugin.LocalNotification.xml",
+        "plugin.localnotification.11.1.4.nupkg.sha512",
+        "plugin.localnotification.nuspec"
       ]
     },
     "runtime.any.System.Collections/4.3.0": {
@@ -77545,6 +78657,60 @@
         "system.reflection.emit.nuspec"
       ]
     },
+    "System.Reflection.Emit/4.7.0": {
+      "sha512": "VR4kk8XLKebQ4MZuKuIni/7oh+QGFmZW3qORd1GvBq/8026OpW501SzT/oypwiQl4TvT8ErnReh/NzY9u+C6wQ==",
+      "type": "package",
+      "path": "system.reflection.emit/4.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/System.Reflection.Emit.dll",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.1/System.Reflection.Emit.dll",
+        "lib/netstandard1.1/System.Reflection.Emit.xml",
+        "lib/netstandard1.3/System.Reflection.Emit.dll",
+        "lib/netstandard2.0/System.Reflection.Emit.dll",
+        "lib/netstandard2.0/System.Reflection.Emit.xml",
+        "lib/netstandard2.1/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.1/System.Reflection.Emit.dll",
+        "ref/netstandard1.1/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/de/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/es/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/fr/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/it/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/ja/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/ko/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/ru/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/zh-hans/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/zh-hant/System.Reflection.Emit.xml",
+        "ref/netstandard2.0/System.Reflection.Emit.dll",
+        "ref/netstandard2.0/System.Reflection.Emit.xml",
+        "ref/netstandard2.1/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/aot/lib/netcore50/System.Reflection.Emit.dll",
+        "runtimes/aot/lib/netcore50/System.Reflection.Emit.xml",
+        "system.reflection.emit.4.7.0.nupkg.sha512",
+        "system.reflection.emit.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Reflection.Emit.ILGeneration/4.3.0": {
       "sha512": "59tBslAk9733NXLrUJrwNZEzbMAcu8k344OYo+wfSVygcgZ9lgBdGIzH/nrg3LYhXceynyvTc8t5/GD4Ri0/ng==",
       "type": "package",
@@ -79379,6 +80545,50 @@
         "ref/xamarinwatchos10/_._",
         "system.threading.timer.4.3.0.nupkg.sha512",
         "system.threading.timer.nuspec"
+      ]
+    },
+    "System.ValueTuple/4.5.0": {
+      "sha512": "okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
+      "type": "package",
+      "path": "system.valuetuple/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.ValueTuple.dll",
+        "lib/net461/System.ValueTuple.xml",
+        "lib/net47/System.ValueTuple.dll",
+        "lib/net47/System.ValueTuple.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.ValueTuple.dll",
+        "lib/netstandard1.0/System.ValueTuple.xml",
+        "lib/netstandard2.0/_._",
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.xml",
+        "lib/uap10.0.16299/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net461/System.ValueTuple.dll",
+        "ref/net47/System.ValueTuple.dll",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard2.0/_._",
+        "ref/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "ref/uap10.0.16299/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.valuetuple.4.5.0.nupkg.sha512",
+        "system.valuetuple.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Windows.Extensions/6.0.0": {
@@ -81417,6 +82627,28 @@
         "xamarin.androidx.window.extensions.core.core.nuspec"
       ]
     },
+    "Xamarin.Build.Download/0.11.4": {
+      "sha512": "u2ROt0h6P7mfs0jbmgvmTrqU/YEpEZcf16xcHa78GSEp7fOZunNtJLCZxooeI1V5p+lrr9kYdg3Pa8FoTbgcXQ==",
+      "type": "package",
+      "path": "xamarin.build.download/0.11.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "THIRD-PARTY-NOTICE.txt",
+        "build/Microsoft.Win32.Registry.dll",
+        "build/Newtonsoft.Json.dll",
+        "build/Xamarin.Build.Download.dll",
+        "build/Xamarin.Build.Download.props",
+        "build/Xamarin.Build.Download.targets",
+        "buildTransitive/Microsoft.Win32.Registry.dll",
+        "buildTransitive/Newtonsoft.Json.dll",
+        "buildTransitive/Xamarin.Build.Download.dll",
+        "buildTransitive/Xamarin.Build.Download.props",
+        "buildTransitive/Xamarin.Build.Download.targets",
+        "xamarin.build.download.0.11.4.nupkg.sha512",
+        "xamarin.build.download.nuspec"
+      ]
+    },
     "Xamarin.Google.Android.Material/1.12.0.2": {
       "sha512": "KUMetCNIFLEgIn4bbRubwQfjkTsZmgC3cqc2DNGZRh5fd8FSoyiPXHauul67Dv9xDZOQ4AinyMnehP+U1LERqQ==",
       "type": "package",
@@ -81523,6 +82755,83 @@
         "readme.md",
         "xamarin.google.guava.listenablefuture.1.0.0.26.nupkg.sha512",
         "xamarin.google.guava.listenablefuture.nuspec"
+      ]
+    },
+    "Xamarin.GooglePlayServices.Base/118.4.0": {
+      "sha512": "Z/103gIf3EjaJoug4aKACLbYnScequP1iTT7nxmvLvUhaoEiIXAFyNuJV7sdmW5kzSTceSKCxfA8q57ZEmcSPw==",
+      "type": "package",
+      "path": "xamarin.googleplayservices.base/118.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/net8.0-android34.0/Xamarin.GooglePlayServices.Base.targets",
+        "buildTransitive/net8.0-android34.0/Xamarin.GooglePlayServices.Base.targets",
+        "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Base.dll",
+        "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Base.pdb",
+        "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Base.xml",
+        "lib/net8.0-android34.0/play-services-base.aar",
+        "proguard/proguard.txt",
+        "readme.md",
+        "xamarin.googleplayservices.base.118.4.0.nupkg.sha512",
+        "xamarin.googleplayservices.base.nuspec"
+      ]
+    },
+    "Xamarin.GooglePlayServices.Basement/118.3.0.2": {
+      "sha512": "CDWygAHmlmBruegun2qXhY6u78y0UD0giALaKgHc/N4TeRkJX9nlmnvt2O9F+RIlfzcASpOCNFNyVouO3TyPbA==",
+      "type": "package",
+      "path": "xamarin.googleplayservices.basement/118.3.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/net8.0-android34.0/Xamarin.GooglePlayServices.Basement.targets",
+        "build/net8.0-android34.0/Xamarin.GooglePlayServices.Tasks.dll",
+        "buildTransitive/net8.0-android34.0/Xamarin.GooglePlayServices.Basement.targets",
+        "buildTransitive/net8.0-android34.0/Xamarin.GooglePlayServices.Tasks.dll",
+        "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Basement.dll",
+        "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Basement.pdb",
+        "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Basement.xml",
+        "lib/net8.0-android34.0/play-services-basement.aar",
+        "proguard/proguard.txt",
+        "readme.md",
+        "xamarin.googleplayservices.basement.118.3.0.2.nupkg.sha512",
+        "xamarin.googleplayservices.basement.nuspec"
+      ]
+    },
+    "Xamarin.GooglePlayServices.Location/121.2.0": {
+      "sha512": "6HKkMjF0Ze7BdGeebmPxP9sW4ulQHEcqX/KYqA4m0ddOxsScdXU1q+ah3wtkcdOG5Py0hxf8+tQhtz2rDjJ3Zw==",
+      "type": "package",
+      "path": "xamarin.googleplayservices.location/121.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/net8.0-android34.0/Xamarin.GooglePlayServices.Location.targets",
+        "buildTransitive/net8.0-android34.0/Xamarin.GooglePlayServices.Location.targets",
+        "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Location.dll",
+        "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Location.pdb",
+        "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Location.xml",
+        "lib/net8.0-android34.0/play-services-location.aar",
+        "readme.md",
+        "xamarin.googleplayservices.location.121.2.0.nupkg.sha512",
+        "xamarin.googleplayservices.location.nuspec"
+      ]
+    },
+    "Xamarin.GooglePlayServices.Tasks/118.1.0.2": {
+      "sha512": "lz4WXtUE3iVRNZhXPdB2SqCL7mua7OX6FuxrmveQezeqGO3fkj2XyicFgqlinGx4fv4gE5QeLrHN5NLRmAt3IQ==",
+      "type": "package",
+      "path": "xamarin.googleplayservices.tasks/118.1.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/net8.0-android34.0/Xamarin.GooglePlayServices.Tasks.targets",
+        "buildTransitive/net8.0-android34.0/Xamarin.GooglePlayServices.Tasks.targets",
+        "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Tasks.dll",
+        "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Tasks.pdb",
+        "lib/net8.0-android34.0/Xamarin.GooglePlayServices.Tasks.xml",
+        "lib/net8.0-android34.0/play-services-tasks.aar",
+        "proguard/proguard.txt",
+        "readme.md",
+        "xamarin.googleplayservices.tasks.118.1.0.2.nupkg.sha512",
+        "xamarin.googleplayservices.tasks.nuspec"
       ]
     },
     "Xamarin.Jetbrains.Annotations/26.0.1.2": {
@@ -81726,6 +83035,7 @@
       "Microsoft.TeamFoundationServer.Client >= 19.225.1",
       "NPOI >= 2.7.2",
       "Newtonsoft.Json >= 13.0.3",
+      "Plugin.LocalNotification >= 11.1.4",
       "SQLitePCLRaw.bundle_green >= 2.1.10",
       "SQLitePCLRaw.core >= 2.1.10",
       "SQLitePCLRaw.provider.dynamic_cdecl >= 2.1.10",
@@ -81742,6 +83052,7 @@
       "Microsoft.TeamFoundationServer.Client >= 19.225.1",
       "NPOI >= 2.7.2",
       "Newtonsoft.Json >= 13.0.3",
+      "Plugin.LocalNotification >= 11.1.4",
       "SQLitePCLRaw.bundle_green >= 2.1.10",
       "SQLitePCLRaw.core >= 2.1.10",
       "SQLitePCLRaw.provider.dynamic_cdecl >= 2.1.10",
@@ -81758,6 +83069,7 @@
       "Microsoft.TeamFoundationServer.Client >= 19.225.1",
       "NPOI >= 2.7.2",
       "Newtonsoft.Json >= 13.0.3",
+      "Plugin.LocalNotification >= 11.1.4",
       "SQLitePCLRaw.bundle_green >= 2.1.10",
       "SQLitePCLRaw.core >= 2.1.10",
       "SQLitePCLRaw.provider.dynamic_cdecl >= 2.1.10",
@@ -81773,6 +83085,7 @@
       "Microsoft.TeamFoundationServer.Client >= 19.225.1",
       "NPOI >= 2.7.2",
       "Newtonsoft.Json >= 13.0.3",
+      "Plugin.LocalNotification >= 11.1.4",
       "SQLitePCLRaw.bundle_green >= 2.1.10",
       "SQLitePCLRaw.core >= 2.1.10",
       "SQLitePCLRaw.provider.dynamic_cdecl >= 2.1.10",
@@ -81885,6 +83198,10 @@
             "target": "Package",
             "version": "[13.0.3, )"
           },
+          "Plugin.LocalNotification": {
+            "target": "Package",
+            "version": "[11.1.4, )"
+          },
           "SQLitePCLRaw.bundle_green": {
             "target": "Package",
             "version": "[2.1.10, )"
@@ -81967,6 +83284,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.3, )"
+          },
+          "Plugin.LocalNotification": {
+            "target": "Package",
+            "version": "[11.1.4, )"
           },
           "SQLitePCLRaw.bundle_green": {
             "target": "Package",
@@ -82051,6 +83372,10 @@
             "target": "Package",
             "version": "[13.0.3, )"
           },
+          "Plugin.LocalNotification": {
+            "target": "Package",
+            "version": "[11.1.4, )"
+          },
           "SQLitePCLRaw.bundle_green": {
             "target": "Package",
             "version": "[2.1.10, )"
@@ -82128,6 +83453,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.3, )"
+          },
+          "Plugin.LocalNotification": {
+            "target": "Package",
+            "version": "[11.1.4, )"
           },
           "SQLitePCLRaw.bundle_green": {
             "target": "Package",

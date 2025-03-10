@@ -702,3 +702,5 @@ C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
+C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Toolkit.Uwp.Notifications.dll
+C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Plugin.LocalNotification.dll

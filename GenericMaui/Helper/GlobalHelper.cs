@@ -1,4 +1,5 @@
 ﻿using GenericMaui.Interfaces;
+using GenericMaui.MVVM.Models.GenericModels;
 using SQLite;
 using System;
 using System.Collections.Generic;
@@ -12,9 +13,9 @@ namespace GenericMaui.Helper
 {
     public static class GlobalHelper
     {
-        public static ObservableCollection<Type> GetModels()
+        public static ObservableCollection<ModelClass> GetModels()
         {
-            ObservableCollection<Type> models = new ();
+            ObservableCollection<ModelClass> models = new ();
 
             Assembly assembly = Assembly.GetExecutingAssembly();
 
@@ -22,7 +23,7 @@ namespace GenericMaui.Helper
             {
                 if (type.GetProperties().Any(prop => prop.GetCustomAttribute<PrimaryKeyAttribute>() != null))
                 {
-                    models.Add(type);
+                    models.Add( new ModelClass { Name = type.Name, FullName = type.FullName});
                 }
             }
             return models;

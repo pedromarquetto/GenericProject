@@ -40,6 +40,6 @@ namespace GenericMaui.Helper
         {
             Company = company;
         }
-
+        public static bool IsAppLoaded { get; set; } = false;
     }
 }

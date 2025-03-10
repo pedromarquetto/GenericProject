@@ -30,7 +30,7 @@
     <MauiXaml Update="MVVM\Views\ApplicationManagemant\CreateScreen.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="MVVM\Views\ApplicationManagemant\InitialScreen.xaml">
+    <MauiXaml Update="MVVM\Views\ApplicationManagemant\InitialPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="MVVM\Views\ApplicationManagemant\LoginPage.xaml">

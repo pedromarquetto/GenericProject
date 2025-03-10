@@ -85,6 +85,7 @@
 		<PackageReference Include="Microsoft.TeamFoundationServer.Client" Version="19.225.1" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 		<PackageReference Include="NPOI" Version="2.7.2" />
+		<PackageReference Include="Plugin.LocalNotification" Version="11.1.4" />
 		<PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
 		<PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.10" />
 		<PackageReference Include="SQLitePCLRaw.core" Version="2.1.10" />
@@ -108,7 +109,7 @@
 	  <MauiXaml Update="MVVM\Views\ApplicationManagemant\CreateScreen.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="MVVM\Views\ApplicationManagemant\InitialScreen.xaml">
+	  <MauiXaml Update="MVVM\Views\ApplicationManagemant\InitialPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="MVVM\Views\ApplicationManagemant\LoginPage.xaml">
@@ -131,6 +132,9 @@
 	<ItemGroup>
 	  <Compile Update="MVVM\Views\ApplicationManagemant\CreateScreen.xaml.cs">
 	    <DependentUpon>CreateScreen.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="MVVM\Views\ApplicationManagemant\InitialPage.xaml.cs">
+	    <DependentUpon>InitialPage.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="MVVM\Views\ApplicationManagemant\LoginPage.xaml.cs">
 	    <DependentUpon>LoginPage.xaml</DependentUpon>

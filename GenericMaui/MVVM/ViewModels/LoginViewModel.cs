@@ -28,7 +28,8 @@ namespace GenericMaui.MVVM.ViewModels
         [RelayCommand]
         public void SignIn()
         {
-            if (Users.ValidateConfiguration() == 0)
+            var list = _db.Get(Users);
+            if (!list.Any())
             {
                 if (_db.Insert(Users) == 1)
                 {
@@ -41,10 +42,10 @@ namespace GenericMaui.MVVM.ViewModels
             }
             else
             {
-                ObservableCollection<Users> list = _db.Get(new Users());
                 if (list.Where(p => p.Name == Users.Name && p.Password == Users.Password)
                     .FirstOrDefault() != null)
                 {
+                    Users.IsLoggedUser = true;
                     _db.Update(Users);
                     Application.Current.Windows[0].Page = new AppShell();
                 }

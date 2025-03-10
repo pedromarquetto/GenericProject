@@ -28,17 +28,5 @@ namespace GenericMaui.MVVM.Models
         public DateTime CreateDate { get; set; }
         public bool IsLoggedUser { get; set; }// used for identify the user from the current machine
 
-        readonly SqlContext _db = new SqlContext();
-        public int ValidateConfiguration()
-        {
-            var result = 0;
-            ObservableCollection<Users> config = _db.Get(new Users());
-            if (config.FirstOrDefault() != null)
-            {
-                result = config.FirstOrDefault().StaySigned ? 1 : 2;
-            }
-            return result;
-        }
-
     }
 }

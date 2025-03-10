@@ -51,11 +51,11 @@ build_metadata.AdditionalFiles.ManifestResourceName = GenericMaui.MVVM.Views.App
 build_metadata.AdditionalFiles.TargetPath = MVVM\Views\ApplicationManagemant\DbManagementPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MVVM\Views\ApplicationManagemant\DbManagementPage.xaml
 
-[C:/Users/plcm9/source/genericproject/GenericProject/GenericMaui/MVVM/Views/ApplicationManagemant/InitialScreen.xaml]
+[C:/Users/plcm9/source/genericproject/GenericProject/GenericMaui/MVVM/Views/ApplicationManagemant/InitialPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = GenericMaui.MVVM.Views.ApplicationManagemant.InitialScreen.xaml
-build_metadata.AdditionalFiles.TargetPath = MVVM\Views\ApplicationManagemant\InitialScreen.xaml
-build_metadata.AdditionalFiles.RelativePath = MVVM\Views\ApplicationManagemant\InitialScreen.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GenericMaui.MVVM.Views.ApplicationManagemant.InitialPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\ApplicationManagemant\InitialPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\ApplicationManagemant\InitialPage.xaml
 
 [C:/Users/plcm9/source/genericproject/GenericProject/GenericMaui/MVVM/Views/ApplicationManagemant/LoginPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

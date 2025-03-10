@@ -5,6 +5,17 @@ namespace GenericMaui.MVVM.Views.CustomComponents;
 
 public partial class PMSAutoSuggestBox : ContentView
 {
+    private bool isDropDownOpen = false;
+    public bool IsDropDownOpen 
+    { 
+        get => isDropDownOpen;
+        set
+        {
+            isDropDownOpen = value;
+            OnPropertyChanged();
+        }
+    }
+
     public IEnumerable<object> Items
     {
         get => (IEnumerable<object>)GetValue(ItemsProperty);
@@ -15,7 +26,7 @@ public partial class PMSAutoSuggestBox : ContentView
         BindableProperty.Create(nameof(Items),
                                 typeof(IEnumerable<object>),
                                 typeof(PMSAutoSuggestBox),
-                                default(IEnumerable<object>),
+                                null,
                                 BindingMode.TwoWay,
                                 propertyChanged: OnItemsChanged);
     private static void OnItemsChanged(BindableObject bindable, object oldValue, object newValue)
@@ -23,10 +34,10 @@ public partial class PMSAutoSuggestBox : ContentView
         if (bindable is PMSAutoSuggestBox control && newValue is IEnumerable<object> newItems)
         {
             control.FilteredItems.Clear();
-            foreach (var item in newItems)
-            {
-                control.FilteredItems.Add(item);
-            }
+            //foreach (var item in newItems)
+            //{
+            //    control.FilteredItems.Add(item);
+            //}
         }
     }
 
@@ -43,8 +54,6 @@ public partial class PMSAutoSuggestBox : ContentView
                                 BindingMode.TwoWay);
 
     public ObservableCollection<object> FilteredItems { get; set; } = new();
-
-    public event EventHandler<string> ItemSelected;
 
     public PMSAutoSuggestBox()
 	{
@@ -63,7 +72,11 @@ public partial class PMSAutoSuggestBox : ContentView
     {
         var control = (PMSAutoSuggestBox)bindable;
         control.FilteredItems.Clear();
-        control.SearchText = newValue.GetType()?.GetProperty(control.DisplayColumn)?.GetValue(newValue)?.ToString() ?? "";
+
+        control.SelectedItem = string.IsNullOrEmpty(control.SearchText) ? null : newValue;
+        control.IsDropDownOpen = !string.IsNullOrEmpty(control.SearchText) && newValue == null;
+
+        control.SearchText = newValue?.GetType()?.GetProperty(control.DisplayColumn)?.GetValue(newValue)?.ToString() ?? "";
     }
 
     public string SearchText
@@ -81,34 +94,32 @@ public partial class PMSAutoSuggestBox : ContentView
     private static void OnSearchTextChanged(BindableObject bindable, object oldValue, object newValue)
     {
         var control = (PMSAutoSuggestBox)bindable;
-        control.FiltrarItens();
+        control.SelectedItem = string.IsNullOrEmpty(newValue?.ToString()) ? null : control.SelectedItem;
+        control.IsDropDownOpen = !string.IsNullOrEmpty(newValue as string) && control.SelectedItem == null;
+        control.FilterItems();
     }
-    private void FiltrarItens()
+    private void FilterItems()
     {
         FilteredItems.Clear();
-        if (string.IsNullOrWhiteSpace(SearchText))
+        if (IsDropDownOpen)
         {
-            foreach (var item in Items)
-                FilteredItems.Add(item);
-        }
-        else
-        {
-            foreach (var item in Items)
+            if (string.IsNullOrWhiteSpace(SearchText))
             {
-                var property = item.GetType()?.GetProperty(DisplayColumn)?.GetValue(item)?.ToString() ?? "";
-                if (property.Contains(SearchText,StringComparison.OrdinalIgnoreCase))
-                {
+                foreach (var item in Items)
                     FilteredItems.Add(item);
-                }
-            }   
+            }
+            else
+            {
+                foreach (var item in Items)
+                {
+                    var property = item.GetType()?.GetProperty(DisplayColumn)?.GetValue(item)?.ToString() ?? "";
+                    if (property.Contains(SearchText,StringComparison.OrdinalIgnoreCase))
+                    {
+                        FilteredItems.Add(item);
+                    }
+                }   
+            }
         }
-    }
 
-    //private void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
-    //{
-    //    if (e.SelectedItem is string selectedItem)
-    //    {
-    //        ItemSelected?.Invoke(this, selectedItem);
-    //    }
-    //}
+    }
 }

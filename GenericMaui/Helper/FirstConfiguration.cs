@@ -69,7 +69,7 @@ namespace GenericMaui.Helper
             }
             else
             {
-                var loggedUser = _db.Get(new Users()).FirstOrDefault(p => p.IsLoggedUser && user.StaySigned);
+                var loggedUser = _db.Get(new Users()).FirstOrDefault(p => p.IsLoggedUser && p.StaySigned);
                 return Tuple.Create(loggedUser != null ? LoginStateEnum.UserLogged : LoginStateEnum.UserNotLogged, loggedUser != null ? loggedUser : user);
             }
         }
