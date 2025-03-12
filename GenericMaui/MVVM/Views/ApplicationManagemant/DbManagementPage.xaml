@@ -7,8 +7,9 @@
              >
     <ScrollView>
         <Grid RowDefinitions="Auto,Auto,Auto,Auto">
-            <Label Grid.Row="0" Text="Teste"></Label>
-            <Picker Grid.Row="1" x:Name="pkOperation" Title="Operação" ItemsSource="{Binding OperationList}" SelectedItem="{Binding SelectedOperation,Mode=TwoWay}" />
+            
+            <Picker Grid.Row="1" x:Name="pkOperation" Title="Operação" ItemsSource="{Binding OperationList}" 
+                    SelectedItem="{Binding SelectedOperation,Mode=TwoWay}" />
 
             <!--<Picker x:Name="pkTable" ItemsSource="{Binding ModelNamesList,Mode=TwoWay}" SelectedItem="{Binding SelectedModelName,Mode=TwoWay}" 
                      Title="Tabela" />-->
@@ -18,7 +19,7 @@
                                       VerticalOptions="Start"
                                       HorizontalOptions="Start"
                                       SelectedItem="{Binding SelectedModelName,Mode=TwoWay}" 
-                                      WidthRequest="200"/>
+                                      WidthRequest="350"/>
 
             <CollectionView Grid.Row="3" x:Name="lrecords" SelectedItem="{Binding SelectedLineRecord,Mode=TwoWay}" 
                             ItemsSource="{Binding LineRecordsList,Mode=TwoWay}" SelectionMode="Single" >

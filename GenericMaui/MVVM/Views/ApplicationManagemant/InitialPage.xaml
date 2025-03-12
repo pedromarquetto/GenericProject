@@ -3,14 +3,30 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GenericMaui.MVVM.Views.InitialPage"
              xmlns:custom="clr-namespace:GenericMaui.MVVM.Views.CustomComponents"
+             xmlns:local="clr-namespace:GenericMaui.Helper.Converters"
              Title="InitialScreen">
+    
+    <custom:PMSBasePage.Resources>
+        <local:DecimalToStringConverter x:Key="DecimalToStringConverter"/>
+    </custom:PMSBasePage.Resources>
+
     <Grid RowDefinitions="*,*">
 
         <Image Source="companylogo.jpg" Aspect="Fill" Grid.RowSpan="99"/>
 
+
+        <custom:PMSLabel Grid.Row="1" VerticalOptions="End" Margin="10" FontSize="20" TextColor="Black"
+                         Text="{Binding ProgressCounter,Converter={StaticResource DecimalToStringConverter},Mode=OneWay}" />
+        
         <ProgressBar Grid.Row="1" VerticalOptions="End" Margin="50" WidthRequest="200" IsVisible="True" 
                      Progress="{Binding ProgressCounter,Mode=TwoWay}" 
-                     ProgressColor="Green"></ProgressBar>
+                     ProgressColor="Green"
+                     >
+            <ProgressBar.Clip>
+                <EllipseGeometry Center="100,10" RadiusX="100" RadiusY="10"/>
+            </ProgressBar.Clip>
+        </ProgressBar>
         
+
     </Grid>
 </custom:PMSBasePage>

@@ -35,8 +35,6 @@
             Route="DbManagementPage" />
     </FlyoutItem>
     
-
-
     <Shell.FlyoutFooter>
         <custom:PMSFrame>
             <custom:PMSLabel Text="Footer"></custom:PMSLabel>

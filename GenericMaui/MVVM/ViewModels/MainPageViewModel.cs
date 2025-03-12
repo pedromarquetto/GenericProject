@@ -29,10 +29,10 @@ namespace GenericMaui.MVVM.ViewModels
             //list.Add(model);
             //Application.Current.Resources["TextColorPMS"] = Colors.Blue;
             //_db.Insert(model);
+             
 
-            
             //var b = "aa".Substring(222);
-            
+
         }
 
 

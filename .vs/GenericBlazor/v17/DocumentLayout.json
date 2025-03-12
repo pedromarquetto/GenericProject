@@ -1,16 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\plcm9\\source\\genericproject\\GenericProject\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{BC442361-EFF6-8300-CF73-950BDE5CE414}|GenericMaui\\GenericMaui.csproj|c:\\users\\plcm9\\source\\genericproject\\genericproject\\genericmaui\\mvvm\\viewmodels\\initialviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC442361-EFF6-8300-CF73-950BDE5CE414}|GenericMaui\\GenericMaui.csproj|solutionrelative:genericmaui\\mvvm\\viewmodels\\initialviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC442361-EFF6-8300-CF73-950BDE5CE414}|GenericMaui\\GenericMaui.csproj|c:\\users\\plcm9\\source\\genericproject\\genericproject\\genericmaui\\mvvm\\views\\applicationmanagemant\\initialpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{BC442361-EFF6-8300-CF73-950BDE5CE414}|GenericMaui\\GenericMaui.csproj|solutionrelative:genericmaui\\mvvm\\views\\applicationmanagemant\\initialpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -18,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -27,32 +18,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "InitialPage.xaml",
-              "DocumentMoniker": "C:\\Users\\plcm9\\source\\genericproject\\GenericProject\\GenericMaui\\MVVM\\Views\\ApplicationManagemant\\InitialPage.xaml",
-              "RelativeDocumentMoniker": "GenericMaui\\MVVM\\Views\\ApplicationManagemant\\InitialPage.xaml",
-              "ToolTip": "C:\\Users\\plcm9\\source\\genericproject\\GenericProject\\GenericMaui\\MVVM\\Views\\ApplicationManagemant\\InitialPage.xaml",
-              "RelativeToolTip": "GenericMaui\\MVVM\\Views\\ApplicationManagemant\\InitialPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-10T21:08:06.16Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "InitialViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\plcm9\\source\\genericproject\\GenericProject\\GenericMaui\\MVVM\\ViewModels\\InitialViewModel.cs",
-              "RelativeDocumentMoniker": "GenericMaui\\MVVM\\ViewModels\\InitialViewModel.cs",
-              "ToolTip": "C:\\Users\\plcm9\\source\\genericproject\\GenericProject\\GenericMaui\\MVVM\\ViewModels\\InitialViewModel.cs",
-              "RelativeToolTip": "GenericMaui\\MVVM\\ViewModels\\InitialViewModel.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAEQAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T21:06:47.984Z",
-              "EditorCaption": ""
             }
           ]
         }

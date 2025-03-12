@@ -5,7 +5,6 @@
              xmlns:custom="clr-namespace:GenericMaui.MVVM.Views.CustomComponents"
              xmlns:vm="clr-namespace:GenericMaui.MVVM.ViewModels"
              xmlns:modelobj="clr-namespace:GenericMaui.MVVM.Models"
-             x:DataType="vm:MainPageViewModel"
              xmlns:conv="clr-namespace:GenericMaui.Helper.Converters"
              >
     <custom:PMSBasePage.Resources>
@@ -16,25 +15,17 @@
     
     <!--<NavigationPage.HasBackButton>false</NavigationPage.HasBackButton>
     <NavigationPage.HasNavigationBar>false</NavigationPage.HasNavigationBar>-->
+    
     <Grid RowDefinitions="auto,auto,*,*,*,*,*,*" ColumnDefinitions="*">
-        <!--<custom:PMSLabel BackgroundColor="Black" Text="Testando"></custom:PMSLabel>-->
-
-        <Label
-            Grid.Row="0"
-            Text="Hello, World!"
-            HorizontalOptions="Center"
-            HorizontalTextAlignment="Center"
-            x:Name="lblMain" />
+        
 
         <CarouselView Grid.Row="1" BackgroundColor="Red" x:Name="carrouselList" ItemsSource="{Binding CompanyArchiveList}"
-                      IndicatorView="indicatorView" MinimumHeightRequest="500" >
+                      IndicatorView="indicatorView" HeightRequest="500" >
             <CarouselView.ItemTemplate>
-                <DataTemplate x:DataType="{x:Type modelobj:CompanyArchive}">
+                <DataTemplate>
                     <Image Aspect="Fill" Source="{Binding Archive, Converter={StaticResource ByteArrayToImageSourceConverter}}"></Image>
                 </DataTemplate>
             </CarouselView.ItemTemplate>
-            
-
         </CarouselView>
 
         <IndicatorView x:Name="indicatorView"
@@ -43,21 +34,9 @@
                         IndicatorColor="LightGray"
                         IndicatorSize="20"
                         SelectedIndicatorColor="DarkGray"
+                        HorizontalOptions="Center"
                         VerticalOptions="End" />
         
-        <IndicatorView Grid.Row="2" x:Name="Indicator" HorizontalOptions="Center" />
-
-        <Entry Grid.Row="3" x:Name="txtid" Text="{Binding Model.Id}" />
-        <Entry Grid.Row="4" x:Name="txtName" Text="{Binding Model.Name}" />
-        <Entry Grid.Row="5" x:Name="txtdesc" Text="{Binding Model.Description}" />
-
-        <Button 
-            Grid.Row="6" 
-            Text="Button" Command="{Binding InsertCommand}" />
-        <Button 
-            Grid.Row="7" 
-            Text="Button" Clicked="Button_Clicked" />
-
 
     </Grid>
 </custom:PMSBasePage>

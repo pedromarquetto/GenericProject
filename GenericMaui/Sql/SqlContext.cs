@@ -44,11 +44,6 @@ namespace GenericMaui.Sql
             _database.CreateTable<Validation>();
             _database.CreateTable<LogClass>();
         }
-
-        public int Insert<T>(T item)
-        {
-            return _database.Insert(item);
-        }
         public ObservableCollection<T> Get<T>(T item,string? column = null, string? value = null) 
             where T : new()
         {
@@ -100,6 +95,22 @@ namespace GenericMaui.Sql
                     throw new NotImplementedException();
 
             }
+        }
+        public int InsertOrUpdate<T>(T item)
+        {
+            return _database.InsertOrReplace(item);
+        }
+        public int Insert<T>(T item)
+        {
+            return _database.Insert(item);
+        }
+        public int InsertAll<T>(IEnumerable<T> item)
+        {
+            return _database.InsertAll(item);
+        }
+        public int UpdateAll<T>(IEnumerable<T> item)
+        {
+            return _database.UpdateAll(item);
         }
         public int Update<T>(T item)
         {

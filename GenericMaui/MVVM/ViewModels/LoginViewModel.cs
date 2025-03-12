@@ -33,7 +33,7 @@ namespace GenericMaui.MVVM.ViewModels
             {
                 if (_db.Insert(Users) == 1)
                 {
-                    Application.Current.Windows[0].Page = new AppShell();
+                    Application.Current.Windows[0].Page = new AppShell(_db);
                 }
                 else
                 {
@@ -47,7 +47,7 @@ namespace GenericMaui.MVVM.ViewModels
                 {
                     Users.IsLoggedUser = true;
                     _db.Update(Users);
-                    Application.Current.Windows[0].Page = new AppShell();
+                    Application.Current.Windows[0].Page = new AppShell(_db);
                 }
             }
         }

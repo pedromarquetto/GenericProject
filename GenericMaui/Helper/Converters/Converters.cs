@@ -23,7 +23,22 @@ namespace GenericMaui.Helper.Converters
             throw new NotImplementedException();
         }
     }
+    public class DecimalToStringConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            if (value is decimal decValue)
+            {
+                return decValue.ToString();
+            }
+            return null;
+        }
 
+        public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
     public class DisplayColumnConverter : IMultiValueConverter
     {
         public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)

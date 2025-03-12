@@ -10,9 +10,9 @@ namespace GenericMaui.MVVM.Views.CustomComponents
         {
 
         }
-        public void LoadScreenFields()
+        public void LoadScreenFields(int screenId = 1)
         {
-            ObservableCollection<SystemScreenField> list = FieldValidatior.GetFields("1");
+            ObservableCollection<SystemScreenField> list = FieldValidatior.GetFields($"{screenId.ToString()}");
 
             foreach (var item in list)
             {

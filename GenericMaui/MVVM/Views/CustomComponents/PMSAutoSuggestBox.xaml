@@ -4,9 +4,7 @@
             x:Class="GenericMaui.MVVM.Views.CustomComponents.PMSAutoSuggestBox"
             xmlns:local="clr-namespace:GenericMaui.Helper.Converters"
             x:Name="Root"
-            HeightRequest="40"
             ZIndex="999"
-            BackgroundColor="{DynamicResource PrimaryColorPMS}"
             Margin="5"> <!--To allow selection-->
 
     <ContentView.Resources>
@@ -15,9 +13,10 @@
         </ResourceDictionary>
     </ContentView.Resources>
 
-    <Grid> 
-        <AbsoluteLayout>
-            <SearchBar Placeholder="--Select--"
+    <Grid>
+        <AbsoluteLayout x:Name="absLayout" HeightRequest="40">
+            <SearchBar Placeholder="--Select--" 
+                       BackgroundColor="{DynamicResource PrimaryColorPMS}"
                        AbsoluteLayout.LayoutFlags="WidthProportional"
                        AbsoluteLayout.LayoutBounds="0,0,1,AutoSize"
                        Text="{Binding SearchText,Source={x:Reference Root},Mode=TwoWay}" />
@@ -33,7 +32,7 @@
                       >
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <ViewCell>
+                        <ViewCell Height="40">
                             <Grid>
                                 <Label TextColor="{DynamicResource TextColorPMS}">
                                     <Label.Text>
@@ -47,10 +46,10 @@
                                 </Label>
                             </Grid>
                         </ViewCell>
-                        
+
                     </DataTemplate>
                 </ListView.ItemTemplate>
-            
+
             </ListView>
         </AbsoluteLayout>
     </Grid>

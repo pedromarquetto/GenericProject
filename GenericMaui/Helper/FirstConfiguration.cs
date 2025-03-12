@@ -4,9 +4,6 @@ using GenericMaui.MVVM.Models;
 using GenericMaui.Services;
 using GenericMaui.Sql;
 using Newtonsoft.Json;
-using SQLite;
-using System.Reflection;
-using static Microsoft.VisualStudio.Services.Graph.Constants;
 
 namespace GenericMaui.Helper
 {
@@ -39,24 +36,7 @@ namespace GenericMaui.Helper
                             {
                                 var json = JsonConvert.SerializeObject(itm);
                                 var converted = JsonConvert.DeserializeObject(json, objectType);
-                                var idValue = objectType.GetProperty(objectType.Name.ToString()+"Id")?.GetValue(converted);
-                                if (idValue != null)
-                                {
-                                    var newInstance = Activator.CreateInstance(objectType);
-
-                                    // Check if the item already exists in the database with the same "Model Name + ID"
-                                    var existingItem = _db.Get(newInstance)?.FirstOrDefault(x => x?.GetType().GetProperty(objectType.Name.ToString() + "Id")?
-                                        .GetValue(x).Equals(idValue) ?? false);
-
-                                    if (existingItem != null)
-                                    {
-                                        _db.Update(converted);
-                                    }
-                                    else
-                                    {
-                                        _db.Insert(converted);
-                                    }
-                                }
+                                _db.InsertOrUpdate(converted);
                             }
                         }
                     }

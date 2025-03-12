@@ -15,6 +15,7 @@ public partial class PMSAutoSuggestBox : ContentView
             OnPropertyChanged();
         }
     }
+    public int AbsoluteLayoutHeight { get; set; } = 40;
 
     public IEnumerable<object> Items
     {
@@ -58,7 +59,11 @@ public partial class PMSAutoSuggestBox : ContentView
     public PMSAutoSuggestBox()
 	{
 		InitializeComponent();
-	}
+//#if ANDROID
+//        absLayout.HeightRequest = 200;
+//        //absLayout.WidthRequest = 350;
+//#endif
+    }
 
     public object SelectedItem
     {
@@ -97,6 +102,16 @@ public partial class PMSAutoSuggestBox : ContentView
         control.SelectedItem = string.IsNullOrEmpty(newValue?.ToString()) ? null : control.SelectedItem;
         control.IsDropDownOpen = !string.IsNullOrEmpty(newValue as string) && control.SelectedItem == null;
         control.FilterItems();
+#if ANDROID
+            if (control.FilteredItems.Any())
+            {
+                control.absLayout.HeightRequest = 200;
+            }
+            else
+            {
+                control.absLayout.HeightRequest = 40;
+            }
+#endif
     }
     private void FilterItems()
     {

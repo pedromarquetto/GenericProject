@@ -54,6 +54,7 @@ public class MonoPackageManager_Resources {
 		"NPOI.OOXML.dll",
 		"NPOI.OpenXml4Net.dll",
 		"NPOI.OpenXmlFormats.dll",
+		"Plugin.LocalNotification.dll",
 		"ICSharpCode.SharpZipLib.dll",
 		"SixLabors.Fonts.dll",
 		"SixLabors.ImageSharp.dll",
@@ -153,6 +154,10 @@ public class MonoPackageManager_Resources {
 		"Xamarin.Google.Crypto.Tink.Android.dll",
 		"Xamarin.Google.ErrorProne.Annotations.dll",
 		"Xamarin.Google.Guava.ListenableFuture.dll",
+		"Xamarin.GooglePlayServices.Base.dll",
+		"Xamarin.GooglePlayServices.Basement.dll",
+		"Xamarin.GooglePlayServices.Location.dll",
+		"Xamarin.GooglePlayServices.Tasks.dll",
 		"Xamarin.Jetbrains.Annotations.dll",
 		"Xamarin.Kotlin.StdLib.dll",
 		"Xamarin.KotlinX.AtomicFU.dll",
@@ -196,6 +201,9 @@ public class MonoPackageManager_Resources {
 		"Microsoft.Maui.Controls.resources.dll",
 		"Microsoft.Maui.Controls.resources.dll",
 		"Microsoft.Maui.Controls.resources.dll",
+		"Microsoft.Maui.Controls.HotReload.Forms.dll",
+		"Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll",
+		"Microsoft.VisualStudio.DesignTools.TapContract.dll",
 		"_Microsoft.Android.Resource.Designer.dll",
 	};
 	public static String[] Dependencies = new String[]{
