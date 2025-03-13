@@ -56,10 +56,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Remove="MVVM\Views\CustomComponents\PMSBasePage.xaml" />
-	</ItemGroup>
-
-	<ItemGroup>
 	  <None Remove="CarItemsPage.txt" />
 	  <None Remove="CarItemsPage.xaml.txt" />
 	  <None Remove="MainPageExample.txt" />
@@ -68,12 +64,6 @@
 	  <None Remove="Products.txt" />
 	  <None Remove="ProductsListPage.txt" />
 	  <None Remove="ProductsListPage.xaml.txt" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <EmbeddedResource Include="MVVM\Views\CustomComponents\PMSBasePage.xaml">
-	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-	  </EmbeddedResource>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -94,6 +84,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="MVVM\Views\CustomComponents\PMSBasePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="MVVM\Views\CustomComponents\PMSButton.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -144,6 +137,9 @@
 	  </Compile>
 	  <Compile Update="MVVM\Views\CustomComponents\PMSAutoSuggestBox.xaml.cs">
 	    <DependentUpon>PMSAutoSuggestBox.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="MVVM\Views\CustomComponents\PMSBasePage.xaml.cs">
+	    <DependentUpon>PMSBasePage.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 

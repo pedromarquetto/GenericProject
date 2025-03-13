@@ -21,7 +21,7 @@ namespace GenericMaui.MVVM.ViewModels
             _db = sqlContext;
             ModelNamesList = GlobalHelper.GetModels();
 
-            OperationList = new ObservableCollection<string> { "Delete", "Refresh" };
+            OperationList = new ObservableCollection<string> { "Delete", "Refresh", "RefreshAll" };
         }
 
         [ObservableProperty]
@@ -63,11 +63,13 @@ namespace GenericMaui.MVVM.ViewModels
             if (!string.IsNullOrEmpty(value))
             {
                 var op = value;
-                if (op == "Refresh")
+                if (op == "RefreshAll")
                 {
 
                     var isContinue = await Shell.Current.CurrentPage.DisplayAlert("Warning", "This operation will restore all the data and may take some time, do you want to continue?"
                         , "Yes", "No");
+
+                    GlobalHelper.SetBusyState(true);
 
                     if (isContinue)
                     {
@@ -75,12 +77,22 @@ namespace GenericMaui.MVVM.ViewModels
 
                         LoadItems();
                     }
+
+                    GlobalHelper.SetBusyState(false);
+                }
+                else if (op == "Refresh")
+                {
+                    if (!string.IsNullOrEmpty(SelectedModelName?.Name))
+                    {
+                        FirstConfiguration.CheckFirstConfig(true, SelectedModelName.Name);
+                        LoadItems();
+                    }
                 }
             }
         }
         public void LoadItems()
         {
-            if (string.IsNullOrEmpty(SelectedModelName.Name))
+            if (string.IsNullOrEmpty(SelectedModelName?.Name))
             {
                 return;
             }

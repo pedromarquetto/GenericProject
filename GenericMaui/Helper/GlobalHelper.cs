@@ -1,5 +1,6 @@
 ﻿using GenericMaui.Interfaces;
 using GenericMaui.MVVM.Models.GenericModels;
+using GenericMaui.MVVM.Views.CustomComponents;
 using SQLite;
 using System;
 using System.Collections.Generic;
@@ -28,6 +29,12 @@ namespace GenericMaui.Helper
             }
             return models;
         }
-
+        public static void SetBusyState(bool isBusy)
+        {
+            if (Shell.Current?.CurrentPage is PMSBasePage basePage)
+            {
+                basePage.IsBusyIndicatorVisible = isBusy;
+            }
+        }
     }
 }

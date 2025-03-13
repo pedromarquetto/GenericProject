@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\plcm9\\source\\genericproject\\GenericProject\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BC442361-EFF6-8300-CF73-950BDE5CE414}|GenericMaui\\GenericMaui.csproj|c:\\users\\plcm9\\source\\genericproject\\genericproject\\genericmaui\\mvvm\\viewmodels\\dbmanagemantviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC442361-EFF6-8300-CF73-950BDE5CE414}|GenericMaui\\GenericMaui.csproj|solutionrelative:genericmaui\\mvvm\\viewmodels\\dbmanagemantviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +23,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DbManagemantViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\plcm9\\source\\genericproject\\GenericProject\\GenericMaui\\MVVM\\ViewModels\\DbManagemantViewModel.cs",
+              "RelativeDocumentMoniker": "GenericMaui\\MVVM\\ViewModels\\DbManagemantViewModel.cs",
+              "ToolTip": "C:\\Users\\plcm9\\source\\genericproject\\GenericProject\\GenericMaui\\MVVM\\ViewModels\\DbManagemantViewModel.cs",
+              "RelativeToolTip": "GenericMaui\\MVVM\\ViewModels\\DbManagemantViewModel.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAswDkAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T11:13:20.476Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -3,38 +3,54 @@
     x:Class="GenericMaui.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:GenericMaui.MVVM.Views"
+    xmlns:local="clr-namespace:GenericMaui.MVVM.Views.ApplicationManagemant"
     xmlns:custom="clr-namespace:GenericMaui.MVVM.Views.CustomComponents"
     Title="GenericMaui"
     FlyoutBackgroundColor="{DynamicResource TerciaryColorPMS}"
     BackgroundColor="{DynamicResource PrimaryColorPMS}"
     >
+
+
+    
     <Shell.FlyoutHeader>
         <custom:PMSFrame>
             <custom:PMSLabel Text="Header"></custom:PMSLabel>
         </custom:PMSFrame>
     </Shell.FlyoutHeader>
+    
 
+    <!--<ShellContent>
+        <FlyoutItem x:Name="Tab1" Title="Home">
+            <ShellContent
+            Title="Main Page"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+        </FlyoutItem>
+        --><!--<ActivityIndicator IsRunning="True" 
+                           IsVisible="True" 
+                           HorizontalOptions="Center" 
+                           VerticalOptions="Center" />--><!--
+    </ShellContent>-->
     <!--<FlyoutItem x:Name="Tab1" Title="Home">
         <ShellContent
              Title="Home"
              ContentTemplate="{DataTemplate local:CreateScreen}"
              Route="InitialScreen" />
     </FlyoutItem>-->
-    <FlyoutItem x:Name="Tab1" Title="Home">
+    <!--<FlyoutItem x:Name="Tab1" Title="Home">
         <ShellContent
         Title="Main Page"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
     </FlyoutItem>
-    
-    <FlyoutItem x:Name="Tab2" Title="Tab 2">
+    -->
+    <!--<FlyoutItem x:Name="Tab2" Title="Tab 2">
         <ShellContent
             Title="DbManagement"
             ContentTemplate="{DataTemplate local:DbManagementPage}"
             Route="DbManagementPage" />
-    </FlyoutItem>
-    
+    </FlyoutItem>-->
+
     <Shell.FlyoutFooter>
         <custom:PMSFrame>
             <custom:PMSLabel Text="Footer"></custom:PMSLabel>

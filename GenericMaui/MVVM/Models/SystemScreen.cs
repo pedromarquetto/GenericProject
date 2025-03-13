@@ -18,6 +18,7 @@ namespace GenericMaui.MVVM.Models
         public bool IsActive { get; set; }
         public bool IsControlScreen { get; set; }
         public bool IsVisible { get; set; }
+        public bool IsAvailableOnMobile { get; set; }
         public DateTime CreateDate { get; set; }
         public int SSTableId { get; set; }
         public int PresentationSequence { get; set; }

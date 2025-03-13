@@ -75,6 +75,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = GenericMaui.MVVM.Views.Cus
 build_metadata.AdditionalFiles.TargetPath = MVVM\Views\CustomComponents\PMSAutoSuggestBox.xaml
 build_metadata.AdditionalFiles.RelativePath = MVVM\Views\CustomComponents\PMSAutoSuggestBox.xaml
 
+[C:/Users/plcm9/source/genericproject/GenericProject/GenericMaui/MVVM/Views/CustomComponents/PMSBasePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GenericMaui.MVVM.Views.CustomComponents.PMSBasePage.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\CustomComponents\PMSBasePage.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\CustomComponents\PMSBasePage.xaml
+
 [C:/Users/plcm9/source/genericproject/GenericProject/GenericMaui/MVVM/Views/CustomComponents/PMSButton.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = GenericMaui.MVVM.Views.CustomComponents.PMSButton.xaml

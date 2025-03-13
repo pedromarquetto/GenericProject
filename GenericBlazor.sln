@@ -11,18 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericBlazor.Shared", "Gen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericMaui", "GenericMaui\GenericMaui.csproj", "{BC442361-EFF6-8300-CF73-950BDE5CE414}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DatabaseArchives", "DatabaseArchives", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StoredProcedures", "StoredProcedures", "{9DDA2128-885E-480F-8247-DC0C8A569B5F}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\OneDrive\Área de Trabalho\usp_CreateSystemScreenAndFields.sql = ..\..\..\OneDrive\Área de Trabalho\usp_CreateSystemScreenAndFields.sql
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Triggers", "Triggers", "{2A4D3016-1DFC-44A5-83DC-4B8E92BF6941}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{945BDA3E-8432-48FC-BC5B-DB3BA39AFF5D}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Functions", "Functions", "{C7BBE665-5012-461B-B12B-6DF472C8B4D9}"
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DatabaseProject", "DatabaseProject\DatabaseProject.sqlproj", "{212970F4-597D-4379-9A38-BA23ABD01356}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,15 +37,15 @@ Global
 		{BC442361-EFF6-8300-CF73-950BDE5CE414}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC442361-EFF6-8300-CF73-950BDE5CE414}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BC442361-EFF6-8300-CF73-950BDE5CE414}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{212970F4-597D-4379-9A38-BA23ABD01356}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{212970F4-597D-4379-9A38-BA23ABD01356}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{212970F4-597D-4379-9A38-BA23ABD01356}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{212970F4-597D-4379-9A38-BA23ABD01356}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{212970F4-597D-4379-9A38-BA23ABD01356}.Release|Any CPU.Build.0 = Release|Any CPU
+		{212970F4-597D-4379-9A38-BA23ABD01356}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{9DDA2128-885E-480F-8247-DC0C8A569B5F} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
-		{2A4D3016-1DFC-44A5-83DC-4B8E92BF6941} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
-		{945BDA3E-8432-48FC-BC5B-DB3BA39AFF5D} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
-		{C7BBE665-5012-461B-B12B-6DF472C8B4D9} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0C8BC390-B686-485F-8D58-0FE7DE244C7C}

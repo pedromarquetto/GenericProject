@@ -11,7 +11,7 @@
         <custom:PMSFrame>
             <VerticalStackLayout>
                 <custom:PMSFrame>
-                    <custom:PMSEntry x:Name="txtUserName" Text="{Binding Name,Mode=TwoWay}"/>
+                    <custom:PMSEntry x:Name="txtUserName" Text="{Binding Users.Name,Mode=TwoWay}"/>
                 </custom:PMSFrame>
                 <custom:PMSFrame>
                     <custom:PMSEntry x:Name="txtPassword" Text="{Binding Users.Password,Mode=TwoWay}"/>

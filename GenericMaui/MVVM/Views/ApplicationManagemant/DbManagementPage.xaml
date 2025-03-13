@@ -1,37 +1,45 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <custom:PMSBasePage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="GenericMaui.MVVM.Views.DbManagementPage"
+             x:Class="GenericMaui.MVVM.Views.ApplicationManagemant.DbManagementPage"
              Title="DbManagementPage"
              xmlns:custom="clr-namespace:GenericMaui.MVVM.Views.CustomComponents"
              >
     <ScrollView>
-        <Grid RowDefinitions="Auto,Auto,Auto,Auto">
-            
-            <Picker Grid.Row="1" x:Name="pkOperation" Title="Operação" ItemsSource="{Binding OperationList}" 
-                    SelectedItem="{Binding SelectedOperation,Mode=TwoWay}" />
+        <Grid>
+            <!--<ActivityIndicator x:Name="busyIndicator" IsVisible="False" 
+                               IsRunning="True" 
+                               Color="Black"
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" />-->
 
-            <!--<Picker x:Name="pkTable" ItemsSource="{Binding ModelNamesList,Mode=TwoWay}" SelectedItem="{Binding SelectedModelName,Mode=TwoWay}" 
-                     Title="Tabela" />-->
+            <Grid RowDefinitions="Auto,Auto,Auto,Auto">
 
-            <custom:PMSAutoSuggestBox Grid.Row="2" Items="{Binding ModelNamesList,Mode=TwoWay}" 
-                                      DisplayColumn="Name"
-                                      VerticalOptions="Start"
-                                      HorizontalOptions="Start"
-                                      SelectedItem="{Binding SelectedModelName,Mode=TwoWay}" 
-                                      WidthRequest="350"/>
+                <Picker Grid.Row="1" x:Name="pkOperation" Title="Operação" ItemsSource="{Binding OperationList}" 
+                        SelectedItem="{Binding SelectedOperation,Mode=TwoWay}" />
 
-            <CollectionView Grid.Row="3" x:Name="lrecords" SelectedItem="{Binding SelectedLineRecord,Mode=TwoWay}" 
-                            ItemsSource="{Binding LineRecordsList,Mode=TwoWay}" SelectionMode="Single" >
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <StackLayout Padding="10">
-                            <Label Text="{Binding Id}"></Label>
-                            <Label Text="{Binding CompleteRecord}"></Label>
-                        </StackLayout>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
+                <!--<Picker x:Name="pkTable" ItemsSource="{Binding ModelNamesList,Mode=TwoWay}" SelectedItem="{Binding SelectedModelName,Mode=TwoWay}" 
+                         Title="Tabela" />-->
+
+                <custom:PMSAutoSuggestBox Grid.Row="2" Items="{Binding ModelNamesList,Mode=TwoWay}" 
+                                          DisplayColumn="Name"
+                                          VerticalOptions="Start"
+                                          HorizontalOptions="Start"
+                                          SelectedItem="{Binding SelectedModelName,Mode=TwoWay}" 
+                                          WidthRequest="350"/>
+
+                <CollectionView Grid.Row="3" x:Name="lrecords" SelectedItem="{Binding SelectedLineRecord,Mode=TwoWay}" 
+                                ItemsSource="{Binding LineRecordsList,Mode=TwoWay}" SelectionMode="Single" >
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Padding="10">
+                                <Label Text="{Binding Id}"></Label>
+                                <Label Text="{Binding CompleteRecord}"></Label>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Grid>
         </Grid>
     </ScrollView>
     

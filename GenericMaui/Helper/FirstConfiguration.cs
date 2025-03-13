@@ -1,16 +1,18 @@
 ﻿using GenericMaui.Helper.Enums;
 using GenericMaui.Helper.Logger;
 using GenericMaui.MVVM.Models;
+using GenericMaui.MVVM.Models.GenericModels;
 using GenericMaui.Services;
 using GenericMaui.Sql;
 using Newtonsoft.Json;
+using System.Collections.ObjectModel;
 
 namespace GenericMaui.Helper
 {
     public static class FirstConfiguration
     {
         private static readonly SqlContext _db = new SqlContext();
-        public static Tuple<LoginStateEnum,Users> CheckFirstConfig(bool isForceReconfiguration = false)
+        public static Tuple<LoginStateEnum,Users> CheckFirstConfig(bool isForceReconfiguration = false,string modelName = "")
         {
             var user = new Users();
             LoginStateEnum state = isForceReconfiguration ? LoginStateEnum.NotConfigured : GetInitializationState();
@@ -20,6 +22,12 @@ namespace GenericMaui.Helper
                 try
                 {
                     var i = GlobalHelper.GetModels();
+
+                    if (!string.IsNullOrEmpty(modelName))
+                    {
+                        i = new ObservableCollection<ModelClass>(i.Where(p => p.Name == modelName));
+                    }
+
                     foreach (var item in i)
                     {
                         // Get all the elements from the table in the server
@@ -30,13 +38,31 @@ namespace GenericMaui.Helper
                         if (objectType == null) continue;
 
                         // Loop all the found items and insert/update them into SQLLite
-                        if (items.Any())
+                        if (items?.Count > 0)
                         {
                             foreach (var itm in items)
                             {
                                 var json = JsonConvert.SerializeObject(itm);
                                 var converted = JsonConvert.DeserializeObject(json, objectType);
-                                _db.InsertOrUpdate(converted);
+                                var idValue = objectType.GetProperty(objectType.Name.ToString() + "Id")?.GetValue(converted);
+                                if (idValue != null)
+                                {
+                                    var newInstance = Activator.CreateInstance(objectType);
+
+                                    // Check if the item already exists in the database with the same "Model Name + ID"
+                                    var existingItem = _db.Get(newInstance)?.FirstOrDefault(x => x?.GetType().GetProperty(objectType.Name.ToString() + "Id")?
+                                        .GetValue(x).Equals(idValue) ?? false);
+
+                                    if (existingItem != null)
+                                    {
+                                        _db.Update(converted);
+                                    }
+                                    else
+                                    {
+                                        _db.Insert(converted);
+                                    }
+                                }
+                                //_db.InsertOrUpdate(converted);
                             }
                         }
                     }
