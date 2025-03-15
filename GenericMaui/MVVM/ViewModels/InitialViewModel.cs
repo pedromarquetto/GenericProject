@@ -6,6 +6,7 @@ using GenericMaui.MVVM.Models;
 using GenericMaui.MVVM.Views.ApplicationManagemant;
 using GenericMaui.Sql;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 
 namespace GenericMaui.MVVM.ViewModels
 {
@@ -23,41 +24,43 @@ namespace GenericMaui.MVVM.ViewModels
         public decimal progressCounter = 0;
         public async void LoadData()
         {
-            await Task.Delay(3000);
-
             LoginStateEnum fconfig = LoginStateEnum.NotConfigured;
             Users user = new Users();
-
-            (fconfig, user) = FirstConfiguration.CheckFirstConfig();
-
             Page mainPage;
 
-            if (fconfig == LoginStateEnum.UserLogged)
+            mainPage = await Task.Run(async Task<Page>?() =>
             {
-                mainPage = new AppShell(_db);
-            }
-            else if (fconfig == LoginStateEnum.UserNotLogged)
-            {
-                mainPage = new LoginPage();
-            }
-            else
-            {
-                mainPage = new LoginPage(); // To add error page
-            }
+                (fconfig, user) = FirstConfiguration.CheckFirstConfig();   
 
-            if (CompanyManager.CompanyConfig != null)
-            {
-                var config = _db.Get(CompanyManager.CompanyConfig)?.First();
+                if (fconfig == LoginStateEnum.UserLogged)
+                {
+                    mainPage = new AppShell(_db);
+                }
+                else if (fconfig == LoginStateEnum.UserNotLogged)
+                {
+                    mainPage = new LoginPage();
+                }
+                else
+                {
+                    mainPage = new LoginPage(); // To add error page
+                }
 
-                await CompanyManager.SetCompanyConfiguration(config);
+                if (CompanyManager.CompanyConfig != null)
+                {
+                    var config = _db.Get(CompanyManager.CompanyConfig)?.First();
 
-                Application.Current.Resources["PrimaryColorPMS"] = CompanyManager.CompanyConfig.HeaderColor;
-                Application.Current.Resources["TerciaryColorPMS"] = CompanyManager.CompanyConfig.FooterColor;
-                Application.Current.Resources["TextColorPMS"] = CompanyManager.CompanyConfig.FontColor;
-            }
+                    await CompanyManager.SetCompanyConfiguration(config);
+
+                    Application.Current.Resources["PrimaryColorPMS"] = CompanyManager.CompanyConfig.HeaderColor;
+                    Application.Current.Resources["TerciaryColorPMS"] = CompanyManager.CompanyConfig.FooterColor;
+                    Application.Current.Resources["TextColorPMS"] = CompanyManager.CompanyConfig.FontColor;
+                }
+
+                return mainPage;
+            });
 
             Application.Current.Windows[0].Page = mainPage;
-            CompanyManager.IsAppLoaded = true;           
+            CompanyManager.IsAppLoaded = true;         
         }
         public async void RunProgress()
         {
@@ -65,11 +68,8 @@ namespace GenericMaui.MVVM.ViewModels
             {
                 while (ProgressCounter < 100)
                 {
-                    await Task.Delay(150);
-                    MainThread.BeginInvokeOnMainThread(() =>
-                    {
-                        ProgressCounter += Convert.ToDecimal(0.1);
-                    });
+                    await Task.Delay(500);
+                    ProgressCounter += Convert.ToDecimal(0.1);
                 }
             });
         }

@@ -4,6 +4,12 @@
         <name>GenericMaui</name>
     </assembly>
     <members>
+        <member name="M:GenericMaui.Helper.GlobalHelper.GetRandomUniqueId">
+            <summary>
+            As per the calculation, generates a 10 digit number with 0.0000001% chance of having the same ID
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:GenericMaui.MVVM.ViewModels.AppConfigurationViewModel">
             <inheritdoc/>
             <inheritdoc/>

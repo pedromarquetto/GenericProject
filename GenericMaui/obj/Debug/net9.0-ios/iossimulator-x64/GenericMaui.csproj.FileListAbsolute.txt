@@ -361,7 +361,6 @@ C:\Users\plcm9\source\repos\GenericMaui\obj\Debug\net9.0-ios\iossimulator-x64\re
 C:\Users\plcm9\source\repos\GenericMaui\obj\Debug\net9.0-ios\iossimulator-x64\GenericMaui.pdb
 C:\Users\plcm9\source\repos\GenericMaui\obj\Debug\net9.0-ios\iossimulator-x64\GenericMaui.genruntimeconfig.cache
 C:\Users\plcm9\source\repos\GenericMaui\obj\Debug\net9.0-ios\iossimulator-x64\ref\GenericMaui.dll
-C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-ios\iossimulator-x64\build-signature\signature
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-ios\iossimulator-x64\mauiimage.inputs
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-ios\iossimulator-x64\mauifont.inputs
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-ios\iossimulator-x64\mauisplash.inputs
@@ -721,3 +720,4 @@ C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-ios\iossimulator-x64\GenericM.40F7C817.Up2Date
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-ios\iossimulator-x64\GenericMaui.genruntimeconfig.cache
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-ios\iossimulator-x64\ref\GenericMaui.dll
+C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\bin\Debug\net9.0-ios\iossimulator-x64\Plugin.LocalNotification.dll

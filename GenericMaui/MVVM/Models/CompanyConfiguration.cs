@@ -26,6 +26,9 @@ namespace GenericMaui.MVVM.Models
         public string? HeaderColor { get; set; } = "#810466";
         public string? FooterColor { get; set; } = "#810466";
         public string? FontColor { get; set; } = "#FFFFFF";
+        public int LastReplicationId { get; set; } = 0;
+        public int DaysOfReplicationAvailable { get; set; } = 7;
+        public DateTime LastReplicationDateTime { get; set; }
         [Ignore] public List<CompanyArchive>? CompanyArchives { get; set; }
 
     }

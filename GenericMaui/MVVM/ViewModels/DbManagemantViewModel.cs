@@ -54,7 +54,6 @@ namespace GenericMaui.MVVM.ViewModels
             if (!string.IsNullOrEmpty(value?.Name))
             {
                 LoadItems();
-
                 //Application.Current.OpenWindow(new Window (new MainPage { BindingContext = new MainPageViewModel(_db)}));
             }
         }
@@ -65,11 +64,10 @@ namespace GenericMaui.MVVM.ViewModels
                 var op = value;
                 if (op == "RefreshAll")
                 {
-
                     var isContinue = await Shell.Current.CurrentPage.DisplayAlert("Warning", "This operation will restore all the data and may take some time, do you want to continue?"
                         , "Yes", "No");
 
-                    GlobalHelper.SetBusyState(true);
+                    await GlobalHelper.SetBusyState(true);
 
                     if (isContinue)
                     {
@@ -78,7 +76,7 @@ namespace GenericMaui.MVVM.ViewModels
                         LoadItems();
                     }
 
-                    GlobalHelper.SetBusyState(false);
+                    await GlobalHelper.SetBusyState(false);
                 }
                 else if (op == "Refresh")
                 {
@@ -90,8 +88,10 @@ namespace GenericMaui.MVVM.ViewModels
                 }
             }
         }
-        public void LoadItems()
+        public async void LoadItems()
         {
+            await GlobalHelper.SetBusyState(true);
+
             if (string.IsNullOrEmpty(SelectedModelName?.Name))
             {
                 return;
@@ -128,12 +128,13 @@ namespace GenericMaui.MVVM.ViewModels
                     }
                 }
             }
+            await GlobalHelper.SetBusyState(false);
         }
 
         public async void Del()
         {
             var op = SelectedOperation;
-            LineRecord selected = selectedLineRecord;
+            LineRecord selected = SelectedLineRecord;
             var objectType = Type.GetType(selected.Model);
             var newInstance = Activator.CreateInstance(objectType);
 

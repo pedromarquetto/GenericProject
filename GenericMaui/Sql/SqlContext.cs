@@ -20,10 +20,12 @@ namespace GenericMaui.Sql
     public class SqlContext
     {
         readonly SQLiteConnection _database;
-        string dbPath = Path.Combine(FileSystem.AppDataDirectory, "Sqlite2.db");
-        public SqlContext()
+        public string _dbPath;
+        public SqlContext(string dbPath = "")
         {
-            _database = new SQLiteConnection(dbPath);
+            _dbPath = string.IsNullOrWhiteSpace(dbPath) ? Path.Combine(FileSystem.AppDataDirectory, "Sqlite2.db") : dbPath;
+
+            _database = new SQLiteConnection(_dbPath);
             _database.CreateTable<City>();
             _database.CreateTable<Company>();
             _database.CreateTable<CompanyArchive>();
@@ -44,7 +46,7 @@ namespace GenericMaui.Sql
             _database.CreateTable<Validation>();
             _database.CreateTable<LogClass>();
         }
-        public ObservableCollection<T> Get<T>(T item,string? column = null, string? value = null) 
+        public virtual ObservableCollection<T> Get<T>(T item,string? column = null, string? value = null) 
             where T : new()
         {
             var query = $"SELECT * FROM {item.GetType().Name} WHERE {column ?? "'1'"} = '{value ?? "1"}'";
@@ -96,28 +98,28 @@ namespace GenericMaui.Sql
 
             }
         }
-        public int InsertOrUpdate<T>(T item)
+        public virtual int InsertOrUpdate<T>(T item)
         {
             return _database.InsertOrReplace(item);
         }
-        public int Insert<T>(T item)
+        public virtual int Insert<T>(T item)
         {
             return _database.Insert(item);
         }
-        public int InsertAll<T>(IEnumerable<T> item)
+        public virtual int InsertAll<T>(IEnumerable<T> item)
         {
             return _database.InsertAll(item);
         }
-        public int UpdateAll<T>(IEnumerable<T> item)
+        public virtual int UpdateAll<T>(IEnumerable<T> item)
         {
             return _database.UpdateAll(item);
         }
-        public int Update<T>(T item)
+        public virtual int Update<T>(T item)
         {
             return _database.Update(item);
         }
 
-        public int Delete<T>(T item)
+        public virtual int Delete<T>(T item)
         {
             var Id = item.GetType().GetProperty("Id");
             var IdValue = Id.GetValue(item);

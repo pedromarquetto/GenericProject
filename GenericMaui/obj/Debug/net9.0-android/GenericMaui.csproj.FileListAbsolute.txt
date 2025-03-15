@@ -1626,9 +1626,6 @@ C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\bin\Debug\net9.0
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\bin\Debug\net9.0-android\com.companyname.genericmaui-Signed.aab
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\bin\Debug\net9.0-android\com.companyname.genericmaui-Signed.apk
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\bin\Debug\net9.0-android\com.companyname.genericmaui-Signed.apk.idsig
-C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\bin\Debug\net9.0-android\Microsoft.Maui.Controls.HotReload.Forms.dll
-C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\bin\Debug\net9.0-android\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
-C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\bin\Debug\net9.0-android\Microsoft.VisualStudio.DesignTools.TapContract.dll
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\.NETCoreApp,Version=v9.0.AssemblyAttributes.cs
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\build.props
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\adb.props
@@ -1749,7 +1746,6 @@ C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\GenericMaui.csproj.CoreCompileInputs.cache
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\GenericMaui.sourcelink.json
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\XamlC.stamp
-C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\GenericM.40F7C817.Up2Date
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\GenericMaui.dll
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\GenericMaui.pdb
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\GenericMaui.genruntimeconfig.cache
@@ -1814,7 +1810,6 @@ C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.IO.RecyclableMemoryStream.dll
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.Maui.Controls.Compatibility.dll
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.Maui.Controls.dll
-C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.Maui.Controls.HotReload.Forms.dll
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.Maui.Controls.pdb
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.Maui.Controls.Xaml.dll
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.Maui.Controls.Xaml.pdb
@@ -1839,8 +1834,6 @@ C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.TeamFoundation.WorkItemTracking.WebApi.dll
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.VisualBasic.Core.dll
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.VisualBasic.dll
-C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
-C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.VisualStudio.DesignTools.TapContract.dll
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.VisualStudio.Services.Common.dll
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.VisualStudio.Services.TestManagement.TestPlanning.WebApi.dll
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\assets\x86_64\Microsoft.VisualStudio.Services.TestResults.WebApi.dll
@@ -2865,7 +2858,6 @@ C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\assets\arm64-v8a\Microsoft.IO.RecyclableMemoryStream.dll
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\assets\arm64-v8a\Microsoft.Maui.Controls.Compatibility.dll
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\assets\arm64-v8a\Microsoft.Maui.Controls.dll
-C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\assets\arm64-v8a\Microsoft.Maui.Controls.HotReload.Forms.dll
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\assets\arm64-v8a\Microsoft.Maui.Controls.pdb
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\assets\arm64-v8a\Microsoft.Maui.Controls.Xaml.dll
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\assets\arm64-v8a\Microsoft.Maui.Controls.Xaml.pdb
@@ -2890,8 +2882,6 @@ C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\assets\arm64-v8a\Microsoft.TeamFoundation.WorkItemTracking.WebApi.dll
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\assets\arm64-v8a\Microsoft.VisualBasic.Core.dll
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\assets\arm64-v8a\Microsoft.VisualBasic.dll
-C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\assets\arm64-v8a\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
-C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\assets\arm64-v8a\Microsoft.VisualStudio.DesignTools.TapContract.dll
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\assets\arm64-v8a\Microsoft.VisualStudio.Services.Common.dll
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\assets\arm64-v8a\Microsoft.VisualStudio.Services.TestManagement.TestPlanning.WebApi.dll
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\assets\arm64-v8a\Microsoft.VisualStudio.Services.TestResults.WebApi.dll
@@ -3302,3 +3292,12 @@ C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\assets\arm64-v8a\zh-Hant\Microsoft.Maui.Controls.resources.dll
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\assets\arm64-v8a\zh-HK\Microsoft.Maui.Controls.resources.dll
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\assets\arm64-v8a\_Microsoft.Android.Resource.Designer.dll
+C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\typemaps.arm64-v8a.ll
+C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\environment.arm64-v8a.ll
+C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\compressed_assemblies.arm64-v8a.ll
+C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\typemaps.arm64-v8a.o
+C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\environment.arm64-v8a.o
+C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\compressed_assemblies.arm64-v8a.o
+C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\marshal_methods.arm64-v8a.o
+C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\android\jni_remap.arm64-v8a.o
+C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-android\app_shared_libraries\arm64-v8a\libxamarin-app.so

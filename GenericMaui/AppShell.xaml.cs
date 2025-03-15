@@ -1,8 +1,5 @@
 ﻿using GenericMaui.MVVM.Models;
-using GenericMaui.MVVM.Views;
-using GenericMaui.MVVM.Views.CustomComponents;
 using GenericMaui.Sql;
-using Microsoft.VisualStudio.Services.Common;
 
 namespace GenericMaui
 {
@@ -13,7 +10,7 @@ namespace GenericMaui
             InitializeComponent();
 
             foreach (var item in _db.Get(new SystemScreen())
-                .Where(p => p.Code != "LoginPage" && p.IsAvailableOnMobile))
+                .Where(p => p.Code != "LoginPage" && p.IsAvailableOnMobile).OrderBy(p => p.PresentationSequence))
             {
                 var obj = "GenericMaui.MVVM.Views.ApplicationManagemant." + item.Code;
                 var objectType = Type.GetType(obj);

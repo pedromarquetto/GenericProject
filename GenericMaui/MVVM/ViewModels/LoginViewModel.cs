@@ -17,9 +17,6 @@ namespace GenericMaui.MVVM.ViewModels
         public LoginViewModel(SqlContext sqlContext)
         {
             _db = sqlContext;
-
-            // To remove ----          Search Bar is the autosuggest and I have to create the PMS autosuggest
-
         }
 
         [ObservableProperty]

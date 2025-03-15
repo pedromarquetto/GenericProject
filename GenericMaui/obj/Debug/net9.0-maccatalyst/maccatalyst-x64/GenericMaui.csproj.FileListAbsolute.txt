@@ -701,3 +701,4 @@ C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\GenericM.40F7C817.Up2Date
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\GenericMaui.genruntimeconfig.cache
 C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\ref\GenericMaui.dll
+C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Plugin.LocalNotification.dll
