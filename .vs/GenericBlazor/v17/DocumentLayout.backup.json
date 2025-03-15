@@ -5,13 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{BC8BADD3-75DF-44B7-8ACD-9F774BAAF8A1}|GenericMaui.TestXUnit\\GenericMaui.TestXUnit.csproj|c:\\users\\plcm9\\source\\genericproject\\genericproject\\genericmaui.testxunit\\loginviewmodeltests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BC8BADD3-75DF-44B7-8ACD-9F774BAAF8A1}|GenericMaui.TestXUnit\\GenericMaui.TestXUnit.csproj|solutionrelative:genericmaui.testxunit\\loginviewmodeltests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\plcm9\\AppData\\Local\\Temp\\.vsdbgsrc\\132e4def4e08227ee26a16124a5d1fabc74bef9834110f6a599913371ddc8236\\Lazy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC442361-EFF6-8300-CF73-950BDE5CE414}|GenericMaui\\GenericMaui.csproj|c:\\users\\plcm9\\source\\genericproject\\genericproject\\genericmaui\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC442361-EFF6-8300-CF73-950BDE5CE414}|GenericMaui\\GenericMaui.csproj|solutionrelative:genericmaui\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -33,41 +26,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Lazy.cs",
-              "DocumentMoniker": "C:\\Users\\plcm9\\AppData\\Local\\Temp\\.vsdbgsrc\\132e4def4e08227ee26a16124a5d1fabc74bef9834110f6a599913371ddc8236\\Lazy.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\132e4def4e08227ee26a16124a5d1fabc74bef9834110f6a599913371ddc8236\\Lazy.cs",
-              "ToolTip": "C:\\Users\\plcm9\\AppData\\Local\\Temp\\.vsdbgsrc\\132e4def4e08227ee26a16124a5d1fabc74bef9834110f6a599913371ddc8236\\Lazy.cs [Somente Leitura]",
-              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\132e4def4e08227ee26a16124a5d1fabc74bef9834110f6a599913371ddc8236\\Lazy.cs [Somente Leitura]",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAiwG0AAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T20:11:42.918Z",
-              "EditorCaption": " [Somente Leitura]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\plcm9\\source\\genericproject\\GenericProject\\GenericMaui\\App.xaml.cs",
-              "RelativeDocumentMoniker": "GenericMaui\\App.xaml.cs",
-              "ToolTip": "C:\\Users\\plcm9\\source\\genericproject\\GenericProject\\GenericMaui\\App.xaml.cs",
-              "RelativeToolTip": "GenericMaui\\App.xaml.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T20:04:07.648Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "LoginViewModelTests.cs",
               "DocumentMoniker": "C:\\Users\\plcm9\\source\\genericproject\\GenericProject\\GenericMaui.TestXUnit\\LoginViewModelTests.cs",
               "RelativeDocumentMoniker": "GenericMaui.TestXUnit\\LoginViewModelTests.cs",
               "ToolTip": "C:\\Users\\plcm9\\source\\genericproject\\GenericProject\\GenericMaui.TestXUnit\\LoginViewModelTests.cs",
               "RelativeToolTip": "GenericMaui.TestXUnit\\LoginViewModelTests.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAuwCEAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T20:22:58.76Z",
+              "WhenOpened": "2025-03-15T21:28:24.382Z",
               "EditorCaption": ""
             }
           ]

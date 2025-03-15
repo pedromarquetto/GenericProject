@@ -24,6 +24,9 @@ namespace GenericMaui.TestXUnit
             // Simula que o Insert retorna 1 (sucesso)
             fakeContext.Insert(new Users());
 
+            var a = "";
+            var b = a.Substring(89,999);
+
             // Simula o ambiente da aplicação
             var fakeWindow = new Window { Page = new ContentPage()};
             var fakeApp = new Application();
