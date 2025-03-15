@@ -1,0 +1,31 @@
+name: MAUI Commit
+
+on:
+  push:
+    branches:
+      - development   # Alvo do push (pode ser 'main' ou o nome do seu branch)
+  pull_request:
+    branches:
+      - development   # Alvo do pull request (pode ser 'main' ou o nome do seu branch)
+
+jobs:
+  build:
+    runs-on: windows-latest  # Você pode usar outras imagens, como windows-latest ou macos-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2  # Faz o checkout do código do repositório
+
+    - name: Set up .NET SDK
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '9.0'  # Versão do .NET que você está usando, no caso .NET 9
+
+    - name: Restore dependencies
+      run: dotnet restore   # Restaura as dependências do projeto
+
+    - name: Build the project
+      run: dotnet build --configuration Release  # Construa o projeto em modo Release
+
+    - name: Run tests
+      run: dotnet test GenericMaui.TestXUnit --configuration Release  # Roda os testes com xUnit
