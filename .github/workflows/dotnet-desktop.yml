@@ -2,9 +2,9 @@ name: .NET Core Desktop
 
 on:
   push:
-    branches: [ "Development","main" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "Development","main" ]
+    branches: [ "main" ]
 
 jobs:
   build:
