@@ -1,4 +1,4 @@
-CREATE OR ALTER PROCEDURE usp_CreateSystemScreenAndFields  
+CREATE PROCEDURE usp_CreateSystemScreenAndFields  
 	@pScreenName NVARCHAR(MAX),  
 	@pModelName NVARCHAR(MAX),  
 	@pIsContolPage bit  

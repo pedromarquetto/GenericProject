@@ -1,4 +1,4 @@
-CREATE OR ALTER PROCEDURE [dbo].[usp_login]   
+CREATE PROCEDURE [dbo].[usp_login]   
 	@pName NVARCHAR(300) = NULL,  
 	@pPassword NVARCHAR(300) = NULL,  
 	@pStaySigned BIT = NULL,  
