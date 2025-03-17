@@ -1,12 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\plcm9\\source\\genericproject\\GenericProject\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{BC8BADD3-75DF-44B7-8ACD-9F774BAAF8A1}|GenericMaui.TestXUnit\\GenericMaui.TestXUnit.csproj|c:\\users\\plcm9\\source\\genericproject\\genericproject\\genericmaui.testxunit\\loginviewmodeltests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC8BADD3-75DF-44B7-8ACD-9F774BAAF8A1}|GenericMaui.TestXUnit\\GenericMaui.TestXUnit.csproj|solutionrelative:genericmaui.testxunit\\loginviewmodeltests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -14,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -41,17 +36,8 @@
               "Name": "ST:131:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LoginViewModelTests.cs",
-              "DocumentMoniker": "C:\\Users\\plcm9\\source\\genericproject\\GenericProject\\GenericMaui.TestXUnit\\LoginViewModelTests.cs",
-              "RelativeDocumentMoniker": "GenericMaui.TestXUnit\\LoginViewModelTests.cs",
-              "ToolTip": "C:\\Users\\plcm9\\source\\genericproject\\GenericProject\\GenericMaui.TestXUnit\\LoginViewModelTests.cs",
-              "RelativeToolTip": "GenericMaui.TestXUnit\\LoginViewModelTests.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T00:00:32.495Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             }
           ]
         }

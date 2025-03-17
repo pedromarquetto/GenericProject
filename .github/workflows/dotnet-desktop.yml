@@ -2,9 +2,9 @@ name: .NET Core Desktop
 
 on:
   push:
-    branches: [ "development" ]
+    branches: [ "Development" ]
   pull_request:
-    branches: ["development" ]  
+    branches: [ "Development" ]  
     
 jobs:
   build:
@@ -42,7 +42,8 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0  # Garante que todo o histórico do repositório seja baixado
-
+          token: ${{ secrets.GITHUB_TOKEN }}
+  
       - name: Configurar usuário Git
         run: |
           git config --global user.email "github-actions@github.com"
@@ -52,5 +53,5 @@ jobs:
         run: |
           git checkout main
           git pull origin main
-          git merge --no-ff development -m "Merge automático do branch development"
+          git merge --no-ff Development -m "Merge automático do branch development"
           git push origin main
