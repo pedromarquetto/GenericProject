@@ -2,10 +2,10 @@ name: .NET Core Desktop
 
 on:
   push:
-    branches: [ "Development","main" ]
+    branches: [ "development" ]
   pull_request:
-    branches: [ "Development","main" ]
-
+    branches: ["development" ]  
+    
 jobs:
   build:
     runs-on: windows-latest
@@ -32,7 +32,7 @@ jobs:
       - name: Rodar testes unitários
         run: dotnet test ${{ env.Test_Project_Path }}
 
-  push-changes:
+  merge-to-main:
     needs: build
     runs-on: windows-latest
     if: success()  # Só executa se os testes passarem
@@ -40,7 +40,17 @@ jobs:
     steps:
       - name: Checkout código
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Garante que todo o histórico do repositório seja baixado
 
-      - name: Push das mudanças
+      - name: Configurar usuário Git
         run: |
-          git push origin Development
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "GitHub Actions"
+
+      - name: Criar merge do development → main
+        run: |
+          git checkout main
+          git pull origin main
+          git merge --no-ff development -m "Merge automático do branch development"
+          git push origin main

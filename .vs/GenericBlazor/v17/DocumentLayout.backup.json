@@ -14,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -25,6 +25,22 @@
               "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "LoginViewModelTests.cs",
@@ -32,9 +48,9 @@
               "RelativeDocumentMoniker": "GenericMaui.TestXUnit\\LoginViewModelTests.cs",
               "ToolTip": "C:\\Users\\plcm9\\source\\genericproject\\GenericProject\\GenericMaui.TestXUnit\\LoginViewModelTests.cs",
               "RelativeToolTip": "GenericMaui.TestXUnit\\LoginViewModelTests.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T21:28:24.382Z",
+              "WhenOpened": "2025-03-17T00:00:32.495Z",
               "EditorCaption": ""
             }
           ]
