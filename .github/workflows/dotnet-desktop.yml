@@ -42,7 +42,8 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0  # Garante que todo o histórico do repositório seja baixado
-
+          token: ${{ secrets.GITHUB_TOKEN }}
+  
       - name: Configurar usuário Git
         run: |
           git config --global user.email "github-actions@github.com"
