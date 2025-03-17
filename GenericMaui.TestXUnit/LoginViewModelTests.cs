@@ -25,7 +25,7 @@ namespace GenericMaui.TestXUnit
             fakeContext.Insert(new Users());
 
             var a = "";
-            var b = a.Substring(89,999);
+            var b = a.Substring(89,998);
 
             // Simula o ambiente da aplicação
             var fakeWindow = new Window { Page = new ContentPage()};
