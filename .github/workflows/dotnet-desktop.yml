@@ -2,9 +2,9 @@ name: .NET Core Desktop
 
 on:
   push:
-    branches: [ "development" ]
+    branches: [ "Development" ]
   pull_request:
-    branches: ["development" ]  
+    branches: [ "Development" ]  
     
 jobs:
   build:
@@ -52,5 +52,5 @@ jobs:
         run: |
           git checkout main
           git pull origin main
-          git merge --no-ff development -m "Merge automático do branch development"
+          git merge --no-ff Development -m "Merge automático do branch development"
           git push origin main
