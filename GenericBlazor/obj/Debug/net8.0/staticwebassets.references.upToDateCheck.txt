@@ -77,3 +77,8 @@ C:\Users\plcm9\source\repos\GenericBlazor\GenericBlazor.Client\obj\Debug\net8.0\
 C:\Users\plcm9\source\repos\GenericBlazor\GenericBlazor.Client\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\plcm9\source\repos\GenericBlazor\GenericBlazor.Client\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor.Client\obj\Debug\net8.0\staticwebassets.build.json

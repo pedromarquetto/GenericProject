@@ -162,6 +162,21 @@
 	</CustomDiv>
 
 	<CustomDiv Class="divCard2"
+			   Visible="@(fieldsList?.FirstOrDefault(p => p.Xname == "ckbIsAvailableOnMobile")?.IsVisible)">
+		<div class="divChildCard1">
+			<label>@fieldsList?.FirstOrDefault(p => p.Xname == "ckbIsAvailableOnMobile")?.Name</label>
+		</div>
+		<div class="divChildCard1">
+			<CustomInput Type="checkbox"
+						 Disabled="@(fieldsList?.FirstOrDefault(p => p.Xname == "ckbIsAvailableOnMobile")?.IsDisabled)"
+						 @bind-ValueBool="screenItem.IsAvailableOnMobile" />
+		</div>
+		<div class="divChildCard1">
+			<label>@validator?.FirstOrDefault(p => p.PropertyName == "IsControlScreen")?.ValidationMessage</label>
+		</div>
+	</CustomDiv>
+
+	<CustomDiv Class="divCard2"
 			   Visible="true"
 			   Align="center">
 		<div class="divChildCard1">

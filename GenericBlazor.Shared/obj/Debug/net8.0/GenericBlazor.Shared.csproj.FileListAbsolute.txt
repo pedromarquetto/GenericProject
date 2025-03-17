@@ -23,3 +23,4 @@ C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor.Shared\obj\Deb
 C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor.Shared\obj\Debug\net8.0\refint\GenericBlazor.Shared.dll
 C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor.Shared\obj\Debug\net8.0\GenericBlazor.Shared.pdb
 C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor.Shared\obj\Debug\net8.0\ref\GenericBlazor.Shared.dll
+C:\Users\plcm9\source\genericproject\GenericProject\GenericBlazor.Shared\obj\Debug\net8.0\GenericBlazor.Shared.sourcelink.json

@@ -1,0 +1,87 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GenericMaui.MVVM.Views.CreateScreen"
+             xmlns:custom="clr-namespace:GenericMaui.MVVM.Views.CustomComponents"
+             Title="createscreen">
+
+    <Grid ColumnDefinitions="0.1*,*">
+        <!-- Barra lateral com elementos disponíveis -->
+        <StackLayout Orientation="Vertical" Grid.Column="0" BackgroundColor="Red">
+            <Label Text="TextBox" Padding="5" BackgroundColor="Gray" WidthRequest="200">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" Buttons="Secondary"/>
+                    <DragGestureRecognizer CanDrag="True" DragStarting="OnDragStarting" />
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Text="Button" BackgroundColor="Gray" Padding="5" WidthRequest="200">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" Buttons="Secondary"/>
+                    <DragGestureRecognizer CanDrag="True" DragStarting="OnDragStarting" />
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Text="Label" BackgroundColor="Gray" Padding="5" WidthRequest="200">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" Buttons="Secondary"/>
+                    <DragGestureRecognizer CanDrag="True" DragStarting="OnDragStarting" />
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Text="Rectangle" BackgroundColor="Gray" Padding="5" WidthRequest="200">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" Buttons="Secondary"/>
+                    <DragGestureRecognizer CanDrag="True" DragStarting="OnDragStarting" />
+                </Label.GestureRecognizers>
+            </Label>
+            <Button Clicked="Button_Clicked_1" Text="Save screen" />
+            <Picker x:Name="screentype" SelectedIndexChanged="screentype_SelectedIndexChanged"  />
+            
+            <Entry x:Name="gridRows" Placeholder="3" />
+            <Entry x:Name="gridColumn" Placeholder="3" />
+        </StackLayout>
+
+
+        <Grid Grid.Column="1" RowDefinitions="0.1*,*">
+
+            <Entry Grid.Row="0" 
+                   Placeholder="Screen Name" 
+                   x:Name="txtScreenName"
+                   Unfocused="txtScreenName_Unfocused"  
+                   />
+            
+            <!-- Área onde os elementos serão arrastados e soltos -->
+            <AbsoluteLayout x:Name="canvas" Grid.Row="1" BackgroundColor="White" >
+
+                <StackLayout x:Name="slPropertyPanel" 
+                             IsVisible="Collapse" 
+                             Margin="0,0,0,0"
+                             HeightRequest="300" 
+                             WidthRequest="200"
+                             BackgroundColor="LightGray">
+
+                    <Entry x:Name="slPropertyPanelWidthReq" Placeholder="200" />
+                    <Entry x:Name="slPropertyPanelHeighReq" Placeholder="200" />
+                    <Button Text="Confirm" Clicked="Button_Clicked" />
+                </StackLayout>
+
+                <StackLayout x:Name="ContextMenu"
+                             IsVisible="False"
+                             BackgroundColor="LightGray"
+                             Padding="10"
+                             AbsoluteLayout.LayoutBounds="0.5, 0.5, 150, 100"
+                             AbsoluteLayout.LayoutFlags="None">
+                    <Button HeightRequest="20" WidthRequest="40" BackgroundColor="Yellow" Text="Delete" Clicked="OnDeleteClicked" />
+                    <Button HeightRequest="10" WidthRequest="30" BackgroundColor="Yellow" Text="Edit" Clicked="OnEditClicked" />
+                </StackLayout>
+
+                <!--<Line X1="0" Y1="0" X2="300" Y2="0" Stroke="Black" StrokeThickness="2" 
+                     Grid.Row="1" 
+                     Grid.ColumnSpan="2" />-->
+
+                <AbsoluteLayout.GestureRecognizers>
+                    <DropGestureRecognizer Drop="OnDrop" />
+                </AbsoluteLayout.GestureRecognizers>
+            </AbsoluteLayout>
+            
+        </Grid>
+       
+    </Grid>
+</ContentPage>

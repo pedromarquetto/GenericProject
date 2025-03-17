@@ -1,0 +1,130 @@
+is_global = true
+build_property.MvvmToolkitEnableINotifyPropertyChangingSupport = true
+build_property._MvvmToolkitIsUsingWindowsRuntimePack = true
+build_property.CsWinRTComponent = 
+build_property.CsWinRTAotOptimizerEnabled = true
+build_property.CsWinRTAotOptimizerEnabled = true
+build_property.CsWinRTAotWarningLevel = 
+build_property.CsWinRTAotWarningLevel = 
+build_property.TargetFramework = net9.0-windows10.0.19041.0
+build_property.TargetPlatformMinVersion = 10.0.17763.0
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 9A19103F-16F7-4668-BE54-9A1E7A4F7556
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = GenericMaui
+build_property.ProjectDir = C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTAotExportsEnabled = 
+build_property.CsWinRTRcwFactoryFallbackGeneratorForceOptIn = 
+build_property.CsWinRTRcwFactoryFallbackGeneratorForceOptOut = 
+build_property.CsWinRTCcwLookupTableGeneratorEnabled = true
+build_property.CsWinRTMergeReferencedActivationFactories = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/plcm9/source/genericproject/GenericProject/GenericMaui/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GenericMaui.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/plcm9/source/genericproject/GenericProject/GenericMaui/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GenericMaui.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/plcm9/source/genericproject/GenericProject/GenericMaui/MVVM/Views/ApplicationManagemant/CreateScreen.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GenericMaui.MVVM.Views.ApplicationManagemant.CreateScreen.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\ApplicationManagemant\CreateScreen.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\ApplicationManagemant\CreateScreen.xaml
+
+[C:/Users/plcm9/source/genericproject/GenericProject/GenericMaui/MVVM/Views/ApplicationManagemant/DbManagementPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GenericMaui.MVVM.Views.ApplicationManagemant.DbManagementPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\ApplicationManagemant\DbManagementPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\ApplicationManagemant\DbManagementPage.xaml
+
+[C:/Users/plcm9/source/genericproject/GenericProject/GenericMaui/MVVM/Views/ApplicationManagemant/InitialPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GenericMaui.MVVM.Views.ApplicationManagemant.InitialPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\ApplicationManagemant\InitialPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\ApplicationManagemant\InitialPage.xaml
+
+[C:/Users/plcm9/source/genericproject/GenericProject/GenericMaui/MVVM/Views/ApplicationManagemant/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GenericMaui.MVVM.Views.ApplicationManagemant.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\ApplicationManagemant\LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\ApplicationManagemant\LoginPage.xaml
+
+[C:/Users/plcm9/source/genericproject/GenericProject/GenericMaui/MVVM/Views/ApplicationManagemant/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GenericMaui.MVVM.Views.ApplicationManagemant.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\ApplicationManagemant\MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\ApplicationManagemant\MainPage.xaml
+
+[C:/Users/plcm9/source/genericproject/GenericProject/GenericMaui/MVVM/Views/CustomComponents/PMSAutoSuggestBox.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GenericMaui.MVVM.Views.CustomComponents.PMSAutoSuggestBox.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\CustomComponents\PMSAutoSuggestBox.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\CustomComponents\PMSAutoSuggestBox.xaml
+
+[C:/Users/plcm9/source/genericproject/GenericProject/GenericMaui/MVVM/Views/CustomComponents/PMSBasePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GenericMaui.MVVM.Views.CustomComponents.PMSBasePage.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\CustomComponents\PMSBasePage.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\CustomComponents\PMSBasePage.xaml
+
+[C:/Users/plcm9/source/genericproject/GenericProject/GenericMaui/MVVM/Views/CustomComponents/PMSButton.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GenericMaui.MVVM.Views.CustomComponents.PMSButton.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\CustomComponents\PMSButton.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\CustomComponents\PMSButton.xaml
+
+[C:/Users/plcm9/source/genericproject/GenericProject/GenericMaui/MVVM/Views/CustomComponents/PMSCheckBox.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GenericMaui.MVVM.Views.CustomComponents.PMSCheckBox.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\CustomComponents\PMSCheckBox.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\CustomComponents\PMSCheckBox.xaml
+
+[C:/Users/plcm9/source/genericproject/GenericProject/GenericMaui/MVVM/Views/CustomComponents/PMSEntry.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GenericMaui.MVVM.Views.CustomComponents.PMSEntry.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\CustomComponents\PMSEntry.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\CustomComponents\PMSEntry.xaml
+
+[C:/Users/plcm9/source/genericproject/GenericProject/GenericMaui/MVVM/Views/CustomComponents/PMSFrame.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GenericMaui.MVVM.Views.CustomComponents.PMSFrame.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\CustomComponents\PMSFrame.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\CustomComponents\PMSFrame.xaml
+
+[C:/Users/plcm9/source/genericproject/GenericProject/GenericMaui/MVVM/Views/CustomComponents/PMSLabel.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GenericMaui.MVVM.Views.CustomComponents.PMSLabel.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM\Views\CustomComponents\PMSLabel.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM\Views\CustomComponents\PMSLabel.xaml
+
+[C:/Users/plcm9/source/genericproject/GenericProject/GenericMaui/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GenericMaui.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/plcm9/source/genericproject/GenericProject/GenericMaui/Resources/Styles/PMSColors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GenericMaui.Resources.Styles.PMSColors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\PMSColors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\PMSColors.xaml
+
+[C:/Users/plcm9/source/genericproject/GenericProject/GenericMaui/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GenericMaui.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml

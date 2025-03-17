@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<custom:PMSBasePage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GenericMaui.MVVM.Views.ApplicationManagemant.MainPage"
+             xmlns:custom="clr-namespace:GenericMaui.MVVM.Views.CustomComponents"
+             xmlns:vm="clr-namespace:GenericMaui.MVVM.ViewModels"
+             xmlns:modelobj="clr-namespace:GenericMaui.MVVM.Models"
+             xmlns:conv="clr-namespace:GenericMaui.Helper.Converters"
+             >
+    <custom:PMSBasePage.Resources>
+        <ResourceDictionary>
+            <conv:ByteArrayToImageSourceConverter x:Key="ByteArrayToImageSourceConverter" />
+        </ResourceDictionary>
+    </custom:PMSBasePage.Resources>
+    
+    <!--<NavigationPage.HasBackButton>false</NavigationPage.HasBackButton>
+    <NavigationPage.HasNavigationBar>false</NavigationPage.HasNavigationBar>-->
+    
+    <Grid RowDefinitions="auto,auto,*,*,*,*,*,*" ColumnDefinitions="*">
+        
+
+        <CarouselView Grid.Row="1" BackgroundColor="Red" x:Name="carrouselList" ItemsSource="{Binding CompanyArchiveList}"
+                      IndicatorView="indicatorView" HeightRequest="500" >
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Image Aspect="Fill" Source="{Binding Archive, Converter={StaticResource ByteArrayToImageSourceConverter}}"></Image>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+
+        <IndicatorView x:Name="indicatorView"
+                        Grid.Row="1"
+                        IndicatorsShape="Square"
+                        IndicatorColor="LightGray"
+                        IndicatorSize="20"
+                        SelectedIndicatorColor="DarkGray"
+                        HorizontalOptions="Center"
+                        VerticalOptions="End" />
+        
+
+    </Grid>
+</custom:PMSBasePage>

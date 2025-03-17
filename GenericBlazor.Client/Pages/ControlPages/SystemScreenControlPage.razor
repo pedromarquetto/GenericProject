@@ -61,6 +61,9 @@
                         case "gridCol_IsControlScreen":
                             <PropertyColumn Sortable="true" Title="@field.Name" Property="@(p => p.IsControlScreen)" />
                             break;
+                        case "gridCol_IsAvailableOnMobile":
+                            <PropertyColumn Sortable="true" Title="@field.Name" Property="@(p => p.IsAvailableOnMobile)" />
+                            break;
                         case "gridCol_PresentationSequence":
                             <PropertyColumn Sortable="true" Title="@field.Name" Property="@(p => p.PresentationSequence)" />
                             break;

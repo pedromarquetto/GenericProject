@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GenericMaui.Resources.Styles.PMSColors">
+
+    <Color x:Key="TextColorPMS">#fff</Color>
+    <Color x:Key="PrimaryColorPMS">#102456</Color>
+    <Color x:Key="SecondaryColorPMS">#FFDEB8</Color>
+    <Color x:Key="TerciaryColorPMS">#789</Color>
+    <!--
+    #102456 - PMS
+    #FFDEB8 - Cor de pele
+    #EBEAE9 - Cinza
+    #fff - Branco
+    #7F20C4 - Roxo Fraco
+    #5A0897 - Roxo Forte
+    #36FF22 - Verde Claro
+    #105D08 - Verde Escuro
+    #FDF730 - Amarelo Claro
+    #AFAA08 - Amarelo Escuro (dourado)
+    #FF0800 - Vermelho Claro
+    #7E0703 - Vermelho vinho
+    #1AFBF4 - Azul Claro
+    #044B49 - Azul esverdeado
+    #044B49 - Azul
+    #04124B - Azul Escuro
+    #FF11FB - Rosa Claro
+    #A703A5 - Rosa Escuro
+    #FF0BA2 - Rosa
+    #F98E15 - Laranja
+    #6F420F - Marrom
+    -->
+</ResourceDictionary>

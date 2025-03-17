@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="GenericMaui.MVVM.Views.CustomComponents.PMSAutoSuggestBox"
+            xmlns:local="clr-namespace:GenericMaui.Helper.Converters"
+            x:Name="Root"
+            ZIndex="999"
+            Margin="5"> <!--To allow selection-->
+
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <local:DisplayColumnConverter x:Key="DisplayColumnConverter" />
+        </ResourceDictionary>
+    </ContentView.Resources>
+
+    <Grid>
+        <AbsoluteLayout x:Name="absLayout" HeightRequest="40">
+            <SearchBar Placeholder="--Select--" 
+                       BackgroundColor="{DynamicResource PrimaryColorPMS}"
+                       AbsoluteLayout.LayoutFlags="WidthProportional"
+                       AbsoluteLayout.LayoutBounds="0,0,1,AutoSize"
+                       Text="{Binding SearchText,Source={x:Reference Root},Mode=TwoWay}" />
+
+            <ListView ItemsSource="{Binding FilteredItems,Source={x:Reference Root}, Mode=TwoWay}" 
+                      SelectionMode="Single"
+                      AbsoluteLayout.LayoutFlags="WidthProportional"
+                      AbsoluteLayout.LayoutBounds="0,43,1,AutoSize"
+                      SelectedItem="{Binding SelectedItem,Source={x:Reference Root},Mode=TwoWay}"
+                      IsVisible="{Binding IsDropDownOpen, Source={x:Reference Root},Mode=TwoWay}"
+                      SeparatorColor="{DynamicResource White}"
+                      BackgroundColor="{DynamicResource TerciaryColorPMS}"
+                      >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell Height="40">
+                            <Grid>
+                                <Label TextColor="{DynamicResource TextColorPMS}">
+                                    <Label.Text>
+                                        <MultiBinding Converter="{StaticResource DisplayColumnConverter}">
+                                            <!-- Primeiro valor: o item atual -->
+                                            <Binding Path="." />
+                                            <!-- Segundo valor: o nome da propriedade, que pode vir de outra propriedade do ViewModel ou de um controle -->
+                                            <Binding Source="{x:Reference Root}" Path="DisplayColumn" />
+                                        </MultiBinding>
+                                    </Label.Text>
+                                </Label>
+                            </Grid>
+                        </ViewCell>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+        </AbsoluteLayout>
+    </Grid>
+</ContentView>

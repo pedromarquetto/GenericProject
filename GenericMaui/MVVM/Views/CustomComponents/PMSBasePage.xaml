@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GenericMaui.MVVM.Views.CustomComponents.PMSBasePage"
+             xmlns:conv="clr-namespace:GenericMaui.Helper"
+             x:Name="Root"
+             >
+
+    <ContentPage.ControlTemplate>
+        <ControlTemplate>
+            <Grid RowDefinitions="*">
+
+                <ActivityIndicator ZIndex="999" IsVisible="{Binding IsBusyIndicatorVisible,Source={x:Reference Root}, Mode=TwoWay}" 
+                                   IsRunning="True" Color="Black" x:Name="busyIndicator" WidthRequest="50" HeightRequest="50"/>
+                
+                <!--This will show the content of the child page, it just works when used under a ControlTemplate-->
+                <ContentPresenter Grid.Row="0" />
+            </Grid>
+        </ControlTemplate>
+    </ContentPage.ControlTemplate>
+</ContentPage>

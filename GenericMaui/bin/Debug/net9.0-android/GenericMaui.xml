@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GenericMaui</name>
+    </assembly>
+    <members>
+        <member name="M:GenericMaui.Helper.GlobalHelper.GetRandomUniqueId">
+            <summary>
+            As per the calculation, generates a 10 digit number with 0.0000001% chance of having the same ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:GenericMaui.MVVM.ViewModels.AppConfigurationViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:GenericMaui.MVVM.ViewModels.AppConfigurationViewModel.List">
+            <inheritdoc cref="F:GenericMaui.MVVM.ViewModels.AppConfigurationViewModel.list"/>
+        </member>
+        <member name="P:GenericMaui.MVVM.ViewModels.AppConfigurationViewModel.Model">
+            <inheritdoc cref="F:GenericMaui.MVVM.ViewModels.AppConfigurationViewModel.model"/>
+        </member>
+        <member name="F:GenericMaui.MVVM.ViewModels.AppConfigurationViewModel.insertCommand">
+            <summary>The backing field for <see cref="P:GenericMaui.MVVM.ViewModels.AppConfigurationViewModel.InsertCommand"/>.</summary>
+        </member>
+        <member name="P:GenericMaui.MVVM.ViewModels.AppConfigurationViewModel.InsertCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:GenericMaui.MVVM.ViewModels.AppConfigurationViewModel.Insert"/>.</summary>
+        </member>
+        <member name="T:GenericMaui.MVVM.ViewModels.DbManagemantViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:GenericMaui.MVVM.ViewModels.DbManagemantViewModel.OperationList">
+            <inheritdoc cref="F:GenericMaui.MVVM.ViewModels.DbManagemantViewModel.operationList"/>
+        </member>
+        <member name="P:GenericMaui.MVVM.ViewModels.DbManagemantViewModel.SelectedOperation">
+            <inheritdoc cref="F:GenericMaui.MVVM.ViewModels.DbManagemantViewModel.selectedOperation"/>
+        </member>
+        <member name="P:GenericMaui.MVVM.ViewModels.DbManagemantViewModel.ModelNamesList">
+            <inheritdoc cref="F:GenericMaui.MVVM.ViewModels.DbManagemantViewModel.modelNamesList"/>
+        </member>
+        <member name="P:GenericMaui.MVVM.ViewModels.DbManagemantViewModel.LineRecordsList">
+            <inheritdoc cref="F:GenericMaui.MVVM.ViewModels.DbManagemantViewModel.lineRecordsList"/>
+        </member>
+        <member name="P:GenericMaui.MVVM.ViewModels.DbManagemantViewModel.SelectedLineRecord">
+            <inheritdoc cref="F:GenericMaui.MVVM.ViewModels.DbManagemantViewModel.selectedLineRecord"/>
+        </member>
+        <member name="P:GenericMaui.MVVM.ViewModels.DbManagemantViewModel.SelectedModelName">
+            <inheritdoc cref="F:GenericMaui.MVVM.ViewModels.DbManagemantViewModel.selectedModelName"/>
+        </member>
+        <member name="M:GenericMaui.MVVM.ViewModels.DbManagemantViewModel.OnSelectedOperationChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:GenericMaui.MVVM.ViewModels.DbManagemantViewModel.SelectedOperation"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:GenericMaui.MVVM.ViewModels.DbManagemantViewModel.SelectedOperation"/> is changed.</remarks>
+        </member>
+        <member name="M:GenericMaui.MVVM.ViewModels.DbManagemantViewModel.OnSelectedLineRecordChanged(GenericMaui.MVVM.Models.GenericModels.LineRecord)">
+            <summary>Executes the logic for when <see cref="P:GenericMaui.MVVM.ViewModels.DbManagemantViewModel.SelectedLineRecord"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:GenericMaui.MVVM.ViewModels.DbManagemantViewModel.SelectedLineRecord"/> is changed.</remarks>
+        </member>
+        <member name="M:GenericMaui.MVVM.ViewModels.DbManagemantViewModel.OnSelectedModelNameChanged(GenericMaui.MVVM.Models.GenericModels.ModelClass)">
+            <summary>Executes the logic for when <see cref="P:GenericMaui.MVVM.ViewModels.DbManagemantViewModel.SelectedModelName"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:GenericMaui.MVVM.ViewModels.DbManagemantViewModel.SelectedModelName"/> is changed.</remarks>
+        </member>
+        <member name="T:GenericMaui.MVVM.ViewModels.InitialViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:GenericMaui.MVVM.ViewModels.InitialViewModel.ProgressCounter">
+            <inheritdoc cref="F:GenericMaui.MVVM.ViewModels.InitialViewModel.progressCounter"/>
+        </member>
+        <member name="T:GenericMaui.MVVM.ViewModels.LoginViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:GenericMaui.MVVM.ViewModels.LoginViewModel.Users">
+            <inheritdoc cref="F:GenericMaui.MVVM.ViewModels.LoginViewModel.users"/>
+        </member>
+        <member name="F:GenericMaui.MVVM.ViewModels.LoginViewModel.signInCommand">
+            <summary>The backing field for <see cref="P:GenericMaui.MVVM.ViewModels.LoginViewModel.SignInCommand"/>.</summary>
+        </member>
+        <member name="P:GenericMaui.MVVM.ViewModels.LoginViewModel.SignInCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:GenericMaui.MVVM.ViewModels.LoginViewModel.SignIn"/>.</summary>
+        </member>
+        <member name="T:GenericMaui.MVVM.ViewModels.MainPageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:GenericMaui.MVVM.ViewModels.MainPageViewModel.CompanyArchiveList">
+            <inheritdoc cref="F:GenericMaui.MVVM.ViewModels.MainPageViewModel.companyArchiveList"/>
+        </member>
+        <member name="P:GenericMaui.MVVM.ViewModels.MainPageViewModel.Model">
+            <inheritdoc cref="F:GenericMaui.MVVM.ViewModels.MainPageViewModel.model"/>
+        </member>
+        <member name="F:GenericMaui.MVVM.ViewModels.MainPageViewModel.insertCommand">
+            <summary>The backing field for <see cref="P:GenericMaui.MVVM.ViewModels.MainPageViewModel.InsertCommand"/>.</summary>
+        </member>
+        <member name="P:GenericMaui.MVVM.ViewModels.MainPageViewModel.InsertCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:GenericMaui.MVVM.ViewModels.MainPageViewModel.Insert"/>.</summary>
+        </member>
+        <member name="T:GenericMaui.Resource">
+            <summary>
+            Android Resource Designer class.
+            Exposes the Android Resource designer assembly into the project Namespace.
+            </summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.List">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "List" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Model">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Model" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.OperationList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "OperationList" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedOperation">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedOperation" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ModelNamesList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ModelNamesList" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.LineRecordsList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "LineRecordsList" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedLineRecord">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedLineRecord" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedModelName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedModelName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ProgressCounter">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ProgressCounter" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Users">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Users" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CompanyArchiveList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CompanyArchiveList" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.List">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "List" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Model">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Model" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.OperationList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "OperationList" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedOperation">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedOperation" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ModelNamesList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ModelNamesList" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.LineRecordsList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "LineRecordsList" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedLineRecord">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedLineRecord" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedModelName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedModelName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ProgressCounter">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ProgressCounter" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Users">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Users" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CompanyArchiveList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CompanyArchiveList" generated properties.</summary>
+        </member>
+    </members>
+</doc>

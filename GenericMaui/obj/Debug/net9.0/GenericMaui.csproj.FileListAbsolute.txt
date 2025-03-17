@@ -1,0 +1,14 @@
+C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0\GenericMaui.csproj.AssemblyReference.cache
+C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0\GenericMaui.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0\GenericMaui.AssemblyInfoInputs.cache
+C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0\GenericMaui.AssemblyInfo.cs
+C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0\GenericMaui.csproj.CoreCompileInputs.cache
+C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0\GenericMaui.sourcelink.json
+C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\bin\Debug\net9.0\GenericMaui.deps.json
+C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\bin\Debug\net9.0\GenericMaui.dll
+C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\bin\Debug\net9.0\GenericMaui.pdb
+C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0\XamlC.stamp
+C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0\GenericMaui.dll
+C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0\refint\GenericMaui.dll
+C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0\GenericMaui.pdb
+C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0\ref\GenericMaui.dll

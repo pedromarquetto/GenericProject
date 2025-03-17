@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericBlazor.Client", "Gen
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericBlazor.Shared", "GenericBlazor.Shared\GenericBlazor.Shared.csproj", "{BECE7181-9C2C-4898-BE2D-4B2756D30D25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericMaui", "..\GenericMaui\GenericMaui.csproj", "{9350B48E-C50F-E78D-D20B-F6DC031EC16A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericMaui", "GenericMaui\GenericMaui.csproj", "{BC442361-EFF6-8300-CF73-950BDE5CE414}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DatabaseProject", "DatabaseProject\DatabaseProject.sqlproj", "{212970F4-597D-4379-9A38-BA23ABD01356}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericMaui.TestXUnit", "GenericMaui.TestXUnit\GenericMaui.TestXUnit.csproj", "{BC8BADD3-75DF-44B7-8ACD-9F774BAAF8A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,12 +33,22 @@ Global
 		{BECE7181-9C2C-4898-BE2D-4B2756D30D25}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BECE7181-9C2C-4898-BE2D-4B2756D30D25}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BECE7181-9C2C-4898-BE2D-4B2756D30D25}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9350B48E-C50F-E78D-D20B-F6DC031EC16A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9350B48E-C50F-E78D-D20B-F6DC031EC16A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9350B48E-C50F-E78D-D20B-F6DC031EC16A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{9350B48E-C50F-E78D-D20B-F6DC031EC16A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9350B48E-C50F-E78D-D20B-F6DC031EC16A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9350B48E-C50F-E78D-D20B-F6DC031EC16A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{BC442361-EFF6-8300-CF73-950BDE5CE414}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC442361-EFF6-8300-CF73-950BDE5CE414}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC442361-EFF6-8300-CF73-950BDE5CE414}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BC442361-EFF6-8300-CF73-950BDE5CE414}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC442361-EFF6-8300-CF73-950BDE5CE414}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC442361-EFF6-8300-CF73-950BDE5CE414}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{212970F4-597D-4379-9A38-BA23ABD01356}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{212970F4-597D-4379-9A38-BA23ABD01356}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{212970F4-597D-4379-9A38-BA23ABD01356}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{212970F4-597D-4379-9A38-BA23ABD01356}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{212970F4-597D-4379-9A38-BA23ABD01356}.Release|Any CPU.Build.0 = Release|Any CPU
+		{212970F4-597D-4379-9A38-BA23ABD01356}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{BC8BADD3-75DF-44B7-8ACD-9F774BAAF8A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC8BADD3-75DF-44B7-8ACD-9F774BAAF8A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC8BADD3-75DF-44B7-8ACD-9F774BAAF8A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC8BADD3-75DF-44B7-8ACD-9F774BAAF8A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

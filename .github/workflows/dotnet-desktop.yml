@@ -1,0 +1,46 @@
+name: .NET Core Desktop
+
+on:
+  push:
+    branches: [ "Development","main" ]
+  pull_request:
+    branches: [ "Development","main" ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        configuration: [Debug]
+
+    env:
+      Solution_Name: GenericProject.sln  
+      Test_Project_Path: GenericMaui.TestXUnit\GenericMaui.TestXUnit.csproj
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Instalar .NET Core
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 9.0.x
+
+      - name: Configurar MSBuild
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Rodar testes unitários
+        run: dotnet test ${{ env.Test_Project_Path }}
+
+  push-changes:
+    needs: build
+    runs-on: windows-latest
+    if: success()  # Só executa se os testes passarem
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Push das mudanças
+        run: |
+          git push origin Development
