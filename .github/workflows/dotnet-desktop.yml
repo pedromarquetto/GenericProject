@@ -43,4 +43,4 @@ jobs:
 
       - name: Push das mudanças
         run: |
-          git push origin Development
+          git push origin main
