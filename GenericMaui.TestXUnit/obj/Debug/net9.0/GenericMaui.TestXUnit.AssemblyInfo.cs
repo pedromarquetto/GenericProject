@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GenericMaui.TestXUnit")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bacc9b878541de9a57bc4345fe2f0683e168a0fa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b950d3dea14017a4861ff93022eacbf42bcd8224")]
 [assembly: System.Reflection.AssemblyProductAttribute("GenericMaui.TestXUnit")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GenericMaui.TestXUnit")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

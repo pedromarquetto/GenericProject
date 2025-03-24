@@ -17,6 +17,8 @@ namespace GenericMaui.Helper
             var user = new Users();
             LoginStateEnum state = isForceReconfiguration ? LoginStateEnum.NotConfigured : GetInitializationState();
 
+            var device = CreateAndUpdateDevice();
+
             if (state == LoginStateEnum.NotConfigured)
             {
                 try
@@ -25,8 +27,14 @@ namespace GenericMaui.Helper
 
                     if (!string.IsNullOrEmpty(modelName))
                     {
-                        i = new ObservableCollection<ModelClass>(i.Where(p => p.Name == modelName));
+                        i = new(i.Where(p => p.Name == modelName));
                     }
+
+                    //var ssTables = _db.Get(new SSTable());// For first config, it is required to get ALL
+                    //if (!isForceReconfiguration && ssTables.Any() && string.IsNullOrEmpty(modelName))
+                    //{
+                    //    i = new(i.Where(p => ssTables.Where(x => x.IsReplicationTable).Select(x => x.Name).Contains(p.Name)));
+                    //}
 
                     foreach (var item in i)
                     {
@@ -89,6 +97,35 @@ namespace GenericMaui.Helper
             }
 
             return state;
+        }
+        public async static Task<ConnectedDevice> CreateAndUpdateDevice()
+        {
+            var json = Preferences.Get("DeviceModel", "");
+            var device = JsonConvert.DeserializeObject<ConnectedDevice>(json);
+
+            try
+            {
+                if (device == null)
+                {
+                    var connDev = new ConnectedDevice
+                    {
+                        ConnectedDeviceId = await GlobalHelper.GetRandomUniqueId(),
+                        DeviceUID = Guid.NewGuid(),
+                        DeviceName = DeviceInfo.Name,
+                        CreateDate = DateTime.Now
+                    };
+
+                    var obj = JsonConvert.SerializeObject(connDev);
+
+                    await WebServiceConnection.Post("PostObject", "ConnectedDevice", obj);
+                    Preferences.Set("DeviceModel", obj);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return device;
         }
 
     }
