@@ -100,14 +100,19 @@ namespace GenericBlazor.Controller
 			var parameters = new List<SqlParameter>();
 			byte[] byteArray = null;
 
+			string[] notIdentityTables = ["ConnectedDevice"];
+
 			using (var reader = new StreamReader(Request.Body))
 			{
 				objectdata = reader.ReadToEndAsync().Result;
 			}
 
 			var type = Type.GetType($"GenericBlazor.Shared.Models.{table}, GenericBlazor.Shared");//Pega o Type pelo nome
-			var properties = type?.GetProperties().Where(p => p.Name != $"{table}Id"); // Pega as properties menos a Id
-			if (properties != null)
+			
+			var properties = notIdentityTables.Any(p => p.Contains(table)) ? type?.GetProperties() :
+                type?.GetProperties().Where(p => p.Name != $"{table}Id"); // Pega as properties menos a Id
+
+            if (properties != null)
 			{
 				var columnNames = string.Join(", ", properties.Select(p => p.Name));
 				var obj = JsonConvert.DeserializeObject(objectdata, type);

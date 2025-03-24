@@ -29,7 +29,7 @@
     <AppXManifest Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-03-15T13:46:05.149</Modified>
+      <Modified>2025-03-24T23:32:17.307</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -39,15 +39,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\GenericMaui.runtimeconfig.json">
       <PackagePath>GenericMaui.runtimeconfig.json</PackagePath>
-      <Modified>2025-03-15T13:37:55.910</Modified>
+      <Modified>2025-03-24T23:32:16.071</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\GenericMaui.dll">
       <PackagePath>GenericMaui.dll</PackagePath>
-      <Modified>2025-03-15T13:46:03.915</Modified>
+      <Modified>2025-03-24T23:32:11.889</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>GenericMaui.exe</PackagePath>
-      <Modified>2025-03-15T13:46:04.030</Modified>
+      <Modified>2025-03-24T23:32:11.904</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -799,7 +799,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\source\genericproject\GenericProject\GenericMaui\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\GenericMaui.deps.json">
       <PackagePath>GenericMaui.deps.json</PackagePath>
-      <Modified>2025-03-15T13:37:55.656</Modified>
+      <Modified>2025-03-24T23:32:15.403</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\plcm9\.nuget\packages\microsoft.maui.controls.compatibility\9.0.40\lib\net9.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
